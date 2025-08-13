@@ -1,0 +1,53 @@
+
+.everything-you-need-section {
+    padding: 100px 70px;
+  background-color: #f9fafb;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.everything-you-need-content {
+  margin-bottom: 2rem;
+}
+
+
+.main-big-heading span {
+  color: #4c51bf;
+}
+
+.everything-you-need-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image,
+.card-video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+}
