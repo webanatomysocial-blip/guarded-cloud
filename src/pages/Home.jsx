@@ -1,14 +1,15 @@
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import "../css/index.css";
 import { ArrowRight } from 'react-bootstrap-icons'; // Import ArrowRight icon
 import CarouselSection from "../components/CarouselSection"; // Import CarouselSection component
 import EverythingYouNeed from "../components/EverythingYouNeed"; // Import EverythingYouNeed component
+import Whyteams from "../components/Why-teams"; // Import whyteams component
+
 
 function Home() {
   return (
     <>
-      <Header />
-     
+   
 
       <section className="hero-section">
         <div className="hero-content">
@@ -82,6 +83,8 @@ function Home() {
  <EverythingYouNeed />
 
       {/* Everything You Need Section Endssssssssss */}
+
+<Whyteams/>
 
 
     </>

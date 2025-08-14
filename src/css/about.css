@@ -1,0 +1,178 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+.dis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-card {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.about-card-img {
+  height: 500px;
+  width: 500px;
+  flex: 0 0 40%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.about-card-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-card-img img:hover {
+  transform: scale(1.05);
+}
+
+
+.lead {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 70px;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(#c1dafa, #e0e7ff);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Expertise & Mission Icons */
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon.blue {
+  background-color: #3b82f6;
+}
+.icon.purple {
+  background-color: #8b5cf6;
+}
+.icon.green {
+  background-color: #10b981;
+}
+.icon.orange {
+  background-color: #f97316;
+}
+.icon.red {
+  background-color: #ef4444;
+}
+
+/* Why Choose Us Icons */
+.choose-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+.choose-icon.blue {
+  background-color: #3b82f6;
+}
+.choose-icon.green {
+  background-color: #10b981;
+}
+.choose-icon.purple {
+  background-color: #8b5cf6;
+}
+.choose-icon.orange {
+  background-color: #f97316;
+}
+.choose-icon.red {
+  background-color: #ef4444;
+}
+
+.about-icon {
+  color: white;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  margin-top: 30px;
+}
+@media (min-width: 1024px) {
+  .mission-vision {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  border: 1px solid #f0f0f0;
+}
+.choose-grid {
+  display: grid;
+  gap: 2rem;
+}

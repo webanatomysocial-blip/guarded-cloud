@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
   font-family: "Oswald", sans-serif;
 }
 body {
@@ -15,20 +14,94 @@ body {
   line-height: 1.1em;
   letter-spacing: 0.5px;
   word-spacing: 1px;
-  color: #000;
+  color: #04243f;
 }
 .main-big-heading span {
   color: #a21caf;
 }
+
+
+.main-heading {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #04243f;
+}
+.main-heading span {
+  color: #a21caf;
+}
+
+
 .sub-heading {
   font-size: 22px;
   font-weight: 400;
   line-height: 1.1em;
   letter-spacing: 0.5px;
   word-spacing: 1px;
-  color: #000;
+  color: #04243f;
+   font-family: "Roboto", sans-serif;
+}
+.main-big-heading-white {
+  font-size: 75px;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+}
+.main-big-heading-white span {
+  color: #a21caf;
+}
+.sub-heading-white {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+   font-family: "Roboto", sans-serif;
+}
+.boxes-heading {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #04243f;
+}
+.boxes-heading-white {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
 }
 
+.text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #04243f;
+   font-family: "Roboto", sans-serif;
+}
+
+
+
+
+.text-white {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+   font-family: "Roboto", sans-serif;
+}
 
 
 
@@ -48,6 +121,7 @@ body {
   border-radius: 50px;
   letter-spacing: 1.5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
 }
 
 .blue-button:hover {
@@ -81,10 +155,10 @@ body {
   justify-content: space-between;
   align-items: center;
   border: 0.5px solid rgba(255, 255, 255, 1); /* Subtle border for definition */
-  width: 85%;
+  width: 70%;
   position: fixed;
   top: 30px;
-  left: calc(100% - 95.5%);
+  left: calc(100% - 85%);
   z-index: 1000;
   border-radius: 50px;
   padding: 20px;
@@ -93,18 +167,19 @@ body {
 .header .logo-container {
   display: flex;
   align-items: center;
-  background-color: transparent; /* Transparent background for the logo container */
+  justify-content: center;
+/* background-color: white; */
 }
 
 .logo img {
   height: 35px; /* Adjust the height as needed */
-  width: auto; /* Maintain aspect ratio */
-  background-color: transparent;
+  width: auto;
+  margin-bottom: -10px;
 }
 
 .navigation {
   margin-left: 2rem;
-  background-color: transparent;
+
 }
 
 .nav-list {
@@ -112,12 +187,12 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  background-color: transparent;
+
 }
 
 .nav-list li {
   margin-left: 1rem;
-  background-color: transparent;
+
 }
 
 .nav-link {
@@ -129,8 +204,8 @@ body {
   text-transform: uppercase;
   padding: 10px;
   border-radius: 10px;
-  background-color: transparent;
   transition: color 0.3s, background-color 0.3s;
+  /* background-color: white; */
 }
 
 .nav-link:hover {
@@ -148,6 +223,67 @@ body {
   font-size: 0.75rem;
   vertical-align: middle;
   transition: transform 0.3s;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: -110px;
+  display: none;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  z-index: 1000;
+  width: 430px;
+  flex-direction: column;
+  gap: 10px;
+}
+.inner-mega-menu {
+  background-color: #eceeee;
+   border-radius: 12px;
+   padding: 15px;
+}
+
+.dropdown:hover .mega-menu {
+  display: flex;
+}
+
+.mega-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #03253f;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.mega-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mega-item:hover {
+  transform: scale(1.02);
+}
+.cont-icon-nav-dropdown{
+  background-color: #03253f;
+  padding: 10px;
+  border-radius: 8px;
+}
+.mega-icon {
+  font-size: 20px;
+  color: #03253f;
+  fill: #03253f;
 }
 
 .button-group {

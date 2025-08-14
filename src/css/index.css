@@ -23,10 +23,9 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  /* background-color: #f5f5f5; Light gray background */
 }
 .banner > span:first-child {
-  margin-right: 10px; /* Space between text and circle */
+  margin-right: 10px; 
 }
 .banner .circle {
   margin-left: 10px;

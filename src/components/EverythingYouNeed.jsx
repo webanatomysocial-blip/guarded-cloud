@@ -1,63 +1,80 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/EverythingYouNeed.css";
+import { ArrowRight } from "react-bootstrap-icons"; // ArrowRight for the button
+import { Search } from "react-bootstrap-icons"; // Monitoring
+import { Shield } from "react-bootstrap-icons"; // Protection
+import { Key } from "react-bootstrap-icons"; // IAM
+import { FileText } from "react-bootstrap-icons"; // Compliance
+import { People } from "react-bootstrap-icons"; // Advisory
+import { LightningCharge } from "react-bootstrap-icons"; // MDR
 
 function EverythingYouNeed() {
-  const [hoveredCard, setHoveredCard] = useState(null);
-
-  const cards = [
+  const services = [
     {
-      title: "Video Editor",
-      image: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png",
-      video: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.mp4", // Replace with actual video URL
+      icon: Search,
+      title: "Cloud Security Monitoring & Threat Detection",
+      description:
+        "24/7 monitoring with real‑time alerts and incident triage to minimize risk and dwell time.",
     },
     {
-      title: "Subtitles",
-      image: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png",
-      video: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.mp4", // Replace with actual video URL
+      icon: Shield,
+      title: "Cloud Infrastructure Protection",
+      description:
+        "Hardening and guardrails for workloads, containers, and networks across public clouds.",
     },
     {
-      title: "Audio Editor",
-      image: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png",
-      video: "https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.mp4", // Replace with actual video URL
+      icon: Key,
+      title: "Identity & Access Management (IAM)",
+      description:
+        "Least‑privilege access, SSO, and credential lifecycle to stop lateral movement.",
+    },
+    {
+      icon: FileText,
+      title: "Compliance & Governance",
+      description:
+        "Framework alignment (ISO 27001, SOC 2, GDPR) with automated evidence collection.",
+    },
+    {
+      icon: People,
+      title: "Advisory & Managed Security",
+      description:
+        "Security strategy, architecture reviews, and ongoing managed services for your team.",
+    },
+    {
+      icon: LightningCharge,
+      title: "Managed Detection & Response (MDR)",
+      description:
+        "Detect, investigate, and contain threats fast with expert analysts on call.",
     },
   ];
 
   return (
     <>
       <section className="everything-you-need-section">
-        <div className="everything-you-need-content">
-          <p className="main-big-heading">
-            Everything you need, <br />
-            <span>all in one place</span>
+        <div className="everything-you-need-container">
+          <h2 className="main-heading" data-reveal>
+            Cloud Security Services
+          </h2>
+          <p className="sub-heading">
+            End‑to‑end protection tailored for fast‑moving teams. Clear outcomes,
+            measurable impact.
           </p>
-        </div>
-
-        <div className="everything-you-need-cards">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="card"
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
-            >
-              {hoveredCard === index ? (
-                <video
-                  src={card.video}
-                  className="card-video"
-                  autoPlay
-                  loop
-                  muted
-                />
-              ) : (
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="card-image"
-                />
-              )}
-              <p className="card-title">{card.title}</p>
-            </div>
-          ))}
+          <div className="cards" >
+            {services.map((service, index) => (
+              <article key={index} className="card" data-reveal>
+                <div className="icon" aria-hidden="true">
+                  <service.icon className="service-icon" />
+                </div>
+                <h3 className="boxes-heading">{service.title}</h3>
+                <p className="text">{service.description}</p>
+              </article>
+            ))}
+          </div>
+          <div style={{ marginTop: "40px" }} data-reveal>
+            <a className="blue-button" href="#contact">
+              Speak to an Expert <ArrowRight className="arrow-icon" />
+            </a>
+          </div>
         </div>
       </section>
     </>
