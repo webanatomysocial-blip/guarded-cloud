@@ -2,6 +2,8 @@ import React from "react";
 import "../css/About.css";
 import EverythingYouNeed from "../components/EverythingYouNeed"; // Import EverythingYouNeed component
 // import Blogs from "../components/Blog";
+import aboutbanner from '../assets/images/about-images/About-page-home-banner.jpg';
+import missionvision from '../assets/images/about-images/mission-vision-img.jpg';
 
 import {
   FaShieldAlt,
@@ -44,7 +46,7 @@ export default function About() {
           </div>
           <div className="about-card-img">
             <img
-              src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80"
+              src={aboutbanner}
               alt="Laptop workspace"
             />
           </div>
@@ -187,7 +189,7 @@ export default function About() {
 
 
           <div className="inner-about-mission-vision-right">
-            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80" alt="Mission and Vision" srcset="" />
+            <img src={missionvision} alt="Mission and Vision" />
 
           </div>
 
@@ -214,7 +216,7 @@ export default function About() {
 
         {/* Why Choose Us */}
         <section className="about-why-choose">
-          <h2 className="main-heading">Why Choose Us</h2>
+          <h2 className="main-heading" style={{textAlign: "center"}}>Why Choose Us</h2>
           <div className="about-choose-grid">
             <div className="about-choose-item">
               <div className="icon">

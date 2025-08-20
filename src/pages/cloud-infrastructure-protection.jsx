@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
+import CloudInfra from '../assets/images/services-imgs/Cloud-infra-img.jpg'
+import ShowcaseInfra from '../assets/images/services-imgs/Showcase-infra-img.jpg'
+import TestimonialImg2 from '../assets/images/Testimonial-imgs/Testimonial-img2.jpg'
 import {
   FaUserPlus,
   FaClock,
@@ -25,7 +28,7 @@ function CloudInfrastructureProtection() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              src={CloudInfra}
               alt="cloud infrastructure"
             />
           </div>
@@ -33,7 +36,7 @@ function CloudInfrastructureProtection() {
       </section>
 
       <section className="service-cards-container">
-        <h2 className="main-heading">See Our All Services</h2>
+        <h2 className="main-heading">Strengthening Your Cloud Infrastructure</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
@@ -126,7 +129,7 @@ function CloudInfrastructureProtection() {
             <h3>Michael T.</h3>
             <p>Cloud Architect, TechWave</p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={TestimonialImg2}
               alt="testimonial"
             />
           </div>
@@ -140,7 +143,7 @@ function CloudInfrastructureProtection() {
               Our solutions minimize risks and ensure robust cloud infrastructure security.
             </p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={ShowcaseInfra}
               alt="chart"
             />
           </div>
@@ -199,12 +202,12 @@ function CloudInfrastructureProtection() {
             </p>
           </div>
           <div className="cta-buttons">
-            <a href="#" className="blue-button">
+            <Link to="/Contact" className="blue-button">
               Get Started
-            </a>
-            <a href="#" className="transparent-button">
+            </Link>
+            <Link to="/Contact" className="transparent-button">
               Watch Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

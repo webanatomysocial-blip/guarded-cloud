@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
+import identityAccess from '../assets/images/services-imgs/identity-access-management-img.jpg';
+import TestimonialImg3 from '../assets/images/Testimonial-imgs/Testimonial-img3.jpg';
+import ShowCaseImg3 from '../assets/images/services-imgs/ShowCase-img3.jpg';
+
 import {
   FaUserPlus,
   FaClock,
@@ -25,7 +29,7 @@ function IdentityAccessManagement() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              src={identityAccess}
               alt="identity access"
             />
           </div>
@@ -33,7 +37,7 @@ function IdentityAccessManagement() {
       </section>
 
       <section className="service-cards-container">
-        <h2 className="main-heading">See Our All Services</h2>
+        <h2 className="main-heading">Next-Gen Identity Security</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
@@ -126,7 +130,7 @@ function IdentityAccessManagement() {
             <h3>Laura M.</h3>
             <p>Security Analyst, InfoGuard</p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={TestimonialImg3}
               alt="testimonial"
             />
           </div>
@@ -140,7 +144,7 @@ function IdentityAccessManagement() {
               Streamlined IAM processes improve efficiency and security.
             </p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={ShowCaseImg3}
               alt="chart"
             />
           </div>
@@ -199,12 +203,12 @@ function IdentityAccessManagement() {
             </p>
           </div>
           <div className="cta-buttons">
-            <a href="#" className="blue-button">
+            <Link to="/Contact" className="blue-button">
               Get Started
-            </a>
-            <a href="#" className="transparent-button">
+            </Link>
+            <Link to="/Contact" className="transparent-button">
               Watch Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

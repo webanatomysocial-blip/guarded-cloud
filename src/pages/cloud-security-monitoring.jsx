@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
+import cloudimg from "../assets/images/services-imgs/cloud-security-img.jpg"
+import testimonialImg from '../assets/images/Testimonial-imgs/Testimonial-img1.jpg'
+import Showcaseimg1 from '../assets/images/services-imgs/Showcase-img1.jpg'
 import {
   FaUserPlus,
   FaClock,
@@ -25,7 +28,7 @@ function CloudSecurityMonitoring() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src="https://images.unsplash.com/photo-1667372283587-e1557c08aca4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              src={cloudimg}
               alt="cloud security monitoring"
             />
           </div>
@@ -33,7 +36,7 @@ function CloudSecurityMonitoring() {
       </section>
 
       <section className="service-cards-container">
-        <h2 className="main-heading">See Our All Services</h2>
+        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
@@ -126,7 +129,7 @@ function CloudSecurityMonitoring() {
             <h3>Emily W.</h3>
             <p>Security Manager, CloudSafe</p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={testimonialImg}
               alt="testimonial"
             />
           </div>
@@ -140,7 +143,7 @@ function CloudSecurityMonitoring() {
               Our proactive monitoring minimizes risks and ensures uninterrupted operations.
             </p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={Showcaseimg1}
               alt="chart"
             />
           </div>
@@ -199,12 +202,12 @@ function CloudSecurityMonitoring() {
             </p>
           </div>
           <div className="cta-buttons">
-            <a href="#" className="blue-button">
+            <Link to="/Contact" className="blue-button">
               Get Started
-            </a>
-            <a href="#" className="transparent-button">
+            </Link>
+            <Link to="/Contact" className="transparent-button">
               Watch Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>

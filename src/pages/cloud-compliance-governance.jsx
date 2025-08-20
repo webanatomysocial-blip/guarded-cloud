@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
+import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+import TestimonialImg4 from '../assets/images/Testimonial-imgs/Testimonial-img4.jpg'; 
+import ShowCaseImg4 from '../assets/images/services-imgs/ShowCase-img4.jpg';
 import {
   FaUserPlus,
   FaClock,
@@ -25,7 +28,7 @@ function CloudComplianceGovernance() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              src={cloudCompliance}
               alt="cloud compliance"
             />
           </div>
@@ -33,7 +36,7 @@ function CloudComplianceGovernance() {
       </section>
 
       <section className="service-cards-container">
-        <h2 className="main-heading">See Our All Services</h2>
+        <h2 className="main-heading">Stay Compliant, Stay Secure</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
@@ -126,7 +129,7 @@ function CloudComplianceGovernance() {
             <h3>Sarah L.</h3>
             <p>Compliance Officer, DataSafe</p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={TestimonialImg4}
               alt="testimonial"
             />
           </div>
@@ -140,7 +143,7 @@ function CloudComplianceGovernance() {
               Streamlined processes reduce audit times and improve accuracy.
             </p>
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300"
+              src={ShowCaseImg4}
               alt="chart"
             />
           </div>
@@ -199,12 +202,12 @@ function CloudComplianceGovernance() {
             </p>
           </div>
           <div className="cta-buttons">
-            <a href="#" className="blue-button">
+            <Link to="/Contact" className="blue-button">
               Get Started
-            </a>
-            <a href="#" className="transparent-button">
+            </Link>
+            <Link to="/Contact" className="transparent-button">
               Watch Demo
-            </a>
+            </Link>
           </div>
         </div>
       </div>
