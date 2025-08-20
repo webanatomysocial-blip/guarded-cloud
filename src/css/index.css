@@ -10,7 +10,8 @@
 
 /* Optional: Specific styling for Home page */
 .home-light-rays {
-  background: rgba(0, 0, 0, 0.1); /* Slight overlay for contrast */
+  background: rgba(255, 255, 255, 0.1); 
+  /* color: white; */
 }
 
 
@@ -20,11 +21,12 @@
   justify-content: start;
   align-items: center;
   padding-top: 180px;
+  /* width: 100%; */
 }
 
 .hero-content {
   text-align: center;
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;

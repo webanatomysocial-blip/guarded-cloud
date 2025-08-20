@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Contactus from "../components/ContactForm";
 
 function Contact() {
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
-      <h1>Contact Us</h1>
-      <p>Email: support@example.com</p>
-      <p>Phone: +1-123-456-7890</p>
-      <p>Go back to <Link to="/">Home</Link>.</p>
-    </div>
+    
+    <section style={{marginTop: "100px"}}>
+    <Contactus></Contactus>
+    </section>
   );
 }
 

@@ -102,7 +102,7 @@ label.consent {
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    background: linear-gradient(135deg, #28255e, #aca1bd);
+    background: linear-gradient(135deg, #03253f, #0156B3);
     color: #ffffff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     transition: all ease .5s;

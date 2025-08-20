@@ -1,8 +1,20 @@
+@font-face {
+  font-family: 'Rock'; /* Name you want to use for the font */
+  src: url('../assets/fonts/ROCK.TTF') format('truetype'); /* Path to the .ttf file */
+  font-weight: normal; /* Adjust as needed (e.g., bold, 700) */
+  font-style: normal; /* Adjust as needed (e.g., italic) */
+}
+html {
+  scroll-behavior: auto !important;
+  /* Disables default smooth scrolling */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+  font-family: "Host Grotesk", sans-serif;
+  
 }
 body {
   background-color: #eceeee;
@@ -15,6 +27,7 @@ body {
   letter-spacing: 0.5px;
   word-spacing: 1px;
   color: #04243f;
+  text-transform: capitalize;
 }
 .main-big-heading span {
   color: #a21caf;
@@ -28,6 +41,7 @@ body {
   letter-spacing: 0.5px;
   word-spacing: 1px;
   color: #04243f;
+  text-transform: capitalize;
 }
 .main-heading span {
   color: #a21caf;
@@ -39,6 +53,7 @@ body {
   letter-spacing: 0.5px;
   word-spacing: 1px;
   color: #ffffff;
+  text-transform: capitalize;
 }
 .main-heading-white span {
   color: #a21caf;
@@ -103,7 +118,7 @@ body {
 .text {
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.1em;
+  line-height: 1.3em;
   letter-spacing: 0.5px;
   word-spacing: 1px;
   color: #04243f;
@@ -122,6 +137,39 @@ body {
   color: #ffffff;
    font-family: "Roboto", sans-serif;
 }
+
+
+
+
+
+.cta-heading{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+}
+.cta-text{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -161,6 +209,45 @@ body {
 
 
 
+/* transparent btn start */
+.transparent-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  background-color: transparent; /* Blue background */
+  color: #fff; /* White text */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  border: #fff 1px solid  ;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: fit-content;
+}
+
+.transparent-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
+/* transparent btn  end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +257,7 @@ body {
 .header {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
   backdrop-filter: blur(10px); /* Blur effect for content behind the header */
-  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  -webkit-backdrop-filter: blur(30px); /* For Safari compatibility */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -238,7 +325,7 @@ body {
 }
 .dropdown-icon {
   margin-left: 0.25rem;
-  color: #a21caf;
+  color: #03253f;
   background-color: transparent;
   font-size: 0.75rem;
   vertical-align: middle;
@@ -267,7 +354,7 @@ body {
   gap: 10px;
 }
 .inner-mega-menu {
-  background-color: #eceeee;
+  background-color: #03253f;
    border-radius: 12px;
    padding: 15px;
 }
@@ -280,11 +367,13 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px;
-  border-radius: 8px;
-  color: #03253f;
-  font-weight: 500;
+  padding: 16px 12px;
+  /* border-radius: 8px; */
+  color: #ffffff;
+  font-weight: 300;
+  /* border-radius: 0% 0% 0% 0%  ; */
   transition: transform 0.2s;
+  border-bottom: #ffffff1c 1px solid;
 }
 
 .mega-item a {
@@ -302,8 +391,8 @@ body {
 }
 .mega-icon {
   font-size: 20px;
-  color: #03253f;
-  fill: #03253f;
+  color: #ffffff;
+  fill: #ffffff;
 }
 
 .button-group {

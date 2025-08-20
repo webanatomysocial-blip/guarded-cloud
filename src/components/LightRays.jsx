@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { Renderer, Program, Triangle, Mesh } from "ogl";
 import "../css/index.css";
 
-const DEFAULT_COLOR = "#04243f";
+const DEFAULT_COLOR = "#fff";
 
 const hexToRgb = (hex) => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -38,14 +38,14 @@ const getAnchorAndDir = (origin, w, h) => {
 };
 
 const LightRays = ({
-  raysOrigin = "top-center",
+  raysOrigin = "center-center",
   raysColor = DEFAULT_COLOR,
   raysSpeed = 1,
   lightSpread = 1,
   rayLength = 2,
   pulsating = false,
   fadeDistance = 1.0,
-  saturation = 1.0,
+  saturation = 10,
   followMouse = true,
   mouseInfluence = 0.1,
   noiseAmount = 0.0,
@@ -71,7 +71,7 @@ const LightRays = ({
         const entry = entries[0];
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     observerRef.current.observe(containerRef.current);

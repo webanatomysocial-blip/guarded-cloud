@@ -52,3 +52,21 @@ display: flex;
 .everything-you-need-container .main-heading {
   margin-bottom: 20px;
 }
+
+
+
+/* New styling for Read More link */
+.read-more {
+  display: inline-block;
+  color: #0156b3; /* Match the icon background for consistency */
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  align-self: flex-start; /* Align to the start of the card */
+}
+
+.read-more:hover {
+  color: #03253f; /* Darker text on hover */
+  text-decoration: none;
+}

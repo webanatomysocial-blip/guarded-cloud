@@ -3,7 +3,7 @@ import "../css/Contact.css";
 
 export default function Contactus() {
   return (
-    <section className="contact-us-section">
+    <section className="contact-us-section" id="contact">
       <div className="contact-container">
         <h2>Talk to a Cloud Security Expert</h2>
         <p>

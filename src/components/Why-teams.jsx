@@ -12,7 +12,7 @@ function WhyTeams() {
           <li><strong>24/7 monitoring</strong> — global coverage with expert SOC analysts.</li>
           <li><strong>Clear outcomes</strong> — dashboards and monthly security posture reports.</li>
         </ul>
-        <a className="blue-button">Get a Security Assessment</a>
+        <a className="blue-button" href="#contact">Get a Security Assessment</a>
       </div>
 
       <div className="content-right">

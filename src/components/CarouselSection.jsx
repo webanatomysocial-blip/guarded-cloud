@@ -1,103 +1,104 @@
-import React, { useState } from "react";
-import { Play } from "react-bootstrap-icons"; // Generic icon, replace with specific ones as needed
+import React, { useState, useEffect } from "react";
+import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import "../css/CarouselSection.css";
-import { HiArrowLongRight , HiArrowLongLeft } from "react-icons/hi2";
-
 
 function CarouselSection() {
-  const [activeTab, setActiveTab] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      tab: "Auto Subtitles",
+      tab: "Cloud Security Monitoring & Threat Detection",
       content: "Add subtitles in just a click with our Auto Subtitle Generator",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
     {
-      tab: "Brand Kit",
+      tab: "Cloud Infrastructure Protection",
       content: "Customize your brand with our Brand Kit tools",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
     {
-      tab: "Dubbing",
+      tab: "Identity & Access Management (IAM)",
       content: "Easily dub your videos with professional quality",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
     {
-      tab: "Text to Video AI",
+      tab: "Cloud Compliance & Governance",
       content: "Convert text to video using AI technology",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
     {
-      tab: "AI Clips",
+      tab: "Advisory & Managed Security Services",
       content: "Generate AI-powered video clips automatically",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
     {
-      tab: "AI Avatars",
+      tab: "Managed Detection and Response",
       content: "Create realistic AI avatars for your videos",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
-    },
-    {
-      tab: "Recorder",
-      content: "Record high-quality videos with our recorder",
-      video:
-        "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
+      video: "https://cdn-site-assets.veed.io/HP_Autosubtitles_964621196a/HP_Autosubtitles_964621196a.mp4",
     },
   ];
 
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-    setCurrentSlide(index);
-  };
-
   const handlePrev = () => {
-    const newSlide = currentSlide > 0 ? currentSlide - 1 : slides.length - 1;
-    setCurrentSlide(newSlide);
-    setActiveTab(newSlide); // Sync active tab with slide
+    setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : slides.length - 1);
   };
 
   const handleNext = () => {
-    const newSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
-    setCurrentSlide(newSlide);
-    setActiveTab(newSlide); // Sync active tab with slide
+    setCurrentSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
   };
+
+  // Preload videos to reduce loading delays (optional, for better performance)
+  useEffect(() => {
+    const preloadVideos = slides.map((slide) => {
+      const video = document.createElement("video");
+      video.src = slide.video;
+      video.load();
+      return video;
+    });
+    return () => preloadVideos.forEach((video) => video.remove());
+  }, );
 
   return (
     <section className="carousel-section">
-      <div className="tabs">
-        {slides.map((slide, index) => (
-          <button
-            key={index}
-            className={`tab ${activeTab === index ? "active" : ""}`}
-            onClick={() => handleTabClick(index)}
-          >
-            <Play className="tab-icon" /> {slide.tab}
-          </button>
-        ))}
-      </div>
       <div className="carousel-container">
-        <button className="carousel-arrow prev" onClick={handlePrev}>
+        <button
+          className="carousel-arrow prev"
+          onClick={handlePrev}
+          aria-label="Previous slide"
+        >
           <HiArrowLongLeft className="carousel-icon" />
         </button>
         <div className="carousel-content">
-          <video
-            src={slides[currentSlide].video}
-            className="carousel-video"
-            autoPlay
-            loop
-            muted
-          />
+          <h3 className="main-heading" style={{ marginBottom: "30px" }}>
+            {slides[currentSlide].tab}
+          </h3>
+          <div className="video-wrapper">
+            <video
+              key={currentSlide} // Ensure video re-renders on slide change
+              src={slides[currentSlide].video}
+              className="carousel-video"
+              autoPlay
+              loop
+              muted
+              preload="auto"
+            />
+          </div>
         </div>
-        <button className="carousel-arrow next" onClick={handleNext}>
+        <button
+          className="carousel-arrow next"
+          onClick={handleNext}
+          aria-label="Next slide"
+        >
           <HiArrowLongRight className="carousel-icon" />
         </button>
+      </div>
+      <div className="carousel-indicators">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`indicator ${currentSlide === index ? "active" : ""}`}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

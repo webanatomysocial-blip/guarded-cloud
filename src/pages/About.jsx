@@ -1,5 +1,8 @@
 import React from "react";
-import "../css/About.css"; // Import your CSS file
+import "../css/About.css";
+import EverythingYouNeed from "../components/EverythingYouNeed"; // Import EverythingYouNeed component
+// import Blogs from "../components/Blog";
+
 import {
   FaShieldAlt,
   FaCloud,
@@ -13,94 +16,18 @@ import {
 } from "react-icons/fa";
 
 export default function About() {
-  const expertiseItems = [
-    {
-      icon: <FaSearch size={32} className="about-icon" />,
-      iconBg: "blue",
-      title: "Cloud Security Monitoring & Threat Detection",
-      desc: "24/7 monitoring with advanced threat detection to keep your cloud infrastructure secure.",
-    },
-    {
-      icon: <FaCloud size={32} className="about-icon" />,
-      iconBg: "purple",
-      title: "Cloud Infrastructure Protection",
-      desc: "Comprehensive protection for your cloud infrastructure across all major platforms.",
-    },
-    {
-      icon: <FaUserShield size={32} className="about-icon" />,
-      iconBg: "green",
-      title: "Identity & Access Management (IAM)",
-      desc: "Secure access controls and identity management for your cloud resources.",
-    },
-    {
-      icon: <FaRegCheckCircle size={32} className="about-icon" />,
-      iconBg: "orange",
-      title: "Cloud Compliance & Governance",
-      desc: "Ensure regulatory compliance and maintain governance across your cloud environment.",
-    },
-    {
-      icon: <FaShieldAlt size={32} className="about-icon" />,
-      iconBg: "red",
-      title: "Managed Detection & Response",
-      desc: "Proactive threat hunting and rapid incident response to minimize security risks.",
-    },
-  ];
-
-  const missionVisionItems = [
-    {
-      icon: <FaBullseye size={32} className="about-icon" />,
-      iconBg: "blue",
-      title: "Our Mission",
-      desc: "To deliver world-class cloud security services that protect our clients' critical data, maintain compliance, and build lasting trust.",
-    },
-    {
-      icon: <FaEye size={32} className="about-icon" />,
-      iconBg: "purple",
-      title: "Our Vision",
-      desc: "A world where every organization — regardless of size or location — can harness the power of the cloud without compromising security.",
-    },
-  ];
-
-  const chooseItems = [
-    {
-      icon: <FaCogs size={28} className="about-icon" />,
-      iconBg: "blue",
-      title: "Deep Expertise",
-      desc: "Comprehensive knowledge in public, private, and hybrid cloud security across all major platforms.",
-    },
-    {
-      icon: <FaEye size={28} className="about-icon" />,
-      iconBg: "green",
-      title: "24/7 Monitoring",
-      desc: "Round-the-clock security monitoring with rapid incident response to protect your assets.",
-    },
-    {
-      icon: <FaCogs size={28} className="about-icon" />,
-      iconBg: "purple",
-      title: "Tailored Solutions",
-      desc: "Customized security solutions designed specifically for SMBs and startups of all sizes.",
-    },
-    {
-      icon: <FaGlobe size={28} className="about-icon" />,
-      iconBg: "orange",
-      title: "Global Reach",
-      desc: "Worldwide coverage with local understanding to serve businesses across all regions.",
-    },
-  ];
-
   return (
-    <div className="page">
-      <section>
-        <div className="about-container dis">
-          <div className="about-card">
+    <>
+      <section className="about-banner-container">
+          <div className="about-inner-left">
             <h2 className="main-heading">
               Your Trusted Cloud Security Partner
-            </h2>
-            <p className="lead">
+            </h2><br />
+            <p className="text">
               At Guarded Cloud, we safeguard your cloud assets from cyber
               threats, ensuring compliance and enabling secure growth.
-            </p>
-            <p>
+            </p><br />
+            <p className="text">
               We specialize{" "}
               <strong>
                 in Cloud Security Monitoring, Threat Detection, Infrastructure
@@ -108,8 +35,8 @@ export default function About() {
               </strong>
               , and <strong>Managed Detection & Response</strong>. Our solutions
               adapt to startups or established SMBs seamlessly.
-            </p>
-            <p>
+            </p><br />
+            <p className="text">
               With <strong>24/7 protection</strong>, proactive threat
               intelligence, and expert support, we ensure your business operates
               with confidence.
@@ -121,55 +48,227 @@ export default function About() {
               alt="Laptop workspace"
             />
           </div>
-        </div>
       </section>
 
-      <div className="container main-content">
-        {/* Expertise Section */}
-        <div className="services-section">
-          <h2 className="section-title">Our Expertise</h2>
-          <div className="grid">
-            {expertiseItems.map((item, idx) => (
-              <div className="card" key={idx}>
-                <div className={`icon ${item.iconBg}`}>{item.icon}</div>
-                <h3 className="card-title">{item.title}</h3>
-                <p className="card-desc">{item.desc}</p>
+
+
+
+
+
+{/*     
+        <div className="about-services-section">
+          <h2 className="main-heading" style={{textAlign: "center"}}>Our Expertise</h2>
+
+<div>
+
+
+          <div className="about-grid">
+            <div className="about-card">
+              <div className="icon">
+                <FaSearch  className="service-icon" />
               </div>
-            ))}
+              <h3 className="boxes-heading">
+                Cloud Security Monitoring & Threat Detection
+              </h3>
+              <p className="about-card-desc">
+                24/7 monitoring with advanced threat detection to keep your cloud
+                infrastructure secure.
+              </p>
+            </div>
+
+            
+            <div className="about-card">
+              <div className="icon">
+                <FaCloud  className="service-icon" />
+              </div>
+              <h3 className="boxes-heading">
+                Cloud Infrastructure <br /> Protection 
+              </h3>
+              <p className="about-card-desc">
+                Comprehensive protection for your cloud infrastructure across all
+                major platforms.
+              </p>
+            </div>
+
+            
+            <div className="about-card">
+              <div className="icon">
+                <FaUserShield  className="service-icon" />
+              </div>
+              <h3 className="boxes-heading">
+                Identity & Access <br /> Management (IAM) 
+              </h3>
+              <p className="about-card-desc">
+                Secure access controls and identity management for your cloud
+                resources.
+              </p>
+            </div>
+
+
+            
+      
+
+
+
           </div>
-        </div>
+
+
+
+
+
+          <div className="about-grid">
+                 <div className="about-card">
+              <div className="icon">
+                <FaRegCheckCircle  className="service-icon" />
+              </div>
+              <h3 className="boxes-heading">
+                Cloud Compliance & Governance
+              </h3>
+              <p className="about-card-desc">
+                Ensure regulatory compliance and maintain governance across your
+                cloud environment.
+              </p>
+            </div>
+
+            
+            <div className="about-card">
+              <div className="icon">
+                <FaShieldAlt  className="service-icon" />
+              </div>
+              <h3 className="boxes-heading">
+                Managed Detection & Response
+              </h3>
+              <p className="about-card-desc">
+                Proactive threat hunting and rapid incident response to minimize
+                security risks.
+              </p>
+            </div>
+
+
+          </div>
+          </div>
+        </div> */}
+
+
+
+<EverythingYouNeed  marginTop="-50px" Link="/contact" />
+
+
+
+
+
+
+
+
+
+
+
+
 
         {/* Mission & Vision */}
-        <h2 className="section-title">What Drives Us Forward</h2>
-        <div className="mission-vision">
-          {missionVisionItems.map((item, idx) => (
-            <div className="card white" key={idx}>
-              <div className={`icon ${item.iconBg}`}>{item.icon}</div>
-              <h3 className="card-title center">{item.title}</h3>
-              <p className="card-desc center">{item.desc}</p>
+        <h2 className="main-heading" style={{textAlign: "center"}}>What Drives Us Forward</h2>
+        <div className="about-mission-vision">
+        
+           <div className="about-card-our-mission-vision ">
+            <div className="icon">
+              <FaBullseye  className="service-icon" />
             </div>
-          ))}
+            <h3 className="boxes-heading ">Our Mission</h3>
+            <p className="about-card-desc">
+              To deliver world-class cloud security services that protect our
+              clients' critical data, maintain compliance, and build lasting
+              clients' critical data, maintain compliance, and build lasting
+              trust.
+            </p>
+          </div>
+         
+     
+
+
+
+          <div className="inner-about-mission-vision-right">
+            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80" alt="Mission and Vision" srcset="" />
+
+          </div>
+
+
+           <div className="about-card-our-mission-vision ">
+            <div className="icon">
+              <FaEye  className="service-icon" />
+            </div>
+            <h3 className="boxes-heading">Our Vision</h3>
+            <p className="about-card-desc">
+              A world where every organization — regardless of size or location —
+              can harness the power of the cloud without compromising security.
+              can harness the power of the cloud without compromising security.
+            </p>
+          </div>
+
+
         </div>
+
+
+
+
+
 
         {/* Why Choose Us */}
-        <div className="why-choose">
-          <h2 className="section-title">Why Choose Us</h2>
-          <div className="choose-grid">
-            {chooseItems.map((item, idx) => (
-              <div className="choose-item" key={idx}>
-                <div className={`choose-icon ${item.iconBg}`}>{item.icon}</div>
-                <div>
-                  <h4 className="choose-title">{item.title}</h4>
-                  <p className="choose-desc">{item.desc}</p>
-                </div>
+        <section className="about-why-choose">
+          <h2 className="main-heading">Why Choose Us</h2>
+          <div className="about-choose-grid">
+            <div className="about-choose-item">
+              <div className="icon">
+                <FaCogs  className="service-icon" />
               </div>
-            ))}
+              <div>
+                <h4 className="boxes-heading">Deep Expertise</h4>
+                <p className="about-choose-desc">
+                  Comprehensive knowledge in public, private, and hybrid cloud
+                  security across all major platforms.
+                </p>
+              </div>
+            </div>
+            <div className="about-choose-item">
+              <div className="icon ">
+                <FaEye  className="service-icon" />
+              </div>
+              <div>
+                <h4 className="boxes-heading">24/7 Monitoring</h4>
+                <p className="about-choose-desc">
+                  Round-the-clock security monitoring with rapid incident response
+                  to protect your assets.
+                </p>
+              </div>
+            </div>
+            <div className="about-choose-item">
+              <div className="icon">
+                <FaCogs  className="service-icon" />
+              </div>
+              <div>
+                <h4 className="boxes-heading">Tailored Solutions</h4>
+                <p className="about-choose-desc">
+                  Customized security solutions designed specifically for SMBs and
+                  startups of all sizes.
+                </p>
+              </div>
+            </div>
+            <div className="about-choose-item">
+              <div className="icon">
+                <FaGlobe  className="service-icon" />
+              </div>
+              <div>
+                <h4 className="boxes-heading">Global Reach</h4>
+                <p className="about-choose-desc">
+                  Worldwide coverage with local understanding to serve businesses
+                  across all regions.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
+        {/* <Blogs /> */}
 
-      
-      </div>
-    </div>
+    </>
   );
 }

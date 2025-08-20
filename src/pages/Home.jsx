@@ -7,15 +7,11 @@ import Whyteams from "../components/Why-teams"; // Import whyteams component
 import LightRays from "../components/LightRays"; // Adjust path if necessary
 import Contactus from "../components/ContactForm";
 import FAQTemplate from "../components/FaqTemplate";
+import Blogs from "../components/Blog"; // Import Blogs component
 
 
 
 function Home() {
-
-
-
-
-
 
 
 
@@ -29,18 +25,18 @@ function Home() {
    {/* LightRays component at the top */}
       
         <LightRays
-          raysOrigin="top-center"
-          raysColor="#04243f" // Custom color (teal)
+          raysOrigin="center-center"
+          raysColor="#fff" // Custom color (teal)
           raysSpeed={0.5}
           lightSpread={1.2}
-          rayLength={1.5}
+          rayLength={2}
           pulsating={true}
           fadeDistance={1.0}
-          saturation={0.8}
+          saturation={1}
           followMouse={true}
           mouseInfluence={0.4}
           noiseAmount={0.3}
-          distortion={1}
+          distortion={0.5}
           className="home-light-rays"
         />
 
@@ -52,21 +48,21 @@ function Home() {
       <section className="hero-section">
         <div className="hero-content">
           <p className="main-big-heading">
-            CREATE PRO LEVEL <br />
-            VIDEOS IN THE BLINK OF AI
+            Empower Your Future: <br /> Secure Your Cloud Now
           </p>
           <p className="sub-heading">
-            Make better videos faster. AI-powered video creation for teams
+           Robust Security for SMBs & Startups
+
           </p>
-          <a href="#" className="blue-button">Start for free
+          <a href="#contact" className="blue-button">Start for free
             <ArrowRight className="arrow-icon" />
           </a>
 
 
          <div className="banner">
-           <span >* No credit card required</span> |
+           <span >Threat Defense: Proactive monitoring.</span> |
            <span className="circle">⦿</span> {/* Using a Unicode circle as a placeholder icon */}
-           <span>Rated 4.6 out of 5 on G2</span>
+           <span>Compliance: Standards met easily.</span>
          </div>
 
  
@@ -128,7 +124,7 @@ function Home() {
 
 
 {/* about us section start */}
-<section className="about-section">
+{/* <section className="about-section">
       <div className="about-container">
         <h2 className="main-heading-White">About Us</h2>
         <p className="text-white">
@@ -138,7 +134,7 @@ function Home() {
         </p>
 
         <div className="about-content">
-          {/* Timeline */}
+    
           <div className="timeline">
             <div className="timeline-item">
               <span className="year">2023</span>
@@ -166,7 +162,7 @@ function Home() {
             </div>
           </div>
 
-          {/* Leadership Card */}
+       
           <div className="leadership-card">
             <h3 className="sub-heading-white">Leadership</h3>
             <p className="text-white">
@@ -181,8 +177,12 @@ function Home() {
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
+
+
 {/* about us section End */}
+
+<Blogs backgroundColor="#fff"  textColor="#000"/>
 
 
 
