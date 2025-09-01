@@ -1,0 +1,64 @@
+.breach-article-wrapper {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.breach-hero-banner {
+  background-image: url('https://cloud.kaphi.in/images/21655.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.hero-overlay-section {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-overlay-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.breach-article-content {
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.breach-article-content section {
+  margin-bottom: 32px;
+}
+
+.breach-article-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.breach-article-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.breach-article-content p {
+  color: #4B5563;
+  margin-bottom: 16px;
+}
+
+.breach-article-content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.breach-article-content li {
+  margin-bottom: 8px;
+}

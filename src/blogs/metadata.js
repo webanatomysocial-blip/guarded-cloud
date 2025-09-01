@@ -1,19 +1,13 @@
 export const blogMetadata = [
   {
-    id: 'Blog1',
-    title: 'lorem ipsum dolor',
-    excerpt: 'lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque sapiente ex minus! Ipsa iure suscipit vero accusantium? Accusantium dolores nesciunt porro sint cupiditate sed deserunt, illum obcaecati adipisci, maiores delectus!',
-    image: 'https://aecsastra1.mosol9.in/wp-content/uploads/2025/04/How-does-it-work-image_-min-1.jpg', // Image path
-    // date: '2025-08-10',
+    id: "Breach-cost-50-person-company",
+    title: "How Much Does a Breach Really Cost a 50-Person Company?",
+    slug: "/blog/breach-cost-50-person-company",
+    metaDescription: "A practical way to estimate breach impact for a 50-employee company—downtime, lost deals, recovery work, and insurance—without hand-wavy scare tactics.",
+    excerpt: "Big-enterprise breach numbers don’t help SMBs plan. Use this simple worksheet to estimate your own exposure and decide what’s worth investing in before you need it.",
+    image: "https://cloud.kaphi.in/images/21655.jpg",
+    date: "2025-08-26"
   },
-  {
-    id: 'Blog2',
-    title: 'lorem ipsum',
-    excerpt: 'lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque sapiente ex minus! Ipsa iure suscipit vero accusantium? Accusantium dolores nesciunt porro sint cupiditate sed deserunt, illum obcaecati adipisci, maiores delectus!',
-    image: 'https://aecsastra1.mosol9.in/wp-content/uploads/2025/04/How-does-it-work-image_-min-1.jpg', // Image path
-    // date: '2025-08-10',
-  },
-  // Add more entries
 ];
 
 // Preload images
