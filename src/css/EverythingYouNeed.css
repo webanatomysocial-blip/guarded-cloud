@@ -70,3 +70,13 @@ display: flex;
   color: #03253f; /* Darker text on hover */
   text-decoration: none;
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+}

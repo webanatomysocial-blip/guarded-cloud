@@ -96,3 +96,28 @@
 .carousel-icon {
   background-color: transparent;
 }
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .carousel-section {
+  padding: 60px 20px;
+}
+.carousel-arrow{
+  display: none;
+}
+.video-wrapper{
+  width: 100%;
+  height: 30vh;
+}
+.carousel-indicators {
+  margin-top: -50px;
+}
+}

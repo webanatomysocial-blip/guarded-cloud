@@ -8,6 +8,9 @@ import LightRays from "../components/LightRays"; // Adjust path if necessary
 import Contactus from "../components/ContactForm";
 import FAQTemplate from "../components/FaqTemplate";
 import Blogs from "../components/Blog"; // Import Blogs component
+import Azure  from '../assets/images/Home-images/1.png'
+import AWSs from '../assets/images/Home-images/2.png';
+import gcp from '../assets/images/Home-images/3.png';
 
 
 
@@ -87,19 +90,12 @@ function Home() {
 
         </div>
 
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 1" />
+           <a href="https://azure.microsoft.com/en-in"><img src={Azure} alt="Image 1" /></a> 
+           <a href="https://cloud.google.com/"><img src={AWSs} alt="Image 1" /></a> 
+           <a href="https://aws.amazon.com/"><img src={gcp} alt="Image 1" /></a> 
 
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 2" />
-
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-            <img src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=640,quality=75,format=auto/pentax_912257cd99/pentax_912257cd99.png" alt="Image 3" />
-
+          
+            
 
 
         <div className="blur-right">

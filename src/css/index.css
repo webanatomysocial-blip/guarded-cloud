@@ -22,6 +22,7 @@
   align-items: center;
   padding-top: 180px;
   /* width: 100%; */
+  /* padding: 0px; */
 }
 
 .hero-content {
@@ -60,11 +61,11 @@
 /* image section start */
 .images-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   overflow: hidden;
-  gap: 20px;
+  gap: 100px;
   padding: 20px;
   position: relative;
 }
@@ -198,3 +199,50 @@
 }
 
 /* about section End */
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .hero-section {
+
+  padding-top: 100px;
+
+}
+.hero-content{
+  width: 100%;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+}
+.banner .circle {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.images-section {
+ 
+  gap: 60px;
+  padding: 20px;
+}
+
+.images-section img {
+  width: 100%;
+  height: auto;
+  max-width: 250px; /* Adjust as needed */
+}
+
+}

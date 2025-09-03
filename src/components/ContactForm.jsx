@@ -87,7 +87,8 @@ export default function Contactus() {
       </div>
       <div className="contact-right">
         <h3>Contact</h3>
-        <p>Email: abcd@gmail.com</p>
+        <p href="mailto:info@guardedcloud.com">Email: info@guardedcloud.com</p>
+        <p href="mailto:info@guardedcloud.com">Address: coming soon</p>
         <p>Global | Remote | 24/7</p>
         <div className="box">
           <div className="content">Content here</div>

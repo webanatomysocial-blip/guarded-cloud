@@ -4,6 +4,8 @@ import EverythingYouNeed from "../components/EverythingYouNeed"; // Import Every
 // import Blogs from "../components/Blog";
 import aboutbanner from '../assets/images/about-images/About-page-home-banner.jpg';
 import missionvision from '../assets/images/about-images/mission-vision-img.jpg';
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import { Link } from "react-router-dom";
 
 import {
   FaShieldAlt,
@@ -269,6 +271,48 @@ export default function About() {
           </div>
         </section>
 
+
+
+
+        <TestimonialCarousel/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-images">
+            <div className="img1"></div>
+            <div className="img2"></div>
+            <div className="img3"></div>
+          </div>
+          <div className="cta-contents">
+            <h1 className="cta-heading">Ready to Master Cloud Compliance?</h1>
+            <p className="cta-text">
+              Simplify your compliance journey with our governance solutions tailored to your business.
+            </p>
+          </div>
+          <div className="cta-buttons">
+            <Link to="/Contact" className="blue-button">
+              Get Started
+            </Link>
+            <Link to="/Contact" className="transparent-button">
+              Watch Demo
+            </Link>
+          </div>
+        </div>
+      </div>
         {/* <Blogs /> */}
 
     </>
