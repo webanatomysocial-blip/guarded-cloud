@@ -1,25 +1,22 @@
 .testimonialcarousel-section {
-  padding: 0px 70px 0px 70px ;
-  /* background: white; */
+  padding: 0px 70px 0px 70px;
 }
 
 .swiper {
   width: 100%;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .testimonialcarousel-card {
   display: flex;
   background: #E0FFFF;
   width: 100%;
-  height: 500px;
+  height: 550px; 
   flex-direction: row;
 }
 
 .testimonialcarousel-img-container {
   flex: 1;
-  max-width: 340px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,70 +26,52 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  display: block;
 }
 
 .testimonialcarousel-content {
   flex: 2;
-  padding: 40px 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: #E0FFFF;
-}
-
-.testimonialcarousel-quote {
-  font-size: 40px;
-  color: #003366;
-  font-weight: bold;
-  margin-bottom: 16px;
-  display: block;
+  padding: 20px;
 }
 
 .testimonialcarousel-quote-img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 16px;
-  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .testimonialcarousel-text {
-  font-size: 20px;
-  font-family: "Barlow", sans-serif;
-  margin-bottom: 32px;
-  color: #222;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .testimonialcarousel-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialcarousel-name {
+  font-weight: bold;
   font-size: 18px;
-  font-weight: 700;
-  font-family: "Barlow", sans-serif;
-  color: #111;
 }
 
 .testimonialcarousel-role {
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Barlow", sans-serif;
-  color: #444;
+  font-size: 14px;
+  color: #555;
 }
 
-/* Swiper pagination dots */
-.swiper-pagination-bullets {
-  bottom: 0 !important;
+@media only screen and (max-width: 800px) {
+  .testimonialcarousel-card {
+    flex-direction: column;
+    height: 550px;
+  }
+  .testimonialcarousel-section {
+    padding: 40px 20px 20px 20px;
 }
-
-.swiper-pagination-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #000000 !important;
-  opacity: 1;
-  margin: 0 6px !important;
+.swiper {
+    width: 100%;
+    margin-top: 30px;
 }
-
-.swiper-pagination-bullet-active {
-  background: #646464;
 }

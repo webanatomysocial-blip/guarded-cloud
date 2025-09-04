@@ -5,7 +5,7 @@ import Contactus from "../components/ContactForm";
 function Contact() {
   return (
     
-    <section style={{marginTop: "100px"}}>
+    <section style={{marginTop: "60px"}}>
     <Contactus></Contactus>
     </section>
   );

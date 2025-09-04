@@ -23,35 +23,35 @@ export default function About() {
   return (
     <>
       <section className="about-banner-container">
-          <div className="about-inner-left">
-            <h2 className="main-heading">
-              Your Trusted Cloud Security Partner
-            </h2><br />
-            <p className="text">
-              At Guarded Cloud, we safeguard your cloud assets from cyber
-              threats, ensuring compliance and enabling secure growth.
-            </p><br />
-            <p className="text">
-              We specialize{" "}
-              <strong>
-                in Cloud Security Monitoring, Threat Detection, Infrastructure
-                Protection, IAM, Compliance & Governance
-              </strong>
-              , and <strong>Managed Detection & Response</strong>. Our solutions
-              adapt to startups or established SMBs seamlessly.
-            </p><br />
-            <p className="text">
-              With <strong>24/7 protection</strong>, proactive threat
-              intelligence, and expert support, we ensure your business operates
-              with confidence.
-            </p>
-          </div>
-          <div className="about-card-img">
-            <img
-              src={aboutbanner}
-              alt="Laptop workspace"
-            />
-          </div>
+        <div className="about-inner-left">
+          <h2 className="main-heading">
+            Your Trusted Cloud Security Partner
+          </h2><br />
+          <p className="text">
+            At Guarded Cloud, we safeguard your cloud assets from cyber
+            threats, ensuring compliance and enabling secure growth.
+          </p><br />
+          <p className="text">
+            We specialize{" "}
+            <strong>
+              in Cloud Security Monitoring, Threat Detection, Infrastructure
+              Protection, IAM, Compliance & Governance
+            </strong>
+            , and <strong>Managed Detection & Response</strong>. Our solutions
+            adapt to startups or established SMBs seamlessly.
+          </p><br />
+          <p className="text">
+            With <strong>24/7 protection</strong>, proactive threat
+            intelligence, and expert support, we ensure your business operates
+            with confidence.
+          </p>
+        </div>
+        <div className="about-card-img">
+          <img
+            src={aboutbanner}
+            alt="Laptop workspace"
+          />
+        </div>
       </section>
 
 
@@ -59,7 +59,7 @@ export default function About() {
 
 
 
-{/*     
+      {/*     
         <div className="about-services-section">
           <h2 className="main-heading" style={{textAlign: "center"}}>Our Expertise</h2>
 
@@ -155,7 +155,7 @@ export default function About() {
 
 
 
-<EverythingYouNeed  marginTop="-50px" Link="/contact" />
+      <EverythingYouNeed marginTop="-50px" Link="/contact" />
 
 
 
@@ -169,151 +169,148 @@ export default function About() {
 
 
 
-        {/* Mission & Vision */}
-        <h2 className="main-heading" style={{textAlign: "center"}}>What Drives Us Forward</h2>
-        <div className="about-mission-vision">
-        
-           <div className="about-card-our-mission-vision ">
-            <div className="icon">
-              <FaBullseye  className="service-icon" />
-            </div>
-            <h3 className="boxes-heading ">Our Mission</h3>
-            <p className="about-card-desc">
-              To deliver world-class cloud security services that protect our
-              clients' critical data, maintain compliance, and build lasting
-              clients' critical data, maintain compliance, and build lasting
-              trust.
-            </p>
+      {/* Mission & Vision */}
+      <h2 className="main-heading" style={{ textAlign: "center" }}>What Drives Us Forward</h2>
+      <div className="about-mission-vision">
+
+        <div className="about-card-our-mission-vision ">
+          <div className="icon">
+            <FaBullseye className="service-icon" />
           </div>
-         
-     
-
-
-
-          <div className="inner-about-mission-vision-right">
-            <img src={missionvision} alt="Mission and Vision" />
-
-          </div>
-
-
-           <div className="about-card-our-mission-vision ">
-            <div className="icon">
-              <FaEye  className="service-icon" />
-            </div>
-            <h3 className="boxes-heading">Our Vision</h3>
-            <p className="about-card-desc">
-              A world where every organization — regardless of size or location —
-              can harness the power of the cloud without compromising security.
-              can harness the power of the cloud without compromising security.
-            </p>
-          </div>
-
-
+          <h3 className="boxes-heading ">Our Mission</h3>
+          <p className="about-card-desc">
+            To deliver world-class cloud security services that protect our
+            clients' critical data, maintain compliance, and build lasting
+            clients' critical data, maintain compliance, and build lasting
+            trust.
+          </p>
         </div>
 
 
 
 
 
+        <div className="inner-about-mission-vision-right">
+          <img src={missionvision} alt="Mission and Vision" />
 
-        {/* Why Choose Us */}
-        <section className="about-why-choose">
-          <h2 className="main-heading" style={{textAlign: "center"}}>Why Choose Us</h2>
-          <div className="about-choose-grid">
-            <div className="about-choose-item">
-              <div className="icon">
-                <FaCogs  className="service-icon" />
-              </div>
-              <div>
-                <h4 className="boxes-heading">Deep Expertise</h4>
-                <p className="about-choose-desc">
-                  Comprehensive knowledge in public, private, and hybrid cloud
-                  security across all major platforms.
-                </p>
-              </div>
-            </div>
-            <div className="about-choose-item">
-              <div className="icon ">
-                <FaEye  className="service-icon" />
-              </div>
-              <div>
-                <h4 className="boxes-heading">24/7 Monitoring</h4>
-                <p className="about-choose-desc">
-                  Round-the-clock security monitoring with rapid incident response
-                  to protect your assets.
-                </p>
-              </div>
-            </div>
-            <div className="about-choose-item">
-              <div className="icon">
-                <FaCogs  className="service-icon" />
-              </div>
-              <div>
-                <h4 className="boxes-heading">Tailored Solutions</h4>
-                <p className="about-choose-desc">
-                  Customized security solutions designed specifically for SMBs and
-                  startups of all sizes.
-                </p>
-              </div>
-            </div>
-            <div className="about-choose-item">
-              <div className="icon">
-                <FaGlobe  className="service-icon" />
-              </div>
-              <div>
-                <h4 className="boxes-heading">Global Reach</h4>
-                <p className="about-choose-desc">
-                  Worldwide coverage with local understanding to serve businesses
-                  across all regions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-
-        <TestimonialCarousel/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div className="service-cta-section">
-        <div className="service-cta-content">
-          <div className="cta-images">
-            <div className="img1"></div>
-            <div className="img2"></div>
-            <div className="img3"></div>
-          </div>
-          <div className="cta-contents">
-            <h1 className="cta-heading">Ready to Master Cloud Compliance?</h1>
-            <p className="cta-text">
-              Simplify your compliance journey with our governance solutions tailored to your business.
-            </p>
-          </div>
-          <div className="cta-buttons">
-            <Link to="/Contact" className="blue-button">
-              Get Started
-            </Link>
-            <Link to="/Contact" className="transparent-button">
-              Watch Demo
-            </Link>
-          </div>
         </div>
+
+
+        <div className="about-card-our-mission-vision ">
+          <div className="icon">
+            <FaEye className="service-icon" />
+          </div>
+          <h3 className="boxes-heading">Our Vision</h3>
+          <p className="about-card-desc">
+            A world where every organization — regardless of size or location —
+            can harness the power of the cloud without compromising security.
+            can harness the power of the cloud without compromising security.
+          </p>
+        </div>
+
+
       </div>
-        {/* <Blogs /> */}
+
+
+
+
+
+
+      {/* Why Choose Us */}
+      <section className="about-why-choose">
+        <h2 className="main-heading" style={{ textAlign: "center" }}>Why Choose Us</h2>
+        <div className="about-choose-grid">
+          <div className="about-choose-item">
+            <div className="icon">
+              <FaCogs className="service-icon" />
+            </div>
+            <div>
+              <h4 className="boxes-heading">Deep Expertise</h4>
+              <p className="about-choose-desc">
+                Comprehensive knowledge in public, private, and hybrid cloud
+                security across all major platforms.
+              </p>
+            </div>
+          </div>
+          <div className="about-choose-item">
+            <div className="icon ">
+              <FaEye className="service-icon" />
+            </div>
+            <div>
+              <h4 className="boxes-heading">24/7 Monitoring</h4>
+              <p className="about-choose-desc">
+                Round-the-clock security monitoring with rapid incident response
+                to protect your assets.
+              </p>
+            </div>
+          </div>
+          <div className="about-choose-item">
+            <div className="icon">
+              <FaCogs className="service-icon" />
+            </div>
+            <div>
+              <h4 className="boxes-heading">Tailored Solutions</h4>
+              <p className="about-choose-desc">
+                Customized security solutions designed specifically for SMBs and
+                startups of all sizes.
+              </p>
+            </div>
+          </div>
+          <div className="about-choose-item">
+            <div className="icon">
+              <FaGlobe className="service-icon" />
+            </div>
+            <div>
+              <h4 className="boxes-heading">Global Reach</h4>
+              <p className="about-choose-desc">
+                Worldwide coverage with local understanding to serve businesses
+                across all regions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <TestimonialCarousel/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+              <p className="cta-text-white">
+                Protect your cloud environment with our advanced security monitoring solutions.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Get Started
+              </Link>
+              <Link to="/Contact" className="transparent-button">
+                Watch Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <Blogs /> */}
 
     </>
   );

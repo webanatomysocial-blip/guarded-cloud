@@ -80,7 +80,7 @@ function EverythingYouNeed(props) {
               </article>
             ))}
           </div>
-          <div style={{ marginTop: "40px" }} data-reveal>
+          <div className="data-reveal" style={{ marginTop: "40px" }} data-reveal>
             <Link className="blue-button" to={props.Link}>
               Speak to an Expert <ArrowRight className="arrow-icon" />
             </Link>

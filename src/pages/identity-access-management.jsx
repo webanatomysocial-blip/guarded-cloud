@@ -189,29 +189,26 @@ function IdentityAccessManagement() {
         </div>
       </div>
 
-      <div className="service-cta-section">
-        <div className="service-cta-content">
-          <div className="cta-images">
-            <div className="img1"></div>
-            <div className="img2"></div>
-            <div className="img3"></div>
-          </div>
-          <div className="cta-contents">
-            <h1 className="cta-heading">Ready to Secure Your Identities?</h1>
-            <p className="cta-text">
-              Enhance security and streamline access with our IAM solutions tailored to your business.
-            </p>
-          </div>
-          <div className="cta-buttons">
-            <Link to="/Contact" className="blue-button">
-              Get Started
-            </Link>
-            <Link to="/Contact" className="transparent-button">
-              Watch Demo
-            </Link>
-          </div>
-        </div>
-      </div>
+        <section className="service-cta-section">
+              <div className="service-cta-content">
+                <div className="cta-flex-container">
+                  <div className="cta-text">
+                    <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+                    <p className="cta-text-white">
+                      Protect your cloud environment with our advanced security monitoring solutions.
+                    </p>
+                  </div>
+                  <div className="cta-buttons">
+                    <Link to="/Contact" className="blue-button">
+                      Get Started
+                    </Link>
+                    <Link to="/Contact" className="transparent-button">
+                      Watch Demo
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </section>
     </>
   );
 }

@@ -11,6 +11,7 @@
   align-items: center;
   flex-direction: row;
 }
+
 .about-inner-left {
   width: 50%;
 }
@@ -23,7 +24,6 @@
 }
 
 .about-card-img img {
-
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -35,7 +35,6 @@
   padding: 0px 70px 100px 70px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 30px;
 }
 
@@ -54,13 +53,13 @@
   border: 1px solid #f0f0f0;
   transition: 0.3s;
   width: 32%;
-
   height: auto;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .about-card-our-mission-vision {
   background: white;
   padding: 20px;
@@ -75,9 +74,11 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .about-card-our-mission-vision:last-child {
   align-self: self-end;
 }
+
 .about-card-our-mission-vision:first-child {
   align-self: self-start;
 }
@@ -109,8 +110,9 @@
 
 /* Why Choose Us */
 .about-why-choose {
-  padding: 30px 70px 100px 70px;
+  padding: 30px 70px 40px 70px;
 }
+
 .about-choose-grid {
   display: flex;
   padding: 3rem;
@@ -121,9 +123,131 @@
   border-radius: 20px;
   margin-top: 30px;
 }
+
+.data-reveal {
+  margin-top: 40px !important;
+}
+
 .about-choose-item {
   display: flex;
   align-items: start;
   gap: 10px;
   flex-direction: column;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .about-banner-container {
+    padding: 100px 20px 60px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .about-inner-left {
+    width: 100%;
+  }
+
+  .about-card-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .everything-you-need-section {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 4px 12px rgba(60, 100, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-top: 40px;
+  }
+
+  .data-reveal {
+    margin-top: 20px !important;
+  }
+
+  .about-mission-vision {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 20px 60px 20px;
+  }
+
+  .inner-about-mission-vision-right {
+    width: 100%;
+    height: 100%;
+  }
+
+  .inner-about-mission-vision-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    border: 5px solid white;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .about-card-our-mission-vision {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-card-our-mission-vision:first-child,
+  .about-card-our-mission-vision:last-child {
+    align-self: center;
+  }
+
+  .about-why-choose {
+    padding: 0px 20px 30px 20px;
+  }
+
+  .about-choose-grid {
+    display: flex;
+    padding: 25px 20px 30px 20px;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #f0f0f0;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+
+
+
 }

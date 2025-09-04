@@ -1,11 +1,11 @@
 /* src/css/Blogs.css */
 .blogs-container {
-    width: 100%;
-    display: flex
-;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.whole-blog-section{
+
+.whole-blog-section {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -128,4 +128,27 @@
   font-size: 1.5rem;
   color: #666;
   padding: 40px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .whole-blog-section {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px ;
+  }
+
+  .blog-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+
+
 }

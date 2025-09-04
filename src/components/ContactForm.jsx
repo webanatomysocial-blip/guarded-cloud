@@ -5,7 +5,7 @@ export default function Contactus() {
   return (
     <section className="contact-us-section" id="contact">
       <div className="contact-container">
-        <h2>Talk to a Cloud Security Expert</h2>
+        <h2 className="main-heading">Talk to a Cloud Security Expert</h2>
         <p>
           Fill out the form below or use WhatsApp. We’ll get back within one
           business day.
@@ -33,33 +33,33 @@ export default function Contactus() {
               />
             </div>
           </div>
-<div className="field-row"> 
-          <div className="field">
-            <label htmlFor="company">Company</label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              placeholder="Your Company"
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="service">Service of Interest</label>
-            <select id="service" name="service">
-              <option value="Monitoring & Threat Detection">
-                Monitoring & Threat Detection
-              </option>
-              <option value="Infrastructure Protection">
-                Infrastructure Protection
-              </option>
-              <option value="IAM">Identity & Access Management (IAM)</option>
-              <option value="Compliance & Governance">
-                Compliance & Governance
-              </option>
-              <option value="Advisory & Managed">Advisory & Managed</option>
-              <option value="MDR">Managed Detection & Response</option>
-            </select>
-          </div>
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="company">Company</label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder="Your Company"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="Monitoring & Threat Detection">
+                  Monitoring & Threat Detection
+                </option>
+                <option value="Infrastructure Protection">
+                  Infrastructure Protection
+                </option>
+                <option value="IAM">Identity & Access Management (IAM)</option>
+                <option value="Compliance & Governance">
+                  Compliance & Governance
+                </option>
+                <option value="Advisory & Managed">Advisory & Managed</option>
+                <option value="MDR">Managed Detection & Response</option>
+              </select>
+            </div>
           </div>
           <div className="field">
             <label htmlFor="message">Project Details</label>
@@ -86,11 +86,11 @@ export default function Contactus() {
         </form>
       </div>
       <div className="contact-right">
-        <h3>Contact</h3>
+        <h3 className="main-heading-White">Contact</h3>
         <p href="mailto:info@guardedcloud.com">Email: info@guardedcloud.com</p>
         <p href="mailto:info@guardedcloud.com">Address: coming soon</p>
         <p>Global | Remote | 24/7</p>
-        <div className="box">
+        <div className="box only-windows">
           <div className="content">Content here</div>
         </div>
         <a href="#">What's app</a>

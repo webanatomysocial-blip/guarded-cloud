@@ -4,6 +4,7 @@ import "../css/CarouselSection.css";
 
 function CarouselSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
   const slides = [
     {
       tab: "Cloud Security Monitoring & Threat Detection",
@@ -45,7 +46,26 @@ function CarouselSection() {
     setCurrentSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
   };
 
-  // Preload videos to reduce loading delays (optional, for better performance)
+  // Touch swipe handling
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!touchStart) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const difference = touchStart - touchEnd;
+
+    if (difference > 50) {
+      handleNext(); // swipe left → next
+    }
+    if (difference < -50) {
+      handlePrev(); // swipe right → prev
+    }
+
+    setTouchStart(null);
+  };
+
   useEffect(() => {
     const preloadVideos = slides.map((slide) => {
       const video = document.createElement("video");
@@ -54,10 +74,14 @@ function CarouselSection() {
       return video;
     });
     return () => preloadVideos.forEach((video) => video.remove());
-  }, );
+  }, []);
 
   return (
-    <section className="carousel-section">
+    <section
+      className="carousel-section"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="carousel-container">
         <button
           className="carousel-arrow prev"
@@ -72,7 +96,7 @@ function CarouselSection() {
           </h3>
           <div className="video-wrapper">
             <video
-              key={currentSlide} // Ensure video re-renders on slide change
+              key={currentSlide}
               src={slides[currentSlide].video}
               className="carousel-video"
               autoPlay

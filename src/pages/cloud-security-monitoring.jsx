@@ -187,30 +187,26 @@ function CloudSecurityMonitoring() {
           </div>
         </div>
       </div>
-
-      <div className="service-cta-section">
+      <section className="service-cta-section">
         <div className="service-cta-content">
-          <div className="cta-images">
-            <div className="img1"></div>
-            <div className="img2"></div>
-            <div className="img3"></div>
-          </div>
-          <div className="cta-contents">
-            <h1 className="cta-heading">Ready to Secure Your Cloud?</h1>
-            <p className="cta-text">
-              Protect your cloud environment with our advanced security monitoring solutions.
-            </p>
-          </div>
-          <div className="cta-buttons">
-            <Link to="/Contact" className="blue-button">
-              Get Started
-            </Link>
-            <Link to="/Contact" className="transparent-button">
-              Watch Demo
-            </Link>
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+              <p className="cta-text-white">
+                Protect your cloud environment with our advanced security monitoring solutions.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Get Started
+              </Link>
+              <Link to="/Contact" className="transparent-button">
+                Watch Demo
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
