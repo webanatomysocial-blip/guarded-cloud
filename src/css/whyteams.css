@@ -1,10 +1,8 @@
 .why-team-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* background-color: #0f172a; */
+  align-items: center; 
   padding: 100px 70px 0px 70px;
-  /* color: #cbd5e1; */
   gap: 50px;
 }
 

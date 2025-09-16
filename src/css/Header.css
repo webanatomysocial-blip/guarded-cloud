@@ -516,13 +516,13 @@ body {
   .mobile-menu {
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 250px;
+    left: -110%;
+    width: 100%;
     height: 100vh;
     background-color: #03253f;
     color: white;
     z-index: 9999;
-    padding: 40px 20px;
+    padding: 40px 0px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -530,7 +530,7 @@ body {
   }
 
   .mobile-menu.open {
-    left: -2px;
+    left: 0;
   }
 
   .mobile-nav-list {
@@ -538,6 +538,7 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
+    
     flex-direction: column;
     gap: 15px;
   }
@@ -546,6 +547,13 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding-left: 20px;
+  }
+  .mobile-nav-list li span {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 20px;
   }
 
   .mobile-nav-list li a:hover {
@@ -553,9 +561,12 @@ body {
   }
 
   .close-icon {
-    align-self: flex-end;
+    align-self: flex-start;
     font-size: 28px;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   .overlay {
@@ -622,18 +633,20 @@ body {
 
   .mobile-submenu {
     list-style: none;
-    padding-left: 15px;
+    /* padding-left: 20px; */
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
+    background-color: #0a395e;
   }
 
   .mobile-submenu li a {
     color: #fff;
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 30px;
   }
 
   .mobile-submenu li a:hover {

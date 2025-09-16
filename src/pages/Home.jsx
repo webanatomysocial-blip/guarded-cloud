@@ -11,6 +11,7 @@ import Blogs from "../components/Blog"; // Import Blogs component
 import Azure  from '../assets/images/Home-images/1.png'
 import AWSs from '../assets/images/Home-images/2.png';
 import gcp from '../assets/images/Home-images/3.png';
+import { VscNoNewline } from "react-icons/vsc";
 
 
 
@@ -48,7 +49,7 @@ function Home() {
 
 
 
-      <section className="hero-section">
+      <section className="hero-section" >
         <div className="hero-content">
           <p className="main-big-heading">
             Empower Your Future: <br /> Secure Your Cloud Now
@@ -85,7 +86,7 @@ function Home() {
 
 {/* images section start  */}
 
-      <section className="images-section">
+      <section className="images-section" >
         <div className="blur-left">
 
         </div>
@@ -114,7 +115,13 @@ function Home() {
 
       {/* Everything You Need Section Endssssssssss */}
 
+
+
+
+
+      {/* Why teams section start */}
 <Whyteams/>
+      {/* Why teams section End */}
 
 
 
@@ -178,7 +185,7 @@ function Home() {
 
 {/* about us section End */}
 
-<Blogs backgroundColor="#fff"  textColor="#000"/>
+<Blogs backgroundColor="#fff"  textColor="#000" marginTop="60px" />
 
 
 

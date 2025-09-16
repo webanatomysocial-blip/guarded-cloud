@@ -74,7 +74,7 @@ function CarouselSection() {
       return video;
     });
     return () => preloadVideos.forEach((video) => video.remove());
-  }, []);
+  },);
 
   return (
     <section

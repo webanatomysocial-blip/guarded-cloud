@@ -29,7 +29,7 @@ const Blogs = (props) => {
   };
 
   return (
-    <div className=' whole-blog-section' style={{ backgroundColor: props.backgroundColor }}>
+    <div className=' whole-blog-section' style={{ backgroundColor: props.backgroundColor , paddingTop:props.marginTop }}>
     <div className="blogs-container">
       <h1 className="main-heading" style={{textAlign: 'center', marginBottom: '30px', color: props.textColor}}>Our Blogs</h1>
       <div className="blogs-grid">
