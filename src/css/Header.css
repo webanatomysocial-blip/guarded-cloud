@@ -1,12 +1,8 @@
 @font-face {
   font-family: 'Rock';
-  /* Name you want to use for the font */
   src: url('../assets/fonts/ROCK.TTF') format('truetype');
-  /* Path to the .ttf file */
   font-weight: normal;
-  /* Adjust as needed (e.g., bold, 700) */
   font-style: normal;
-  /* Adjust as needed (e.g., italic) */
 }
 
 html {
@@ -259,6 +255,7 @@ body {
   border: #fff 1px solid;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: fit-content;
+  cursor: pointer;
 }
 
 .transparent-button:hover {
@@ -291,21 +288,27 @@ body {
 
 
 .header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(30px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 0.5px solid rgba(255, 255, 255, 1);
-  width: 70%;
+  width: 85%;
   position: fixed;
   top: 30px;
-  left: calc(100% - 85%);
+  left: calc(100% - 93%);
   z-index: 1000;
   border-radius: 50px;
   padding: 20px;
-  padding-left: 30px;
+  transition: background 0.3s ease;
+}
+
+.header.white-bg {
+  background: #FFFFFF; 
+  backdrop-filter: none; 
+  -webkit-backdrop-filter: none;
 }
 
 .header .logo-container {
@@ -315,7 +318,7 @@ body {
 }
 
 .logo img {
-  height: 35px;
+  height: 45px;
   width: auto;
   margin-bottom: -10px;
 }

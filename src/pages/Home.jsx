@@ -1,6 +1,6 @@
 // import Header from "../components/Header";
 import "../css/index.css";
-import { ArrowRight } from 'react-bootstrap-icons'; // Import ArrowRight icon
+import { ArrowRight, Link } from 'react-bootstrap-icons'; // Import ArrowRight icon
 import CarouselSection from "../components/CarouselSection"; // Import CarouselSection component
 import EverythingYouNeed from "../components/EverythingYouNeed"; // Import EverythingYouNeed component
 import Whyteams from "../components/Why-teams"; // Import whyteams component
@@ -8,12 +8,12 @@ import LightRays from "../components/LightRays"; // Adjust path if necessary
 import Contactus from "../components/ContactForm";
 import FAQTemplate from "../components/FaqTemplate";
 import Blogs from "../components/Blog"; // Import Blogs component
-import Azure  from '../assets/images/Home-images/1.png'
+import Azure from '../assets/images/Home-images/1.png'
 import AWSs from '../assets/images/Home-images/2.png';
 import gcp from '../assets/images/Home-images/3.png';
 import { VscNoNewline } from "react-icons/vsc";
-
-
+import videoFile from '../assets/banner-video.mp4';
+import bannnnnnnn from '../assets/banner-img-after-vedeo.jpg';
 
 function Home() {
 
@@ -22,13 +22,13 @@ function Home() {
 
 
   return (
-   
-   <>
+
+    <>
 
 
-   {/* LightRays component at the top */}
-      
-        <LightRays
+      {/* LightRays component at the top */}
+
+      {/* <LightRays
           raysOrigin="center-center"
           raysColor="#fff" // Custom color (teal)
           raysSpeed={0.5}
@@ -42,76 +42,92 @@ function Home() {
           noiseAmount={0.3}
           distortion={0.5}
           className="home-light-rays"
+        /> */}
+
+
+      <section className="home-video-section-hero" id="home-banner">
+
+        <video
+          src={videoFile}
+          noControls
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="background-video-home"
         />
 
-   
 
+   <a href="/contact" className="transparent-button-link">
+          </a>
+      
 
+      </section>
 
+      <section className="hero-section">
 
-      <section className="hero-section" >
         <div className="hero-content">
-          <p className="main-big-heading">
-            Empower Your Future: <br /> Secure Your Cloud Now
+          <p className="sub-heading">Empower Your Future <br /> </p>
+          <p className="main-heading">
+             Secure Your Cloud Now
           </p>
-          <p className="sub-heading">
-           Robust Security for SMBs & Startups
+          <p className="text">
+            Protecting sensitive data and workloads in the cloud requires more than just basic security controls. With evolving cyber threats, it’s essential to have continuous monitoring and intelligent threat detection in place.
 
           </p>
           <a href="#contact" className="blue-button">Start for free
             <ArrowRight className="arrow-icon" />
           </a>
-
-
-         <div className="banner">
-           <span >Threat Defense: Proactive monitoring.</span> |
-           <span className="circle">⦿</span> {/* Using a Unicode circle as a placeholder icon */}
-           <span>Compliance: Standards met easily.</span>
-         </div>
-
- 
-
+      
         </div>
+
+        
+  <div className="right-banner-image">
+    <img src={bannnnnnnn} alt="" />
+  </div>
+
+
+
       </section>
-{/* carosule section start */}
+      {/* carosule section start */}
 
-       <CarouselSection />
+      {/* <CarouselSection /> */}
 
-{/* carosule section End */}
-
-
+      {/* carosule section End */}
 
 
 
 
-{/* images section start  */}
+
+
+      {/* images section start  */}
 
       <section className="images-section" >
         <div className="blur-left">
 
         </div>
 
-           <a href="https://azure.microsoft.com/en-in"><img src={Azure} alt="Image 1" /></a> 
-           <a href="https://cloud.google.com/"><img src={AWSs} alt="Image 1" /></a> 
-           <a href="https://aws.amazon.com/"><img src={gcp} alt="Image 1" /></a> 
+        <a href="https://azure.microsoft.com/en-in"><img src={Azure} alt="Image 1" /></a>
+        <a href="https://cloud.google.com/"><img src={AWSs} alt="Image 1" /></a>
+        <a href="https://aws.amazon.com/"><img src={gcp} alt="Image 1" /></a>
 
-          
-            
+
+
 
 
         <div className="blur-right">
 
-        </div>  
- 
+        </div>
+
       </section>
 
-{/* images section End */}
+      {/* images section End */}
 
 
 
       {/* Everything You Need Section start */}
 
- <EverythingYouNeed />
+      <EverythingYouNeed />
 
       {/* Everything You Need Section Endssssssssss */}
 
@@ -120,14 +136,14 @@ function Home() {
 
 
       {/* Why teams section start */}
-<Whyteams/>
+      <Whyteams />
       {/* Why teams section End */}
 
 
 
 
-{/* about us section start */}
-{/* <section className="about-section">
+      {/* about us section start */}
+      {/* <section className="about-section">
       <div className="about-container">
         <h2 className="main-heading-White">About Us</h2>
         <p className="text-white">
@@ -183,17 +199,17 @@ function Home() {
     </section> */}
 
 
-{/* about us section End */}
+      {/* about us section End */}
 
-<Blogs backgroundColor="#fff"  textColor="#000" marginTop="60px" />
-
-
+      <Blogs backgroundColor="#fff" textColor="#000" marginTop="60px" />
 
 
 
-{/* contact form start  */}
-<Contactus/>
-{/* contact form End */}
+
+
+      {/* contact form start  */}
+      <Contactus />
+      {/* contact form End */}
 
 
 

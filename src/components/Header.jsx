@@ -19,7 +19,9 @@ function Header() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // Mobile submenu state
+  const [isHeaderWhite, setIsHeaderWhite] = useState(false); // New state for header background
   const dropdownRef = useRef(null);
+  const headerRef = useRef(null); // Ref for the header element
   const debouncedHideMenuRef = useRef(null);
 
   // Debounced hide mega menu
@@ -44,11 +46,30 @@ function Header() {
     }
   };
 
-  useEffect(() => {
-    return () => {
-      getDebouncedHideMenu().cancel();
-    };
-  }, [getDebouncedHideMenu]);
+  // Intersection Observer to detect when header is over #home-banner
+useEffect(() => {
+  const homeBanner = document.getElementById("home-banner");
+
+  if (!homeBanner) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      // If the #home-banner is intersecting with the viewport, set header to white
+      setIsHeaderWhite(entry.isIntersecting);
+    },
+    {
+      root: null, // Use viewport as root
+      threshold: 0.1, // Trigger when 10% of #home-banner is visible
+    }
+  );
+
+  observer.observe(homeBanner);
+
+  return () => {
+    observer.disconnect(); // Cleanup observer on unmount
+    getDebouncedHideMenu().cancel();
+  };
+}, [getDebouncedHideMenu]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -58,7 +79,10 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    <header
+      className={`header ${isHeaderWhite ? "white-bg" : ""}`}
+      ref={headerRef}
+    >
       {/* Left logo */}
       <div className="logo-container">
         <Link to="/" className="logo">
@@ -164,27 +188,19 @@ function Header() {
           <li>
             <span
               className="mobile-nav-link"
-              onClick={() =>
-                setIsMobileServicesOpen(!isMobileServicesOpen)
-              }
+              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
             >
               Services <FaCaretDown />
             </span>
             {isMobileServicesOpen && (
               <ul className="mobile-submenu">
                 <li>
-                  <Link
-                    to="/cloud-security-monitoring"
-                    onClick={toggleMenu}
-                  >
+                  <Link to="/cloud-security-monitoring" onClick={toggleMenu}>
                     Cloud Security Monitoring & Threat Detection
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/cloud-infrastructure-protection"
-                    onClick={toggleMenu}
-                  >
+                  <Link to="/cloud-infrastructure-protection" onClick={toggleMenu}>
                     Cloud Infrastructure Protection
                   </Link>
                 </li>
@@ -194,26 +210,17 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/cloud-compliance-governance"
-                    onClick={toggleMenu}
-                  >
+                  <Link to="/cloud-compliance-governance" onClick={toggleMenu}>
                     Cloud Compliance & Governance
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/advisory-managed-security"
-                    onClick={toggleMenu}
-                  >
+                  <Link to="/advisory-managed-security" onClick={toggleMenu}>
                     Advisory & Managed Security Services
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/managed-detection-response"
-                    onClick={toggleMenu}
-                  >
+                  <Link to="/managed-detection-response" onClick={toggleMenu}>
                     Managed Detection and Response
                   </Link>
                 </li>
