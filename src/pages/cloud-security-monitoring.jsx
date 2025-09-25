@@ -137,7 +137,7 @@ function CloudSecurityMonitoring() {
 
         <div className="strength-right">
           <div className="stats-card">
-            <h3>SecureCloud</h3>
+            <h3>Guarded Cloud</h3>
             <h4>55% reduction in security incidents</h4>
             <p>
               Our proactive monitoring minimizes risks and ensures uninterrupted operations.

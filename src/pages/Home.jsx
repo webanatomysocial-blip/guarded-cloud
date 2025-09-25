@@ -14,6 +14,7 @@ import gcp from '../assets/images/Home-images/3.png';
 import { VscNoNewline } from "react-icons/vsc";
 import videoFile from '../assets/banner-video.mp4';
 import bannnnnnnn from '../assets/banner-img-after-vedeo.jpg';
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
 
@@ -24,6 +25,21 @@ function Home() {
   return (
 
     <>
+    <Helmet>
+        <title>Home - CloudSecure</title>
+        <meta
+          name="description"
+          content="Welcome to CloudSecure! Explore our cybersecurity services and solutions."
+        />
+        <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
+        <meta name="robots" content="index, follow" />
+        {/* <meta property="og:title" content="Home - CloudSecure" />
+        <meta property="og:description" content="Welcome to CloudSecure! Explore our cybersecurity services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+        <link rel="canonical" href="https://yourwebsite.com/" /> */}
+      </Helmet>
 
 
       {/* LightRays component at the top */}

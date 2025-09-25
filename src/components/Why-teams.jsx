@@ -5,7 +5,7 @@ function WhyTeams() {
   return (
     <section className="why-team-section">
       <div className="content-left">
-        <h2 className="main-heading">Why teams choose CloudSecure</h2>
+        <h2 className="main-heading">Why teams choose Guarded Cloud</h2>
         <ul className="text">
           <li><strong>Faster time-to-value</strong> — deploy controls within days, not months.</li>
           <li><strong>Compliance ready</strong> — GDPR, ISO 27001, SOC 2 guidance baked-in.</li>
