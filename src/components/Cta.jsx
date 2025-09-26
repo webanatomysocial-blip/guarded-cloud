@@ -9,9 +9,9 @@ const Cta = () => {
                 <div className="service-cta-content">
                     <div className="cta-flex-container">
                         <div className="cta-text">
-                            <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+                            <h2 className="cta-heading">Book a FREE Security Assessment</h2>
                             <p className="cta-text-white">
-                                Protect your cloud environment with our advanced security monitoring solutions.
+                                Talk to an Engineer
                             </p>
                         </div>
                         <div className="cta-buttons">

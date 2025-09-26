@@ -7,9 +7,12 @@ import {
   FaShieldAlt,
   FaCloud,
   FaUserShield,
-  FaBalanceScale,
-  FaClipboardCheck,
-  FaEye,
+  FaNetworkWired,
+  FaEnvelopeOpenText,
+  FaLock,
+  FaBug,
+  FaDatabase,
+  FaLifeRing,
 } from "react-icons/fa";
 import debounce from "lodash.debounce";
 import "../css/Header.css";
@@ -19,9 +22,9 @@ function Header() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // Mobile submenu state
-  const [isHeaderWhite, setIsHeaderWhite] = useState(false); // New state for header background
+  const [isHeaderWhite, setIsHeaderWhite] = useState(false); // Header background state
   const dropdownRef = useRef(null);
-  const headerRef = useRef(null); // Ref for the header element
+  const headerRef = useRef(null);
   const debouncedHideMenuRef = useRef(null);
 
   // Debounced hide mega menu
@@ -54,19 +57,18 @@ function Header() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // If the #home-banner is intersecting with the viewport, set header to white
         setIsHeaderWhite(entry.isIntersecting);
       },
       {
-        root: null, // Use viewport as root
-        threshold: 0.1, // Trigger when 10% of #home-banner is visible
+        root: null,
+        threshold: 0.1,
       }
     );
 
     observer.observe(homeBanner);
 
     return () => {
-      observer.disconnect(); // Cleanup observer on unmount
+      observer.disconnect();
       getDebouncedHideMenu().cancel();
     };
   }, [getDebouncedHideMenu]);
@@ -74,7 +76,7 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
-      setIsMobileServicesOpen(false); // Close submenu when closing mobile menu
+      setIsMobileServicesOpen(false);
     }
   };
 
@@ -106,16 +108,13 @@ function Header() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <span className="nav-link">
+            <Link to="/solutions" className="nav-link">
               Solutions <FaCaretDown className="dropdown-icon" />
-            </span>
+            </Link>
             <div className={`mega-menu ${isMegaMenuOpen ? "open" : ""}`}>
               <div className="inner-mega-menu">
                 <div className="mega-item">
-                  <FaEye className="mega-icon" />
-                  {/* <Link to="/cloud-security-monitoring">
-                    Cloud Security Monitoring & Threat Detection
-                  </Link> */}
+                  <FaCloud className="mega-icon" />
                   <Link to="/cloud-security-posture">
                     Cloud Security Posture (CSPM)
                   </Link>
@@ -127,78 +126,89 @@ function Header() {
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaCloud className="mega-icon" />
-                  {/* <Link to="/cloud-infrastructure-protection">
-                    Cloud Infrastructure Protection
-                  </Link> */}
+                  <FaUserShield className="mega-icon" />
                   <Link to="/zero-trust-identity">
                     Zero Trust & Identity
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaUserShield className="mega-icon" />
-                  {/* <Link to="/identity-access-management">
-                    Identity & Access Management (IAM)
-                  </Link> */}
+                  <FaNetworkWired className="mega-icon" />
                   <Link to="/firewall-network-security">
                     Firewall & Network Security (Palo Alto focus)
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaBalanceScale className="mega-icon" />
-                  {/* <Link to="/cloud-compliance-governance">
-                    Cloud Compliance & Governance
-                  </Link> */}
+                  <FaEnvelopeOpenText className="mega-icon" />
                   <Link to="/email-collaboration-security">
                     Email & Collaboration Security
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaClipboardCheck className="mega-icon" />
-                  {/* <Link to="/advisory-managed-security">
-                    Advisory & Managed Security Services
-                  </Link> */}
+                  <FaLock className="mega-icon" />
                   <Link to="/data-protection-dlp">
                     Data Protection & DLP
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaClipboardCheck className="mega-icon" />
-
+                  <FaBug className="mega-icon" />
                   <Link to="/vulnerability-patch-management">
                     Vulnerability & Patch Management
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaClipboardCheck className="mega-icon" />
+                  <FaDatabase className="mega-icon" />
                   <Link to="/backup-disaster-recovery">
                     Backup & Disaster Recovery
                   </Link>
                 </div>
                 <div className="mega-item">
-                  <FaClipboardCheck className="mega-icon" />
+                  <FaLifeRing className="mega-icon" />
                   <Link to="/incident-response-retainer">
                     Incident Response Retainer
                   </Link>
                 </div>
-
               </div>
             </div>
           </li>
 
           <li>
-            <Link to="/about" className="nav-link">
-              About
+            <Link to="/industries" className="nav-link">
+              Industries
             </Link>
           </li>
           <li>
-            <Link to="/blogs" className="nav-link">
-              Blog
+            <Link to="/how-we-work" className="nav-link">
+              How We Work
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" className="nav-link">
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link to="/security" className="nav-link">
+              Security
+            </Link>
+          </li>
+          <li>
+            <Link to="/case-studies" className="nav-link">
+              Case Studies
+            </Link>
+          </li>
+          <li>
+            <Link to="/resources" className="nav-link">
+              Resources
             </Link>
           </li>
           <li>
             <Link to="/contact" className="nav-link">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-link">
+              About
             </Link>
           </li>
         </ul>
@@ -225,56 +235,105 @@ function Header() {
               className="mobile-nav-link"
               onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
             >
-              Services <FaCaretDown />
+              Solutions <FaCaretDown />
             </span>
             {isMobileServicesOpen && (
               <ul className="mobile-submenu">
                 <li>
-                  <Link to="/cloud-security-monitoring" onClick={toggleMenu}>
-                    Cloud Security Monitoring & Threat Detection
+                  <FaCloud className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/cloud-security-posture" onClick={toggleMenu}>
+                    Cloud Security Posture (CSPM)
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cloud-infrastructure-protection" onClick={toggleMenu}>
-                    Cloud Infrastructure Protection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/identity-access-management" onClick={toggleMenu}>
-                    Identity & Access Management (IAM)
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/cloud-compliance-governance" onClick={toggleMenu}>
-                    Cloud Compliance & Governance
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/advisory-managed-security" onClick={toggleMenu}>
-                    Advisory & Managed Security Services
-                  </Link>
-                </li>
-                <li>
+                  <FaShieldAlt className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
                   <Link to="/managed-detection-response" onClick={toggleMenu}>
-                    Managed Detection and Response
+                    Managed Detection and Response (MDR/XDR)
+                  </Link>
+                </li>
+                <li>
+                  <FaUserShield className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/zero-trust-identity" onClick={toggleMenu}>
+                    Zero Trust & Identity
+                  </Link>
+                </li>
+                <li>
+                  <FaNetworkWired className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/firewall-network-security" onClick={toggleMenu}>
+                    Firewall & Network Security
+                  </Link>
+                </li>
+                <li>
+                  <FaEnvelopeOpenText className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/email-collaboration-security" onClick={toggleMenu}>
+                    Email & Collaboration Security
+                  </Link>
+                </li>
+                <li>
+                  <FaLock className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/data-protection-dlp" onClick={toggleMenu}>
+                    Data Protection & DLP
+                  </Link>
+                </li>
+                <li>
+                  <FaBug className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/vulnerability-patch-management" onClick={toggleMenu}>
+                    Vulnerability & Patch Management
+                  </Link>
+                </li>
+                <li>
+                  <FaDatabase className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/backup-disaster-recovery" onClick={toggleMenu}>
+                    Backup & Disaster Recovery
+                  </Link>
+                </li>
+                <li>
+                  <FaLifeRing className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
+                  <Link to="/incident-response-retainer" onClick={toggleMenu}>
+                    Incident Response Retainer
                   </Link>
                 </li>
               </ul>
             )}
           </li>
           <li>
-            <Link to="/about" onClick={toggleMenu}>
-              About
+            <Link to="/industries" onClick={toggleMenu}>
+              Industries
             </Link>
           </li>
           <li>
-            <Link to="/blogs" onClick={toggleMenu}>
-              Blog
+            <Link to="/how-we-work" onClick={toggleMenu}>
+              How We Work
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" onClick={toggleMenu}>
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link to="/security" onClick={toggleMenu}>
+              Security
+            </Link>
+          </li>
+          <li>
+            <Link to="/case-studies" onClick={toggleMenu}>
+              Case Studies
+            </Link>
+          </li>
+          <li>
+            <Link to="/resources" onClick={toggleMenu}>
+              Resources
             </Link>
           </li>
           <li>
             <Link to="/contact" onClick={toggleMenu}>
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={toggleMenu}>
+              About
             </Link>
           </li>
         </ul>

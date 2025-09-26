@@ -1,0 +1,66 @@
+.security-main {
+    padding: 160px 70px 100px 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.security-container {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 50px 30px;
+}
+
+.security-left-container {
+    width: 40%;
+    height: 100%;
+    background-color: #04243f;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 20px 40px 20px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.security-right-container {
+    height: 100%;
+    width: 60%;
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.section-card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-icon {
+    font-size: 24px;
+    color: #333;
+}
+
+.feature-text h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.feature-text p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+}

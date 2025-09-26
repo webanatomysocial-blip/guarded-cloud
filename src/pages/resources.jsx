@@ -1,19 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Contactus from "../components/ContactForm";
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
+import "../css/Header.css";
+import "../css/resources.css";
 
-function Contact() {
+import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+const Resources = () => {
   return (
-    <>
-     <Helmet>
-        <title>Contact | Guarded Cloud
+   <>
+   <Helmet>
+        <title>Resources | Guarded Cloud
 
         </title>
         <meta
           name="description"
-          content="  Reach our security engineers for assessments, pricing, and partnership.
-"
+          content=" Guides, checklists, and insights on cloud security, Zero Trust, MDR, and compliance."
         />
 
         {/* <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
@@ -25,11 +25,8 @@ function Contact() {
         <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
         <link rel="canonical" href="https://yourwebsite.com/" /> */}
       </Helmet>
-    <section style={{marginTop: "60px"}}>
-    <Contactus></Contactus>
-    </section>
-    </>
-  );
+   </>
+  )
 }
 
-export default Contact;
+export default Resources;

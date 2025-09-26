@@ -6,6 +6,7 @@ import aboutbanner from '../assets/images/about-images/About-page-home-banner.jp
 import missionvision from '../assets/images/about-images/mission-vision-img.jpg';
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 import {
   FaShieldAlt,
@@ -22,6 +23,23 @@ import {
 export default function About() {
   return (
     <>
+     <Helmet>
+            <title> About Guarded Cloud
+            </title>
+            <meta
+              name="description"
+              content=" Our mission is to make cloud security simple, visible, and reliable for every sized team"
+            />
+    
+            {/* <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
+            <meta name="robots" content="index, follow" /> */}
+            {/* <meta property="og:title" content="Home - CloudSecure" />
+            <meta property="og:description" content="Welcome to CloudSecure! Explore our cybersecurity services." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://yourwebsite.com/" />
+            <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+            <link rel="canonical" href="https://yourwebsite.com/" /> */}
+          </Helmet>
       <section className="about-banner-container">
         <div className="about-inner-left">
           <h2 className="main-heading">
