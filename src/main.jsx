@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Blogs from './components/Blog';
 import BlogPage from './pages/BlogPage';
 import CloudSecurityMonitoring from './pages/cloud-security-monitoring';
+import CloudSecurityPosture from './pages/cloud-security-posture';
 import CloudInfrastructureProtection from './pages/cloud-infrastructure-protection';
 import IdentityAccessManagement from './pages/identity-access-management';
 import CloudComplianceGovernance from './pages/cloud-compliance-governance';
@@ -19,6 +20,13 @@ import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import './css/Header.css';
 import Lenis from '@studio-freight/lenis';
+import ZeroTtrustIdentity from './pages/zero-trust-identity';
+import FirewallNetworkSecurity from './pages/firewall-network-security';
+import EmailCollaborationSecurity from './pages/email-collaboration-security';
+import DataProtectiondlp from './pages/data-protection-dlp';
+import VulnerabilityPatchManagement from './pages/vulnerability-patch-management';
+import BackupDisasterRecovery from './pages/backup-disaster-recovery';
+import IncidentResponseRetainer from './pages/incident-response-retainer';
 
 console.log('Main.jsx loaded');
 
@@ -80,12 +88,25 @@ createRoot(document.getElementById('root')).render(
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:blogName" element={<BlogPage />} />
-            <Route path="/cloud-security-monitoring" element={<CloudSecurityMonitoring />} />
-            <Route path="/cloud-infrastructure-protection" element={<CloudInfrastructureProtection />} />
+            
+            <Route path="/cloud-security-posture" element={<CloudSecurityPosture />} />
+            <Route path="/managed-detection-response" element={<ManagedDetectionResponse />} />
+            <Route path="/zero-trust-identity" element={<ZeroTtrustIdentity />} />
+            <Route path="/firewall-network-security" element={<FirewallNetworkSecurity />} />
+            <Route path="/email-collaboration-security" element={<EmailCollaborationSecurity />} />
+            <Route path="/data-protection-dlp" element={<DataProtectiondlp />} />
+            <Route path="/vulnerability-patch-management" element={<VulnerabilityPatchManagement />} />
+            <Route path="/backup-disaster-recovery" element={<BackupDisasterRecovery />} />
+            <Route path="/incident-response-retainer" element={<IncidentResponseRetainer />} />
+
+
+            {/* Old Pages Routing */}
+            {/* <Route path="/cloud-security-monitoring" element={<CloudSecurityMonitoring />} /> */}
+            {/* <Route path="/cloud-infrastructure-protection" element={<CloudInfrastructureProtection />} />
             <Route path="/identity-access-management" element={<IdentityAccessManagement />} />
             <Route path="/cloud-compliance-governance" element={<CloudComplianceGovernance />} />
             <Route path="/advisory-managed-security" element={<AdvisoryManagedSecurity />} />
-            <Route path="/managed-detection-response" element={<ManagedDetectionResponse />} />
+             */}
           </Routes>
           <Footer />
         </BrowserRouter>

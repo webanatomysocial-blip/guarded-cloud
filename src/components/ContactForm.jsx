@@ -5,15 +5,16 @@ export default function Contactus() {
   return (
     <section className="contact-us-section" id="contact">
       <div className="contact-container">
-        <h2 className="main-heading">Talk to a Cloud Security Expert</h2>
+        <h2 className="main-heading">Talk to us
+        </h2>
         <p>
-          Fill out the form below or use WhatsApp. We’ll get back within one
-          business day.
+          Tell us where you’re headed and what keeps you up at night. We’ll reply within one business
+          day
         </p>
         <form className="contact-form">
           <div className="field-row">
             <div className="field">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 id="name"
                 name="name"
@@ -41,10 +42,32 @@ export default function Contactus() {
                 name="company"
                 type="text"
                 placeholder="Your Company"
+                required
               />
             </div>
             <div className="field">
-              <label htmlFor="service">Service of Interest</label>
+              <label htmlFor="role">Role</label>
+              <input
+                id="role"
+                name="role"
+                type="text"
+                placeholder="Your Role"
+                required
+              />
+            </div>
+            </div>
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="phone">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Your Phone Number"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="service">What do you need help with?</label>
               <select id="service" name="service">
                 <option value="Monitoring & Threat Detection">
                   Monitoring & Threat Detection
@@ -62,7 +85,7 @@ export default function Contactus() {
             </div>
           </div>
           <div className="field">
-            <label htmlFor="message">Project Details</label>
+            <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"
@@ -73,20 +96,20 @@ export default function Contactus() {
             <input id="gdpr" type="checkbox" required />
             <span>
               I agree to the{" "}
+              processing of my data as described in the {" "}
               <a href="#" style={{ textDecoration: "underline" }}>
                 Privacy Policy
-              </a>{" "}
-              and consent to be contacted for this inquiry. (GDPR)
+              </a>
             </span>
           </label>
           <button className="sub-button" type="submit">
-            Submit
+            Send Message
           </button>
           <div id="formMsg" className="sm" role="status"></div>
         </form>
       </div>
       <div className="contact-right">
-        <h3 className="main-heading-White">Contact</h3>
+        <h2 className="main-heading-White">Contact</h2>
         <p href="mailto:info@guardedcloud.com">Email: info@guardedcloud.com</p>
         <p href="mailto:info@guardedcloud.com">Address: coming soon</p>
         <p>Global | Remote | 24/7</p>

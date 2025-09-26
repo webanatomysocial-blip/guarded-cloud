@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
-import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
-import TestimonialImg4 from '../assets/images/Testimonial-imgs/Testimonial-img4.jpg'; 
-import ShowCaseImg4 from '../assets/images/services-imgs/ShowCase-img4.jpg';
-import Cta from "../components/Cta";
-
+import cloudimg from "../assets/images/services-imgs/cloud-security-img.jpg"
+import testimonialImg from '../assets/images/Testimonial-imgs/Testimonial-img1.jpg'
+import Showcaseimg1 from '../assets/images/services-imgs/Showcase-img1.jpg'
 import {
   FaUserPlus,
   FaClock,
@@ -14,40 +12,43 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
+import { CgTab } from "react-icons/cg";
+import Cta from "../components/Cta";
 
-function CloudComplianceGovernance() {
+function FirewallNetworkSecurity() {
   return (
     <>
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Ensure compliance and governance in the cloud
+            Close misconfigurations before attackers find them
           </h2>
           <p className="text">
-            Navigate the complex landscape of cloud compliance with NTT DATA’s governance solutions. Our AI-powered tools and expert guidance ensure your organization meets regulatory standards while optimizing cloud operations. From data privacy to industry-specific regulations, we provide end-to-end compliance management to minimize risks and enhance trust, enabling your business to focus on innovation.
+            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
+
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
-              src={cloudCompliance}
-              alt="cloud compliance"
+              src={cloudimg}
+              alt="cloud security monitoring"
             />
           </div>
         </div>
       </section>
 
       <section className="service-cards-container">
-        <h2 className="main-heading">Stay Compliant, Stay Secure</h2>
+        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Regulatory Compliance Audits</h3>
+              <h3 className="boxes-heading">Proactive Threat Detection</h3>
               <p className="text">
-                Conduct thorough audits to ensure adherence to GDPR, HIPAA, and other regulations.
+                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
               </p>
             </div>
           </div>
@@ -57,9 +58,9 @@ function CloudComplianceGovernance() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Real-Time Compliance Monitoring</h3>
+              <h3 className="boxes-heading">24/7 Security Operations</h3>
               <p className="text">
-                Track compliance status in real-time to address issues proactively.
+                Ensure continuous protection with round-the-clock monitoring and response.
               </p>
             </div>
           </div>
@@ -69,9 +70,9 @@ function CloudComplianceGovernance() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Analytics</h3>
+              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
               <p className="text">
-                Gain insights into compliance performance with detailed analytics and reporting.
+                Gain actionable insights with real-time analytics and customizable dashboards.
               </p>
             </div>
           </div>
@@ -81,9 +82,9 @@ function CloudComplianceGovernance() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Effective Compliance</h3>
+              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
               <p className="text">
-                Optimize compliance processes to reduce costs while maintaining standards.
+                Achieve robust security monitoring without exceeding your budget.
               </p>
             </div>
           </div>
@@ -93,9 +94,9 @@ function CloudComplianceGovernance() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Policy Automation</h3>
+              <h3 className="boxes-heading">Compliance Reporting</h3>
               <p className="text">
-                Automate policy updates and ensure seamless distribution across teams.
+                Generate detailed compliance reports to meet regulatory requirements effortlessly.
               </p>
             </div>
           </div>
@@ -105,9 +106,9 @@ function CloudComplianceGovernance() {
               <div className="icon">
                 <FaUsers className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Training</h3>
+              <h3 className="boxes-heading">Security Training Programs</h3>
               <p className="text">
-                Educate your team on compliance requirements with tailored training programs.
+                Empower your team with training to enhance cloud security awareness.
               </p>
             </div>
           </div>
@@ -118,20 +119,20 @@ function CloudComplianceGovernance() {
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
           <p className="text-white">
-            Our cloud compliance and governance solutions simplify regulatory challenges, ensuring your business stays compliant and secure.
+            Our cloud security monitoring solutions combine cutting-edge technology with expert support to keep your business secure and compliant.
           </p>
         </div>
 
         <div className="strength-middle">
           <div className="testimonial-card">
-            <p>⭐ 4.7 (Rating)</p>
+            <p>⭐ 4.9 (Rating)</p>
             <p>
-              The compliance tools made it easy to stay on top of regulations without overwhelming our team.
+              The monitoring tools provided real-time insights that helped us prevent a major security breach.
             </p>
-            <h3>Sarah L.</h3>
-            <p>Compliance Officer, DataSafe</p>
+            <h3>Emily W.</h3>
+            <p>Security Manager, CloudSafe</p>
             <img
-              src={TestimonialImg4}
+              src={testimonialImg}
               alt="testimonial"
             />
           </div>
@@ -139,13 +140,13 @@ function CloudComplianceGovernance() {
 
         <div className="strength-right">
           <div className="stats-card">
-            <h3>ComplyTrend</h3>
-            <h4>50% faster compliance audits</h4>
+            <h3>Guarded Cloud</h3>
+            <h4>55% reduction in security incidents</h4>
             <p>
-              Streamlined processes reduce audit times and improve accuracy.
+              Our proactive monitoring minimizes risks and ensures uninterrupted operations.
             </p>
             <img
-              src={ShowCaseImg4}
+              src={Showcaseimg1}
               alt="chart"
             />
           </div>
@@ -157,10 +158,10 @@ function CloudComplianceGovernance() {
           <div className="stat-box">
             <div className="stat-topline">
               <span className="dot"></span>
-              <h3>30,000+</h3>
+              <h3>45,000+</h3>
             </div>
             <ul className="stat-sub">
-              <li>Compliance checks completed</li>
+              <li>Cloud environments monitored</li>
             </ul>
           </div>
         </div>
@@ -169,10 +170,10 @@ function CloudComplianceGovernance() {
           <div className="stat-box">
             <div className="stat-topline">
               <span className="dot"></span>
-              <h3>200M+</h3>
+              <h3>180M+</h3>
             </div>
             <ul className="stat-sub">
-              <li>Regulated data points secured</li>
+              <li>Threats detected and mitigated</li>
             </ul>
           </div>
         </div>
@@ -181,7 +182,7 @@ function CloudComplianceGovernance() {
           <div className="stat-box">
             <div className="stat-topline">
               <span className="dot"></span>
-              <h3>4.8</h3>
+              <h3>4.9</h3>
             </div>
             <ul className="stat-sub">
               <li>Client satisfaction rating</li>
@@ -189,11 +190,9 @@ function CloudComplianceGovernance() {
           </div>
         </div>
       </div>
-
-            <Cta />
-
+      <Cta />
     </>
   );
 }
 
-export default CloudComplianceGovernance;
+export default FirewallNetworkSecurity;

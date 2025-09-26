@@ -25,11 +25,13 @@ function Home() {
   return (
 
     <>
-    <Helmet>
-        <title>Home - CloudSecure</title>
+      <Helmet>
+        <title>Cloud Security & Managed Services | Guarded Cloud
+        </title>
         <meta
           name="description"
-          content="Welcome to CloudSecure! Explore our cybersecurity services and solutions."
+          content=" Guarded Cloud secures your Microsoft/AWS/Google environments with MDR/XDR,
+CSPM, Zero Trust, and firewall management. Book a free security assessment and guard what’s next."
         />
         <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
         <meta name="robots" content="index, follow" />
@@ -74,9 +76,9 @@ function Home() {
         />
 
 
-   <a href="/contact" className="transparent-button-link">
-          </a>
-      
+        <a href="/contact" className="transparent-button-link">
+        </a>
+
 
       </section>
 
@@ -85,7 +87,7 @@ function Home() {
         <div className="hero-content">
           <p className="sub-heading">Empower Your Future <br /> </p>
           <p className="main-heading">
-             Secure Your Cloud Now
+            Secure Your Cloud Now
           </p>
           <p className="text">
             Protecting sensitive data and workloads in the cloud requires more than just basic security controls. With evolving cyber threats, it’s essential to have continuous monitoring and intelligent threat detection in place.
@@ -94,13 +96,13 @@ function Home() {
           <a href="#contact" className="blue-button">Start for free
             <ArrowRight className="arrow-icon" />
           </a>
-      
+
         </div>
 
-        
-  <div className="right-banner-image">
-    <img src={bannnnnnnn} alt="" />
-  </div>
+
+        <div className="right-banner-image">
+          <img src={bannnnnnnn} alt="" />
+        </div>
 
 
 
@@ -223,11 +225,7 @@ function Home() {
 
 
 
-      {/* contact form start  */}
-      <Contactus />
-      {/* contact form End */}
-
-
+     
 
 
 

@@ -4,6 +4,7 @@ import "../css/Services.css";
 import identityAccess from '../assets/images/services-imgs/identity-access-management-img.jpg';
 import TestimonialImg3 from '../assets/images/Testimonial-imgs/Testimonial-img3.jpg';
 import ShowCaseImg3 from '../assets/images/services-imgs/ShowCase-img3.jpg';
+import Cta from "../components/Cta";
 
 import {
   FaUserPlus,

@@ -47,29 +47,29 @@ function Header() {
   };
 
   // Intersection Observer to detect when header is over #home-banner
-useEffect(() => {
-  const homeBanner = document.getElementById("home-banner");
+  useEffect(() => {
+    const homeBanner = document.getElementById("home-banner");
 
-  if (!homeBanner) return;
+    if (!homeBanner) return;
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      // If the #home-banner is intersecting with the viewport, set header to white
-      setIsHeaderWhite(entry.isIntersecting);
-    },
-    {
-      root: null, // Use viewport as root
-      threshold: 0.1, // Trigger when 10% of #home-banner is visible
-    }
-  );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the #home-banner is intersecting with the viewport, set header to white
+        setIsHeaderWhite(entry.isIntersecting);
+      },
+      {
+        root: null, // Use viewport as root
+        threshold: 0.1, // Trigger when 10% of #home-banner is visible
+      }
+    );
 
-  observer.observe(homeBanner);
+    observer.observe(homeBanner);
 
-  return () => {
-    observer.disconnect(); // Cleanup observer on unmount
-    getDebouncedHideMenu().cancel();
-  };
-}, [getDebouncedHideMenu]);
+    return () => {
+      observer.disconnect(); // Cleanup observer on unmount
+      getDebouncedHideMenu().cancel();
+    };
+  }, [getDebouncedHideMenu]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -107,46 +107,81 @@ useEffect(() => {
             onMouseLeave={handleMouseLeave}
           >
             <span className="nav-link">
-              Services <FaCaretDown className="dropdown-icon" />
+              Solutions <FaCaretDown className="dropdown-icon" />
             </span>
             <div className={`mega-menu ${isMegaMenuOpen ? "open" : ""}`}>
               <div className="inner-mega-menu">
                 <div className="mega-item">
                   <FaEye className="mega-icon" />
-                  <Link to="/cloud-security-monitoring">
+                  {/* <Link to="/cloud-security-monitoring">
                     Cloud Security Monitoring & Threat Detection
-                  </Link>
-                </div>
-                <div className="mega-item">
-                  <FaCloud className="mega-icon" />
-                  <Link to="/cloud-infrastructure-protection">
-                    Cloud Infrastructure Protection
-                  </Link>
-                </div>
-                <div className="mega-item">
-                  <FaUserShield className="mega-icon" />
-                  <Link to="/identity-access-management">
-                    Identity & Access Management (IAM)
-                  </Link>
-                </div>
-                <div className="mega-item">
-                  <FaBalanceScale className="mega-icon" />
-                  <Link to="/cloud-compliance-governance">
-                    Cloud Compliance & Governance
-                  </Link>
-                </div>
-                <div className="mega-item">
-                  <FaClipboardCheck className="mega-icon" />
-                  <Link to="/advisory-managed-security">
-                    Advisory & Managed Security Services
+                  </Link> */}
+                  <Link to="/cloud-security-posture">
+                    Cloud Security Posture (CSPM)
                   </Link>
                 </div>
                 <div className="mega-item">
                   <FaShieldAlt className="mega-icon" />
                   <Link to="/managed-detection-response">
-                    Managed Detection and Response
+                    Managed Detection and Response (MDR/XDR)
                   </Link>
                 </div>
+                <div className="mega-item">
+                  <FaCloud className="mega-icon" />
+                  {/* <Link to="/cloud-infrastructure-protection">
+                    Cloud Infrastructure Protection
+                  </Link> */}
+                  <Link to="/zero-trust-identity">
+                    Zero Trust & Identity
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaUserShield className="mega-icon" />
+                  {/* <Link to="/identity-access-management">
+                    Identity & Access Management (IAM)
+                  </Link> */}
+                  <Link to="/firewall-network-security">
+                    Firewall & Network Security (Palo Alto focus)
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaBalanceScale className="mega-icon" />
+                  {/* <Link to="/cloud-compliance-governance">
+                    Cloud Compliance & Governance
+                  </Link> */}
+                  <Link to="/email-collaboration-security">
+                    Email & Collaboration Security
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaClipboardCheck className="mega-icon" />
+                  {/* <Link to="/advisory-managed-security">
+                    Advisory & Managed Security Services
+                  </Link> */}
+                  <Link to="/data-protection-dlp">
+                    Data Protection & DLP
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaClipboardCheck className="mega-icon" />
+
+                  <Link to="/vulnerability-patch-management">
+                    Vulnerability & Patch Management
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaClipboardCheck className="mega-icon" />
+                  <Link to="/backup-disaster-recovery">
+                    Backup & Disaster Recovery
+                  </Link>
+                </div>
+                <div className="mega-item">
+                  <FaClipboardCheck className="mega-icon" />
+                  <Link to="/incident-response-retainer">
+                    Incident Response Retainer
+                  </Link>
+                </div>
+
               </div>
             </div>
           </li>

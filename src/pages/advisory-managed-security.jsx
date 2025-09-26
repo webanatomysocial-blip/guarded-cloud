@@ -4,6 +4,7 @@ import "../css/Services.css";
 import advisorymanaged from '../assets/images/services-imgs/advisory-managed-security-img.jpg';
 import ShowcaseImg5 from '../assets/images/services-imgs/Showcase-img5.jpg';
 import Testimonialimg5 from '../assets/images/Testimonial-imgs/Testimonial-img5.jpg';
+import Cta from "../components/Cta";
 
 import {
   FaUserPlus,
@@ -189,26 +190,8 @@ function AdvisoryManagedSecurity() {
         </div>
       </div>
 
-       <section className="service-cta-section">
-             <div className="service-cta-content">
-               <div className="cta-flex-container">
-                 <div className="cta-text">
-                   <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
-                   <p className="cta-text-white">
-                     Protect your cloud environment with our advanced security monitoring solutions.
-                   </p>
-                 </div>
-                 <div className="cta-buttons">
-                   <Link to="/Contact" className="blue-button">
-                     Get Started
-                   </Link>
-                   <Link to="/Contact" className="transparent-button">
-                     Watch Demo
-                   </Link>
-                 </div>
-               </div>
-             </div>
-           </section>
+      <Cta />
+      
     </>
   );
 }
