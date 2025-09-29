@@ -12,43 +12,43 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import { CgTab } from "react-icons/cg";
 import Cta from "../components/Cta";
 
 function IncidentResponseRetainer() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Close misconfigurations before attackers find them
+            When seconds matter, be ready.
           </h2>
           <p className="text">
-            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
-
+            <strong>Offer:</strong> Pre‑negotiated IR hours, escalation paths, tabletop exercises, forensics toolkit readiness.
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
               src={cloudimg}
-              alt="cloud security monitoring"
+              alt="incident response retainer"
             />
           </div>
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
+        <h2 className="main-heading">Incident Response Retainer Services</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Proactive Threat Detection</h3>
+              <h3 className="boxes-heading">Pre‑Negotiated IR Hours</h3>
               <p className="text">
-                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
+                Ensure immediate response with pre‑booked incident response hours when critical events occur.
               </p>
             </div>
           </div>
@@ -58,9 +58,9 @@ function IncidentResponseRetainer() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Security Operations</h3>
+              <h3 className="boxes-heading">Escalation Paths</h3>
               <p className="text">
-                Ensure continuous protection with round-the-clock monitoring and response.
+                Access a clear chain of escalation to ensure timely and effective resolution of security incidents.
               </p>
             </div>
           </div>
@@ -70,9 +70,9 @@ function IncidentResponseRetainer() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
+              <h3 className="boxes-heading">Tabletop Exercises</h3>
               <p className="text">
-                Gain actionable insights with real-time analytics and customizable dashboards.
+                Prepare your team with realistic simulation exercises to test incident response readiness.
               </p>
             </div>
           </div>
@@ -82,39 +82,16 @@ function IncidentResponseRetainer() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
+              <h3 className="boxes-heading">Forensics Toolkit Readiness</h3>
               <p className="text">
-                Achieve robust security monitoring without exceeding your budget.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaFileAlt className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Compliance Reporting</h3>
-              <p className="text">
-                Generate detailed compliance reports to meet regulatory requirements effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaUsers className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Security Training Programs</h3>
-              <p className="text">
-                Empower your team with training to enhance cloud security awareness.
+                Maintain a fully equipped toolkit to quickly investigate and contain security breaches.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections (LEFT UNTOUCHED) */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -190,7 +167,25 @@ function IncidentResponseRetainer() {
           </div>
         </div>
       </div>
-      <Cta />
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Reserve an IR retainer</h2>
+              <p className="cta-text-white">
+                Secure expert incident response support before the unexpected happens.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Reserve Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

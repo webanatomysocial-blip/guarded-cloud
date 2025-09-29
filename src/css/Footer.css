@@ -3,7 +3,7 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   color: #ffffff;
-  padding: 40px 20px;
+  padding: 80px 20px 25px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -44,10 +44,31 @@
   gap: 10px;
 }
 
+/* New styles for split columns */
+.split-column .column-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.split-column .left-links,
+.split-column .right-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.split-column .divider {
+  width: 1px;
+  background-color: white;
+}
+
+/* Existing styles for headings and links */
 .footer-column h4 {
   font-size: 18px;
   margin-bottom: 15px;
   font-weight: bold;
+  text-align: center;
 }
 
 .footer-column a {
@@ -60,30 +81,106 @@
 .footer-column a:hover {
   color: #cccccc;
 }
+.footer-middle a:hover {
+  color: #cccccc;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 20px 0;
   border-top: white 1px solid;
   background-color: #04243F;
 }
-.footer-bottom  a{
+
+.footer-bottom a {
   color: #656565;
   text-decoration: none;
-
 }
 
+.footer-middle {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #04243F;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-middle a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .split-column .column-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .split-column .divider {
+    display: none;
+    /* Hide divider on smaller screens */
+  }
+}
+
+/* Mobile-friendly footer adjustments */
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 30px 15px;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Stack split columns vertically for mobile */
+  .split-column .column-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .split-column .left-links,
+  .split-column .right-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .split-column .divider {
+    display: none;
+    /* Hide the divider on mobile */
   }
 
   .footer-social-container {
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .footer-social {
     justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    padding: 15px 10px;
+    font-size: 13px;
   }
 }

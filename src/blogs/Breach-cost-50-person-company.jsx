@@ -9,7 +9,7 @@ export default function Blog1() {
         <div className="hero-overlay-section">
           <h1>How Much Does a Breach Really Cost a 50-Person Company?</h1>
         </div>
-      </div>
+      </div> 
 
       {/* Blog Content */}
       <div className="breach-article-content">

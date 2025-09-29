@@ -12,43 +12,43 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import { CgTab } from "react-icons/cg";
 import Cta from "../components/Cta";
 
 function DataProtectiondlp() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Close misconfigurations before attackers find them
+            Keep sensitive data where it belongs.
           </h2>
           <p className="text">
-            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
-
+            <strong>Scope:</strong> Classify data, enforce DLP policies across cloud apps, email, endpoints; encrypt at rest/in transit; govern sharing.
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
               src={cloudimg}
-              alt="cloud security monitoring"
+              alt="data protection and DLP"
             />
           </div>
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
+        <h2 className="main-heading">Safeguard Your Sensitive Data</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Proactive Threat Detection</h3>
+              <h3 className="boxes-heading">Data Classification</h3>
               <p className="text">
-                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
+                Identify and label sensitive data to enforce the right protections.
               </p>
             </div>
           </div>
@@ -58,9 +58,9 @@ function DataProtectiondlp() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Security Operations</h3>
+              <h3 className="boxes-heading">DLP Policy Enforcement</h3>
               <p className="text">
-                Ensure continuous protection with round-the-clock monitoring and response.
+                Apply policies across cloud, email, and endpoint platforms to prevent data leaks.
               </p>
             </div>
           </div>
@@ -70,9 +70,9 @@ function DataProtectiondlp() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
+              <h3 className="boxes-heading">Encryption</h3>
               <p className="text">
-                Gain actionable insights with real-time analytics and customizable dashboards.
+                Protect sensitive data in transit and at rest with strong encryption.
               </p>
             </div>
           </div>
@@ -82,9 +82,9 @@ function DataProtectiondlp() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
+              <h3 className="boxes-heading">Sharing Governance</h3>
               <p className="text">
-                Achieve robust security monitoring without exceeding your budget.
+                Monitor and control sharing across your organization to minimize exposure risks.
               </p>
             </div>
           </div>
@@ -94,27 +94,16 @@ function DataProtectiondlp() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Reporting</h3>
+              <h3 className="boxes-heading">Policy Auditing & Reporting</h3>
               <p className="text">
-                Generate detailed compliance reports to meet regulatory requirements effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaUsers className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Security Training Programs</h3>
-              <p className="text">
-                Empower your team with training to enhance cloud security awareness.
+                Track DLP enforcement and generate reports for compliance and audits.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections (LEFT UNTOUCHED) */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -190,7 +179,26 @@ function DataProtectiondlp() {
           </div>
         </div>
       </div>
-      <Cta />
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Design your DLP policy</h2>
+              <p className="cta-text-white">
+                Build a tailored data loss prevention strategy to protect your sensitive information.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Design DLP Policy
+              </Link>
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

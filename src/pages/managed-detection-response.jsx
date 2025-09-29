@@ -17,13 +17,22 @@ import Cta from "../components/Cta";
 function ManagedDetectionResponse() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Proactive managed detection and response services
+            24/7 detection with real containment
           </h2>
           <p className="text">
-            Stay ahead of cyber threats with NTT DATA’s managed detection and response (MDR) services. Our AI-powered solutions provide 24/7 monitoring, rapid threat detection, and swift response to minimize risks. With deep industry expertise and advanced analytics, we ensure your organization is protected from sophisticated attacks, allowing you to focus on business growth with confidence.
+            <strong>What’s included:</strong> Log & telemetry onboarding
+            (cloud, identity, endpoint, firewall), playbooks that auto-contain
+            (isolate host, disable account, block IOC), and human analysts to
+            validate and accelerate response. Executive and technical reporting
+            is also provided.
+          </p>
+          <p className="text">
+            <strong>Outcomes:</strong> Lower dwell time, fewer false positives,
+            and faster recoveries.
           </p>
         </div>
         <div className="service-right">
@@ -36,17 +45,19 @@ function ManagedDetectionResponse() {
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">See Our All Services</h2>
+        <h2 className="main-heading">MDR/XDR Services</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Threat Hunting</h3>
+              <h3 className="boxes-heading">Log & Telemetry Onboarding</h3>
               <p className="text">
-                Proactively identify and neutralize threats before they impact your business.
+                Connect your cloud, identity, endpoint, and firewall logs for
+                comprehensive monitoring.
               </p>
             </div>
           </div>
@@ -56,9 +67,10 @@ function ManagedDetectionResponse() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Incident Response</h3>
+              <h3 className="boxes-heading">Automated Playbooks</h3>
               <p className="text">
-                Respond to incidents instantly with our round-the-clock response team.
+                Playbooks automatically isolate hosts, disable accounts, and
+                block IOCs to contain threats immediately.
               </p>
             </div>
           </div>
@@ -68,9 +80,10 @@ function ManagedDetectionResponse() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Threat Intelligence Analytics</h3>
+              <h3 className="boxes-heading">Human Analyst Validation</h3>
               <p className="text">
-                Leverage advanced analytics to stay informed about emerging threats.
+                Analysts validate alerts, accelerate response, and reduce false
+                positives for accurate remediation.
               </p>
             </div>
           </div>
@@ -80,9 +93,10 @@ function ManagedDetectionResponse() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Effective MDR</h3>
+              <h3 className="boxes-heading">Executive & Technical Reporting</h3>
               <p className="text">
-                Achieve robust threat detection and response without breaking the budget.
+                Gain insights through detailed reporting for both executive and
+                technical stakeholders.
               </p>
             </div>
           </div>
@@ -92,9 +106,10 @@ function ManagedDetectionResponse() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Incident Reporting</h3>
+              <h3 className="boxes-heading">Lower Dwell Time</h3>
               <p className="text">
-                Receive detailed reports on incidents and responses for transparency.
+                Minimize the time threats remain undetected, improving overall
+                security posture.
               </p>
             </div>
           </div>
@@ -104,15 +119,17 @@ function ManagedDetectionResponse() {
               <div className="icon">
                 <FaUsers className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Awareness Training</h3>
+              <h3 className="boxes-heading">Faster Recovery</h3>
               <p className="text">
-                Train your team to recognize and respond to threats effectively.
+                Reduce downtime and quickly restore operations after an incident.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections */}
+      {/* LEFT UNTOUCHED as per your request */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -188,8 +205,27 @@ function ManagedDetectionResponse() {
           </div>
         </div>
       </div>
-      <Cta/>
-      
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">See how MDR works</h2>
+              <p className="cta-text-white">
+                Discover how our managed detection and response services protect your organization 24/7.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Request MDR Review
+              </Link>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

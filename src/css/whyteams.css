@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  padding: 100px 70px 0px 70px;
+  padding: 50px 70px 100px 70px;
   gap: 50px;
 }
 
@@ -64,8 +64,17 @@
   border-radius: 20px;
   height: 60px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-
+  padding: 25px;
+}
+.icon-arrow {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  color: #ffffff; 
 }
 
 @media only screen and (max-width: 800px) {

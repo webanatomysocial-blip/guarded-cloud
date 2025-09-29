@@ -28,6 +28,11 @@ import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import './css/Header.css';
 import Layout from './components/layout';
+import PrivacyPolicy from './pages/privacy-policy';
+import TermsOfService from './pages/terms-of-service';
+import CookiesPolicy from './pages/cookies-policy';
+import DataProcessingAddendum from './pages/data-processing-addendum';
+import FAQTemplate from './components/Faq';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -36,7 +41,6 @@ createRoot(document.getElementById('root')).render(
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            {/* All normal pages with Header/Footer */}
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -46,7 +50,11 @@ createRoot(document.getElementById('root')).render(
               <Route path="/how-we-work" element={<HowWeWork />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/security" element={<SecurityCompliance />} />
+
+              {/* Blogs */}
               <Route path="/case-studies" element={<Blogs />} />
+              <Route path="/case-studies/:id" element={<BlogPage />} />
+
               <Route path="/resources" element={<Blogs />} />
 
               {/* Solution detail pages */}
@@ -59,9 +67,17 @@ createRoot(document.getElementById('root')).render(
               <Route path="/vulnerability-patch-management" element={<VulnerabilityPatchManagement />} />
               <Route path="/backup-disaster-recovery" element={<BackupDisasterRecovery />} />
               <Route path="/incident-response-retainer" element={<IncidentResponseRetainer />} />
+
+
+              {/* Legal Pages Routing */}
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/cookies" element={<CookiesPolicy />} />
+              <Route path="/dpa" element={<DataProcessingAddendum />} />
+              <Route path="/faq" element={<FAQTemplate />} />
             </Route>
 
-            <Route path="*" element={<NotFound />} />
+            {/* Fallback for unknown routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

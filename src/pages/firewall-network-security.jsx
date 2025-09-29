@@ -12,43 +12,46 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import { CgTab } from "react-icons/cg";
 import Cta from "../components/Cta";
 
 function FirewallNetworkSecurity() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Close misconfigurations before attackers find them
+            Clean policy. Strong segmentation. Encrypted traffic in control.
           </h2>
           <p className="text">
-            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
-
+            <strong>What we deliver:</strong> Rule review & cleanup, app‑ID adoption, URL filtering, threat prevention. SSL Decryption program (phase by phase—pilot with IT, then expand). Site‑to‑site and remote access VPN, GlobalProtect hardening. DMZ & IoT segmentation, secure outbound policies, content inspection.
+          </p>
+          <p className="text">
+            <strong>Artifacts:</strong> As‑built diagrams, rule justification sheets, change runbooks, rollback plans.
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
               src={cloudimg}
-              alt="cloud security monitoring"
+              alt="firewall & network security"
             />
           </div>
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
+        <h2 className="main-heading">Firewall & Network Security Features</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Proactive Threat Detection</h3>
+              <h3 className="boxes-heading">Rule Review & Cleanup</h3>
               <p className="text">
-                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
+                Optimize firewall rules and remove redundant or risky entries.
               </p>
             </div>
           </div>
@@ -58,9 +61,9 @@ function FirewallNetworkSecurity() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Security Operations</h3>
+              <h3 className="boxes-heading">App-ID & URL Filtering</h3>
               <p className="text">
-                Ensure continuous protection with round-the-clock monitoring and response.
+                Control application usage and web traffic with precision.
               </p>
             </div>
           </div>
@@ -70,9 +73,9 @@ function FirewallNetworkSecurity() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
+              <h3 className="boxes-heading">SSL Decryption Program</h3>
               <p className="text">
-                Gain actionable insights with real-time analytics and customizable dashboards.
+                Phase-by-phase decryption to inspect encrypted traffic securely.
               </p>
             </div>
           </div>
@@ -82,9 +85,9 @@ function FirewallNetworkSecurity() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
+              <h3 className="boxes-heading">VPN & GlobalProtect Hardening</h3>
               <p className="text">
-                Achieve robust security monitoring without exceeding your budget.
+                Secure remote and site-to-site connections with best practices.
               </p>
             </div>
           </div>
@@ -94,27 +97,16 @@ function FirewallNetworkSecurity() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Reporting</h3>
+              <h3 className="boxes-heading">Segmentation & Secure Policies</h3>
               <p className="text">
-                Generate detailed compliance reports to meet regulatory requirements effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaUsers className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Security Training Programs</h3>
-              <p className="text">
-                Empower your team with training to enhance cloud security awareness.
+                Implement DMZ, IoT segmentation, and secure outbound policies.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections (LEFT UNTOUCHED) */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -190,7 +182,26 @@ function FirewallNetworkSecurity() {
           </div>
         </div>
       </div>
-      <Cta />
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Request a firewall health check</h2>
+              <p className="cta-text-white">
+                Ensure your firewall and network policies are optimized and secure.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Request Firewall Review
+              </Link>
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

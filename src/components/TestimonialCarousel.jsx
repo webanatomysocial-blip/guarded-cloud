@@ -11,9 +11,15 @@ import Union from '../assets/images/Testimonial-imgs/Union.png';
 
 const testimonials = [
   {
+    text: "“Guarded Cloud reduced our critical misconfigs by 72% in 60 days and finally gave us real‑time visibility.”",
+    name: "[Customer Name]",
+    role: "CTO",
+    Images: test1 // you can choose which image to use
+  },
+  {
     text: "Guarded Cloud gave us peace of mind. Their team spotted gaps we didn’t even know we had and set up monitoring that caught issues before they became problems. It feels like having a 24/7 security department without the cost.",
     name: "Mark T",
-    role: " IT Director, Mid-sized Healthcare Company",
+    role: "IT Director, Mid-sized Healthcare Company",
     Images: test2
   },
   {
@@ -34,19 +40,19 @@ const TestimonialCarousel = () => (
   <section className="testimonialcarousel-section">
     <p className="main-heading">What Our Early Clients Are Saying</p>
     <Swiper
-      slidesPerView={1.5}            
+      slidesPerView={1.5}
       spaceBetween={32}
-      centeredSlides={true}          
+      centeredSlides={true}
       pagination={{ clickable: true }}
       modules={[Pagination]}
       style={{ paddingBottom: "40px" }}
       breakpoints={{
-        0: {                      
+        0: {
           slidesPerView: 1,
           spaceBetween: 16,
           centeredSlides: false
         },
-        800: {                     
+        800: {
           slidesPerView: 1.5,
           spaceBetween: 32,
           centeredSlides: true

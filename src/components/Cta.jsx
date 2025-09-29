@@ -18,9 +18,9 @@ const Cta = () => {
                             <Link to="/Contact" className="blue-button">
                                 Get Started
                             </Link>
-                            <Link to="/Contact" className="transparent-button">
+                            {/* <Link to="/Contact" className="transparent-button">
                                 Watch Demo
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

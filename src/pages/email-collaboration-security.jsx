@@ -12,43 +12,43 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import { CgTab } from "react-icons/cg";
 import Cta from "../components/Cta";
 
 function EmailCollaborationSecurity() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Close misconfigurations before attackers find them
+            Stop phishing, BEC, and malware before inboxes.
           </h2>
           <p className="text">
-            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
-
+            <strong>Features:</strong> Advanced phishing detection, attachment/URL sandboxing, impersonation protection, DMARC/DKIM/SPF, and safe links.
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
               src={cloudimg}
-              alt="cloud security monitoring"
+              alt="email & collaboration security"
             />
           </div>
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
+        <h2 className="main-heading">Protect Your Email Ecosystem</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Proactive Threat Detection</h3>
+              <h3 className="boxes-heading">Phishing Detection</h3>
               <p className="text">
-                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
+                Detect and block phishing attempts before they reach users' inboxes.
               </p>
             </div>
           </div>
@@ -58,9 +58,9 @@ function EmailCollaborationSecurity() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Security Operations</h3>
+              <h3 className="boxes-heading">Attachment & URL Sandboxing</h3>
               <p className="text">
-                Ensure continuous protection with round-the-clock monitoring and response.
+                Analyze attachments and links safely to prevent malware execution.
               </p>
             </div>
           </div>
@@ -70,9 +70,9 @@ function EmailCollaborationSecurity() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
+              <h3 className="boxes-heading">Impersonation Protection</h3>
               <p className="text">
-                Gain actionable insights with real-time analytics and customizable dashboards.
+                Stop business email compromise with identity verification measures.
               </p>
             </div>
           </div>
@@ -82,9 +82,9 @@ function EmailCollaborationSecurity() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
+              <h3 className="boxes-heading">DMARC/DKIM/SPF Enforcement</h3>
               <p className="text">
-                Achieve robust security monitoring without exceeding your budget.
+                Ensure email authenticity and prevent spoofing with proper authentication.
               </p>
             </div>
           </div>
@@ -94,27 +94,16 @@ function EmailCollaborationSecurity() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Reporting</h3>
+              <h3 className="boxes-heading">Safe Links & Policies</h3>
               <p className="text">
-                Generate detailed compliance reports to meet regulatory requirements effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaUsers className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Security Training Programs</h3>
-              <p className="text">
-                Empower your team with training to enhance cloud security awareness.
+                Provide secure browsing and prevent access to malicious URLs from emails.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections (LEFT UNTOUCHED) */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -190,7 +179,25 @@ function EmailCollaborationSecurity() {
           </div>
         </div>
       </div>
-      <Cta />
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Evaluate your email risk</h2>
+              <p className="cta-text-white">
+                Assess your organization’s email security posture and stop threats before they reach your users.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Evaluate Email Risk
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import "../css/Header.css";
 import "../css/howwework.css";
 import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+import FAQTemplate from "../components/Faq";
+import { faqs } from "../data/faqs";
 
 
 const HowWeWork = () => {
@@ -86,6 +88,8 @@ phishing rate). - Deliverable:<bold> Quarterly Security Scorecard & Roadmap</bol
           </div>
         </div>
       </section>
+
+       <FAQTemplate title="Frequently Asked Questions" faqs={faqs} />
     </>
   )
 }

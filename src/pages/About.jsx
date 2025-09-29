@@ -43,7 +43,7 @@ export default function About() {
       <section className="about-banner-container">
         <div className="about-inner-left">
           <h2 className="main-heading">
-            Your Trusted Cloud Security Partner
+           Why we exist.
           </h2><br />
           <p className="text">
             At Guarded Cloud, we safeguard your cloud assets from cyber
@@ -197,10 +197,7 @@ export default function About() {
           </div>
           <h3 className="boxes-heading ">Our Mission</h3>
           <p className="about-card-desc">
-            To deliver world-class cloud security services that protect our
-            clients' critical data, maintain compliance, and build lasting
-            clients' critical data, maintain compliance, and build lasting
-            trust.
+          Help teams ship faster by making security simple, visible, and reliable.
           </p>
         </div>
 
@@ -220,9 +217,7 @@ export default function About() {
           </div>
           <h3 className="boxes-heading">Our Vision</h3>
           <p className="about-card-desc">
-            A world where every organization — regardless of size or location —
-            can harness the power of the cloud without compromising security.
-            can harness the power of the cloud without compromising security.
+           Ownership · Clarity · Speed · Integrity · Outcomes.
           </p>
         </div>
 
@@ -302,17 +297,11 @@ export default function About() {
 
 
 
-
-
-
-
-
-
       <section className="service-cta-section">
         <div className="service-cta-content">
           <div className="cta-flex-container">
             <div className="cta-text">
-              <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+              <h2 className="cta-heading">Talk to leadership</h2>
               <p className="cta-text-white">
                 Protect your cloud environment with our advanced security monitoring solutions.
               </p>
@@ -321,9 +310,9 @@ export default function About() {
               <Link to="/Contact" className="blue-button">
                 Get Started
               </Link>
-              <Link to="/Contact" className="transparent-button">
+              {/* <Link to="/Contact" className="transparent-button">
                 Watch Demo
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

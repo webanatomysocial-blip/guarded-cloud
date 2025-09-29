@@ -1,70 +1,41 @@
-// import Header from "../components/Header";
 import "../css/index.css";
-import { ArrowRight, Link } from 'react-bootstrap-icons'; // Import ArrowRight icon
-import CarouselSection from "../components/CarouselSection"; // Import CarouselSection component
-import EverythingYouNeed from "../components/EverythingYouNeed"; // Import EverythingYouNeed component
-import Whyteams from "../components/Why-teams"; // Import whyteams component
-import LightRays from "../components/LightRays"; // Adjust path if necessary
+import "../css/Services.css";
+import { ArrowRight } from 'react-bootstrap-icons'; // only icon import
+import { Link } from 'react-router-dom'; // correct Link import for routing
+import CarouselSection from "../components/CarouselSection";
+import EverythingYouNeed from "../components/EverythingYouNeed";
+import Whyteams from "../components/Why-teams";
+import LightRays from "../components/LightRays";
 import Contactus from "../components/ContactForm";
-import FAQTemplate from "../components/FaqTemplate";
-import Blogs from "../components/Blog"; // Import Blogs component
-import Azure from '../assets/images/Home-images/1.png'
+import FAQTemplate from "../components/Faq";
+import Blogs from "../components/Blog";
+import Azure from '../assets/images/Home-images/1.png';
 import AWSs from '../assets/images/Home-images/2.png';
 import gcp from '../assets/images/Home-images/3.png';
 import { VscNoNewline } from "react-icons/vsc";
 import videoFile from '../assets/banner-video.mp4';
 import bannnnnnnn from '../assets/banner-img-after-vedeo.jpg';
 import { Helmet } from 'react-helmet-async';
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import { faqs } from "../data/faqs";
+
+
 
 function Home() {
-
-
-
-
-
   return (
-
     <>
       <Helmet>
-        <title>Cloud Security & Managed Services | Guarded Cloud
-        </title>
+        <title>Cloud Security & Managed Services | Guarded Cloud</title>
         <meta
           name="description"
-          content=" Guarded Cloud secures your Microsoft/AWS/Google environments with MDR/XDR,
-CSPM, Zero Trust, and firewall management. Book a free security assessment and guard what’s next."
+          content="Guarded Cloud secures your Microsoft/AWS/Google environments with MDR/XDR, CSPM, Zero Trust, and firewall management. Book a free security assessment and guard what’s next."
         />
         <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
         <meta name="robots" content="index, follow" />
-        {/* <meta property="og:title" content="Home - CloudSecure" />
-        <meta property="og:description" content="Welcome to CloudSecure! Explore our cybersecurity services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com/" />
-        <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
-        <link rel="canonical" href="https://yourwebsite.com/" /> */}
       </Helmet>
 
-
-      {/* LightRays component at the top */}
-
-      {/* <LightRays
-          raysOrigin="center-center"
-          raysColor="#fff" // Custom color (teal)
-          raysSpeed={0.5}
-          lightSpread={1.2}
-          rayLength={2}
-          pulsating={true}
-          fadeDistance={1.0}
-          saturation={1}
-          followMouse={true}
-          mouseInfluence={0.4}
-          noiseAmount={0.3}
-          distortion={0.5}
-          className="home-light-rays"
-        /> */}
-
-
+      {/* Hero Video Section */}
       <section className="home-video-section-hero" id="home-banner">
-
         <video
           src={videoFile}
           noControls
@@ -74,161 +45,100 @@ CSPM, Zero Trust, and firewall management. Book a free security assessment and g
           playsInline
           className="background-video-home"
         />
-
-
-        <a href="/contact" className="transparent-button-link">
-        </a>
-
-
+        <a href="/contact" className="transparent-button-link"></a>
       </section>
 
+      {/* Hero Section */}
       <section className="hero-section">
-
         <div className="hero-content">
-          <p className="sub-heading">Empower Your Future <br /> </p>
-          <p className="main-heading">
-            Secure Your Cloud Now
-          </p>
+          <p className="sub-heading">Empower Your Future <br /></p>
+          <p className="main-heading">Secure Your Cloud Now</p>
           <p className="text">
             Protecting sensitive data and workloads in the cloud requires more than just basic security controls. With evolving cyber threats, it’s essential to have continuous monitoring and intelligent threat detection in place.
-
           </p>
-          <a href="#contact" className="blue-button">Start for free
-            <ArrowRight className="arrow-icon" />
-          </a>
-
+          <Link to="/contact" className="blue-button">
+            Start for free <ArrowRight className="arrow-icon" />
+          </Link>
         </div>
-
 
         <div className="right-banner-image">
-          <img src={bannnnnnnn} alt="" />
+          <img src={bannnnnnnn} alt="Cloud Security Banner" />
         </div>
-
-
-
-      </section>
-      {/* carosule section start */}
-
-      {/* <CarouselSection /> */}
-
-      {/* carosule section End */}
-
-
-
-
-
-
-      {/* images section start  */}
-
-      <section className="images-section" >
-        <div className="blur-left">
-
-        </div>
-
-        <a href="https://azure.microsoft.com/en-in"><img src={Azure} alt="Image 1" /></a>
-        <a href="https://cloud.google.com/"><img src={AWSs} alt="Image 1" /></a>
-        <a href="https://aws.amazon.com/"><img src={gcp} alt="Image 1" /></a>
-
-
-
-
-
-        <div className="blur-right">
-
-        </div>
-
       </section>
 
-      {/* images section End */}
+      {/* Images Section */}
+      <section className="images-section">
+        <div className="blur-left"></div>
 
+        <a href="https://azure.microsoft.com/en-in"><img src={Azure} alt="Azure" /></a>
+        <a href="https://cloud.google.com/"><img src={AWSs} alt="AWS" /></a>
+        <a href="https://aws.amazon.com/"><img src={gcp} alt="GCP" /></a>
 
+        <div className="blur-right"></div>
+      </section>
 
-      {/* Everything You Need Section start */}
-
+      {/* Everything You Need Section */}
       <EverythingYouNeed />
+      {/* How It Works Section */}
+      <section className="how-it-works-section">
+        <h2 className="main-heading">How It Works</h2>
 
-      {/* Everything You Need Section Endssssssssss */}
-
-
-
-
-
-      {/* Why teams section start */}
-      <Whyteams />
-      {/* Why teams section End */}
-
-
-
-
-      {/* about us section start */}
-      {/* <section className="about-section">
-      <div className="about-container">
-        <h2 className="main-heading-White">About Us</h2>
-        <p className="text-white">
-          We are a cloud security company helping organizations secure workloads,
-          identities, and data across public clouds. We partner with SMBs and
-          startups worldwide to reduce risk and accelerate growth.
-        </p>
-
-        <div className="about-content">
-    
-          <div className="timeline">
-            <div className="timeline-item">
-              <span className="year">2023</span>
-              <h3 className="sub-heading-white">Founded</h3>
-              <p className="text">
-                Launched with a mission to bring enterprise-grade security to
-                fast-moving teams.
-              </p>
-            </div>
-
-            <div className="timeline-item">
-              <span className="year">2024</span>
-              <h3 className="sub-heading-white">Global Coverage</h3>
-              <p className="text">
-                Expanded to 24/7 operations serving clients across regions.
-              </p>
-            </div>
-
-            <div className="timeline-item">
-              <span className="year">2025</span>
-              <h3 className="sub-heading-white">MDR Launch</h3>
-              <p  className="text">
-                Introduced Managed Detection & Response with aggressive SLAs.
-              </p>
+        <div className="how-it-works-timeline">
+          <div className="timeline-step">
+            <div className="timeline-circle">1</div>
+            <div className="timeline-content">
+              <h3>Assess</h3>
+              <p>We run a rapid posture & threat review across your cloud and critical controls.</p>
             </div>
           </div>
 
-       
-          <div className="leadership-card">
-            <h3 className="sub-heading-white">Leadership</h3>
-            <p className="text-white">
-              Seasoned cloud and security leaders with experience across
-              hyperscalers and regulated industries.
-            </p>
-            <ul className="text-white">
-              <li>Principal Architect — Cloud Security</li>
-              <li>Head of Detection Engineering</li>
-              <li>Compliance & Governance Lead</li>
-            </ul>
+          <div className="timeline-step">
+            <div className="timeline-circle">2</div>
+            <div className="timeline-content">
+              <h3>Harden</h3>
+              <p>We implement quick wins, prioritize risks, and deploy guardrails.</p>
+            </div>
+          </div>
+
+          <div className="timeline-step">
+            <div className="timeline-circle">3</div>
+            <div className="timeline-content">
+              <h3>Monitor & Respond</h3>
+              <p>Our analysts watch 24/7 and contain threats fast.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section> */}
 
-
-      {/* about us section End */}
-
-      <Blogs backgroundColor="#fff" textColor="#000" marginTop="60px" />
-
+        <Link className="blue-button how-it-works-cta" to="/how-we-work">
+          See the 30/60/90 plan <ArrowRight className="arrow-icon" />
+        </Link>
+      </section>
 
 
 
+      {/* Why Teams Section */}
+      <Whyteams />
 
-
-
-
-
+      {/* Blogs Section */}
+      {/* <Blogs backgroundColor="#fff" textColor="#000" marginTop="60px" /> */}
+      <TestimonialCarousel />
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Book a FREE Security Assessment</h2>
+              <p className="cta-text-white">Talk to an Engineer</p>
+            </div>
+            <div className="cta-buttons">
+              <Link className="blue-button" to="/contact">
+                Book your session
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+     
     </>
   );
 }

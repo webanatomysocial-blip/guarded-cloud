@@ -43,48 +43,48 @@ function EverythingYouNeed(props) {
         "Implement identity-driven security to ensure only authorized users access critical resources.",
       route: "/zero-trust-identity",
     },
-    {
-      icon: FaNetworkWired,
-      title: "Firewall & Network Security",
-      description:
-        "Protect your network perimeter with advanced firewall strategies and network traffic monitoring.",
-      route: "/firewall-network-security",
-    },
-    {
-      icon: FaEnvelopeOpenText,
-      title: "Email & Collaboration Security",
-      description:
-        "Safeguard your email and collaboration platforms from phishing, malware, and unauthorized access.",
-      route: "/email-collaboration-security",
-    },
-    {
-      icon: FaLock,
-      title: "Data Protection & DLP",
-      description:
-        "Secure sensitive data and prevent leaks with data loss prevention strategies and encryption.",
-      route: "/data-protection-dlp",
-    },
-    {
-      icon: FaBug,
-      title: "Vulnerability & Patch Management",
-      description:
-        "Identify, prioritize, and remediate vulnerabilities to reduce your security risk exposure.",
-      route: "/vulnerability-patch-management",
-    },
-    {
-      icon: FaDatabase,
-      title: "Backup & Disaster Recovery",
-      description:
-        "Ensure business continuity with reliable backup strategies and rapid disaster recovery solutions.",
-      route: "/backup-disaster-recovery",
-    },
-    {
-      icon: FaLifeRing,
-      title: "Incident Response Retainer",
-      description:
-        "Access expert support during security incidents to contain threats and restore normal operations quickly.",
-      route: "/incident-response-retainer",
-    },
+    // {
+    //   icon: FaNetworkWired,
+    //   title: "Firewall & Network Security",
+    //   description:
+    //     "Protect your network perimeter with advanced firewall strategies and network traffic monitoring.",
+    //   route: "/firewall-network-security",
+    // },
+    // {
+    //   icon: FaEnvelopeOpenText,
+    //   title: "Email & Collaboration Security",
+    //   description:
+    //     "Safeguard your email and collaboration platforms from phishing, malware, and unauthorized access.",
+    //   route: "/email-collaboration-security",
+    // },
+    // {
+    //   icon: FaLock,
+    //   title: "Data Protection & DLP",
+    //   description:
+    //     "Secure sensitive data and prevent leaks with data loss prevention strategies and encryption.",
+    //   route: "/data-protection-dlp",
+    // },
+    // {
+    //   icon: FaBug,
+    //   title: "Vulnerability & Patch Management",
+    //   description:
+    //     "Identify, prioritize, and remediate vulnerabilities to reduce your security risk exposure.",
+    //   route: "/vulnerability-patch-management",
+    // },
+    // {
+    //   icon: FaDatabase,
+    //   title: "Backup & Disaster Recovery",
+    //   description:
+    //     "Ensure business continuity with reliable backup strategies and rapid disaster recovery solutions.",
+    //   route: "/backup-disaster-recovery",
+    // },
+    // {
+    //   icon: FaLifeRing,
+    //   title: "Incident Response Retainer",
+    //   description:
+    //     "Access expert support during security incidents to contain threats and restore normal operations quickly.",
+    //   route: "/incident-response-retainer",
+    // },
   ];
 
   return (
@@ -92,7 +92,7 @@ function EverythingYouNeed(props) {
       <section className="everything-you-need-section" style={{ marginTop: props.marginTop }}>
         <div className="everything-you-need-container">
           <h2 className="main-heading" data-reveal>
-            Cloud Security Services
+            Cloud Solutions 
           </h2>
           <p className="sub-heading">
             End‑to‑end protection tailored for fast‑moving teams. Clear outcomes,
@@ -113,8 +113,8 @@ function EverythingYouNeed(props) {
             ))}
           </div>
           <div className="data-reveal" style={{ marginTop: "40px" }} data-reveal>
-            <Link className="blue-button" to={props.Link}>
-              Speak to an Expert <ArrowRight className="arrow-icon" />
+            <Link className="blue-button-small" to='/solutions'>
+              Explore All Solutions <ArrowRight className="arrow-icon" />
             </Link>
           </div>
         </div>

@@ -12,43 +12,46 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import { CgTab } from "react-icons/cg";
 import Cta from "../components/Cta";
 
 function ZeroTtrustIdentity() {
   return (
     <>
+      {/* Hero Section */}
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Close misconfigurations before attackers find them
+            Make identity your new perimeter
           </h2>
           <p className="text">
-            <bold>Problem:</bold> Cloud speed creates drift—open storage, permissive roles, exposed services.
-
+            <strong>Scope:</strong> MFA everywhere, least privilege, conditional access, device trust, privileged access workflows.
+          </p>
+          <p className="text">
+            <strong>Deliverables:</strong> Access policies, role design, break‑glass accounts, admin tiering, identity threat detection rules.
           </p>
         </div>
         <div className="service-right">
           <div className="service-image">
             <img
               src={cloudimg}
-              alt="cloud security monitoring"
+              alt="zero trust identity"
             />
           </div>
         </div>
       </section>
 
+      {/* Service Cards Section */}
       <section className="service-cards-container">
-        <h2 className="main-heading">Stronger Security, Smarter Protection</h2>
+        <h2 className="main-heading">Zero Trust Identity Features</h2>
         <div className="our-service-cards">
           <div className="serviceCard">
             <div className="serviceInner">
               <div className="icon">
                 <FaUserPlus className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Proactive Threat Detection</h3>
+              <h3 className="boxes-heading">MFA Everywhere</h3>
               <p className="text">
-                Identify and neutralize threats in real-time with advanced AI-driven monitoring.
+                Enforce multi-factor authentication for all users and devices.
               </p>
             </div>
           </div>
@@ -58,9 +61,9 @@ function ZeroTtrustIdentity() {
               <div className="icon">
                 <FaClock className="service-icon" />
               </div>
-              <h3 className="boxes-heading">24/7 Security Operations</h3>
+              <h3 className="boxes-heading">Least Privilege Access</h3>
               <p className="text">
-                Ensure continuous protection with round-the-clock monitoring and response.
+                Limit access to only what is necessary to reduce attack surface.
               </p>
             </div>
           </div>
@@ -70,9 +73,9 @@ function ZeroTtrustIdentity() {
               <div className="icon">
                 <FaChartLine className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Security Analytics Dashboard</h3>
+              <h3 className="boxes-heading">Conditional Access</h3>
               <p className="text">
-                Gain actionable insights with real-time analytics and customizable dashboards.
+                Apply context-aware policies to ensure secure and adaptive access.
               </p>
             </div>
           </div>
@@ -82,9 +85,9 @@ function ZeroTtrustIdentity() {
               <div className="icon">
                 <FaMoneyBillWave className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Cost-Optimized Monitoring</h3>
+              <h3 className="boxes-heading">Device Trust</h3>
               <p className="text">
-                Achieve robust security monitoring without exceeding your budget.
+                Verify device compliance before granting access to critical resources.
               </p>
             </div>
           </div>
@@ -94,27 +97,16 @@ function ZeroTtrustIdentity() {
               <div className="icon">
                 <FaFileAlt className="service-icon" />
               </div>
-              <h3 className="boxes-heading">Compliance Reporting</h3>
+              <h3 className="boxes-heading">Privileged Access Workflows</h3>
               <p className="text">
-                Generate detailed compliance reports to meet regulatory requirements effortlessly.
-              </p>
-            </div>
-          </div>
-
-          <div className="serviceCard">
-            <div className="serviceInner">
-              <div className="icon">
-                <FaUsers className="service-icon" />
-              </div>
-              <h3 className="boxes-heading">Security Training Programs</h3>
-              <p className="text">
-                Empower your team with training to enhance cloud security awareness.
+                Manage, monitor, and secure privileged accounts with controlled workflows.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Showcase & Strength-Bottom Sections (LEFT UNTOUCHED) */}
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -190,7 +182,27 @@ function ZeroTtrustIdentity() {
           </div>
         </div>
       </div>
-      <Cta />
+
+      {/* CTA Section */}
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Start your Zero Trust rollout</h2>
+              <p className="cta-text-white">
+                Begin implementing Zero Trust Identity controls to secure your organization today.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Request Zero Trust Review
+              </Link>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
