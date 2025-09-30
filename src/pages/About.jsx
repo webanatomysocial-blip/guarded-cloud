@@ -23,27 +23,27 @@ import {
 export default function About() {
   return (
     <>
-     <Helmet>
-            <title> About Guarded Cloud
-            </title>
-            <meta
-              name="description"
-              content=" Our mission is to make cloud security simple, visible, and reliable for every sized team"
-            />
-    
-            {/* <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
+      <Helmet>
+        <title> About Guarded Cloud
+        </title>
+        <meta
+          name="description"
+          content=" Our mission is to make cloud security simple, visible, and reliable for every sized team"
+        />
+
+        {/* <meta name="keywords" content="cloudsecure, cybersecurity, services, home" />
             <meta name="robots" content="index, follow" /> */}
-            {/* <meta property="og:title" content="Home - CloudSecure" />
+        {/* <meta property="og:title" content="Home - CloudSecure" />
             <meta property="og:description" content="Welcome to CloudSecure! Explore our cybersecurity services." />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://yourwebsite.com/" />
             <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
             <link rel="canonical" href="https://yourwebsite.com/" /> */}
-          </Helmet>
+      </Helmet>
       <section className="about-banner-container">
         <div className="about-inner-left">
           <h2 className="main-heading">
-           Why we exist.
+            Why we exist.
           </h2><br />
           <p className="text">
             At Guarded Cloud, we safeguard your cloud assets from cyber
@@ -197,7 +197,7 @@ export default function About() {
           </div>
           <h3 className="boxes-heading ">Our Mission</h3>
           <p className="about-card-desc">
-          Help teams ship faster by making security simple, visible, and reliable.
+            Help teams ship faster by making security simple, visible, and reliable.
           </p>
         </div>
 
@@ -217,7 +217,7 @@ export default function About() {
           </div>
           <h3 className="boxes-heading">Our Vision</h3>
           <p className="about-card-desc">
-           Ownership · Clarity · Speed · Integrity · Outcomes.
+            Ownership · Clarity · Speed · Integrity · Outcomes.
           </p>
         </div>
 
@@ -287,7 +287,7 @@ export default function About() {
 
 
 
-      <TestimonialCarousel/>
+      <TestimonialCarousel />
 
 
 
@@ -307,7 +307,7 @@ export default function About() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Get Started
               </Link>
               {/* <Link to="/Contact" className="transparent-button">

@@ -4,7 +4,7 @@ import "../css/Services.css";
 import CloudInfra from '../assets/images/services-imgs/Cloud-infra-img.jpg'
 import ShowcaseInfra from '../assets/images/services-imgs/Showcase-infra-img.jpg'
 import TestimonialImg2 from '../assets/images/Testimonial-imgs/Testimonial-img2.jpg'
-import Cta from "../components/Cta";
+
 
 import {
   FaUserPlus,
@@ -190,7 +190,7 @@ function CloudInfrastructureProtection() {
         </div>
       </div>
 
-            <Cta />
+
 
     </>
   );

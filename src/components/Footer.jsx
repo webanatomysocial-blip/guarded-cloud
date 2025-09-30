@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Solutions */}
         <div className="footer-column split-column">
           <h4>Solutions</h4>
-          <div className="column-links">
+          <div className="column-links-2">
             <div className="left-links">
               <Link to="/cloud-security-posture">Cloud Security Posture (CSPM)</Link>
               <Link to="/managed-detection-response">Managed Detection and Response (MDR/XDR)</Link>
@@ -53,14 +53,30 @@ export default function Footer() {
               <Link to="/incident-response-retainer">Incident Response Retainer</Link>
             </div>
           </div>
+
+          <div className="divider"></div>
+
         </div>
       </footer>
-
-      <div className="footer-middle">
-        <Link to="/privacy">Privacy Policy | </Link>
-        <Link to="/terms">Terms of Service |</Link>
-        <Link to="/cookies">Data Processing Addendum | </Link>
-        <Link to="/dqa">Cookies Policy | </Link>
+      <div className="footer-middle-section only-windows">
+        <div className="footer-middle">
+          <Link to="/privacy">Privacy Policy | </Link>
+          <Link to="/terms">Terms of Service | </Link>
+          <Link to="/cookies">Cookies Policy | </Link>
+          <Link to="/dpa">Data Processing | </Link>
+        </div>
+      </div>
+      <div className="footer-middle-section only-mobile">
+        <div className="footer-middle ">
+          <div className="footer-middle-left">
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+          </div>
+          <div className="footer-middle-right">
+            <Link to="/cookies">Cookies Policy</Link>
+            <Link to="/dpa">Data Processing</Link>
+          </div>
+        </div>
       </div>
       <div className="footer-bottom">
         <p className="text-white">

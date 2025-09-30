@@ -5,7 +5,8 @@ import "../css/howwework.css";
 import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
 import FAQTemplate from "../components/Faq";
 import { faqs } from "../data/faqs";
-
+import "../css/Services.css";
+import { Link } from 'react-router-dom';
 
 const HowWeWork = () => {
   return (
@@ -74,22 +75,38 @@ const HowWeWork = () => {
             <div className="ind-section">
               <p className='sub-heading'>Phase 2: Harden (Days 31–60)</p>
               <p className='text'>Implement guardrails (IaC templates, policy packs, identity controls). - Roll out SSL Decryption pilot to IT
-group; tune exceptions. - Deliverable: <bold> Hardened baseline + change runbooks</bold></p>
+                group; tune exceptions. - Deliverable: <bold> Hardened baseline + change runbooks</bold></p>
             </div>
             <div className="ind-section">
               <p className='sub-heading'>Phase 3: Monitor & Improve (Days 61–90)</p>
               <p className='text'>MDR playbooks live; tuning to reduce noise. - Executive scorecard (KPIs: MTTR, misconfig count, vuln SLA,
-phishing rate). - Deliverable:<bold> Quarterly Security Scorecard & Roadmap</bold></p>
+                phishing rate). - Deliverable:<bold> Quarterly Security Scorecard & Roadmap</bold></p>
             </div>
             <div className="ind-section-last">
               <p className='text'><bold>Ongoing:</bold> Monthly posture reviews, tabletop exercises, roadmap refresh.</p>
             </div>
-           
+
           </div>
         </div>
       </section>
 
-       <FAQTemplate title="Frequently Asked Questions" faqs={faqs} />
+      <FAQTemplate title="Frequently Asked Questions" faqs={faqs} />
+
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Request your tailored 90-day plan</h2>
+              {/* <p className="cta-text-white">Talk to an Engineer</p> */}
+            </div>
+            <div className="cta-buttons">
+              <Link className="blue-button" to="/contact">
+                Book your session
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

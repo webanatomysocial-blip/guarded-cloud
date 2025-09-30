@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
-import cloudimg from "../assets/images/services-imgs/cloud-security-img.jpg"
+import retainer from "../assets/images/services-imgs/retainer.jpg"
 import testimonialImg from '../assets/images/Testimonial-imgs/Testimonial-img1.jpg'
 import Showcaseimg1 from '../assets/images/services-imgs/Showcase-img1.jpg'
 import {
@@ -12,7 +12,7 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import Cta from "../components/Cta";
+
 
 function IncidentResponseRetainer() {
   return (
@@ -30,7 +30,7 @@ function IncidentResponseRetainer() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src={cloudimg}
+              src={retainer}
               alt="incident response retainer"
             />
           </div>
@@ -179,7 +179,7 @@ function IncidentResponseRetainer() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Reserve Now
               </Link>
             </div>

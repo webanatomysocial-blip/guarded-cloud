@@ -13,7 +13,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { CgTab } from "react-icons/cg";
-import Cta from "../components/Cta";
+
 
 function CloudSecurityPosture() {
   return (
@@ -218,10 +218,10 @@ function CloudSecurityPosture() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Get Started
               </Link>
-             
+
             </div>
           </div>
         </div>

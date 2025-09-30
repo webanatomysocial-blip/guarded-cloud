@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
-import cloudimg from "../assets/images/services-imgs/cloud-security-img.jpg"
+import emailImg from "../assets/images/services-imgs/email-sec.jpg"
 import testimonialImg from '../assets/images/Testimonial-imgs/Testimonial-img1.jpg'
 import Showcaseimg1 from '../assets/images/services-imgs/Showcase-img1.jpg'
 import {
@@ -12,7 +12,7 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import Cta from "../components/Cta";
+
 
 function EmailCollaborationSecurity() {
   return (
@@ -21,7 +21,7 @@ function EmailCollaborationSecurity() {
       <section className="service-container-1">
         <div className="service-left">
           <h2 className="main-heading">
-            Stop phishing, BEC, and malware before inboxes.
+            Stop phishing, BEC and malware before inboxes.
           </h2>
           <p className="text">
             <strong>Features:</strong> Advanced phishing detection, attachment/URL sandboxing, impersonation protection, DMARC/DKIM/SPF, and safe links.
@@ -30,7 +30,7 @@ function EmailCollaborationSecurity() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src={cloudimg}
+              src={emailImg}
               alt="email & collaboration security"
             />
           </div>
@@ -191,7 +191,7 @@ function EmailCollaborationSecurity() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Evaluate Email Risk
               </Link>
             </div>

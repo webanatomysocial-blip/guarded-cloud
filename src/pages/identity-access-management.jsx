@@ -4,7 +4,7 @@ import "../css/Services.css";
 import identityAccess from '../assets/images/services-imgs/identity-access-management-img.jpg';
 import TestimonialImg3 from '../assets/images/Testimonial-imgs/Testimonial-img3.jpg';
 import ShowCaseImg3 from '../assets/images/services-imgs/ShowCase-img3.jpg';
-import Cta from "../components/Cta";
+
 
 import {
   FaUserPlus,
@@ -190,26 +190,26 @@ function IdentityAccessManagement() {
         </div>
       </div>
 
-        <section className="service-cta-section">
-              <div className="service-cta-content">
-                <div className="cta-flex-container">
-                  <div className="cta-text">
-                    <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
-                    <p className="cta-text-white">
-                      Protect your cloud environment with our advanced security monitoring solutions.
-                    </p>
-                  </div>
-                  <div className="cta-buttons">
-                    <Link to="/Contact" className="blue-button">
-                      Get Started
-                    </Link>
-                    <Link to="/Contact" className="transparent-button">
-                      Watch Demo
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Ready to Secure Your Cloud?</h2>
+              <p className="cta-text-white">
+                Protect your cloud environment with our advanced security monitoring solutions.
+              </p>
+            </div>
+            <div className="cta-buttons">
+              <Link to="/Contact" className="blue-button">
+                Get Started
+              </Link>
+              <Link to="/Contact" className="transparent-button">
+                Watch Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

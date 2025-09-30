@@ -4,6 +4,7 @@ import { FaLock, FaUserShield, FaNetworkWired, FaDatabase, FaEye, FaClipboardChe
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import "../css/security.css";
+import "../css/Services.css";
 
 const SecurityCompliance = () => {
   const features = [
@@ -73,6 +74,22 @@ const SecurityCompliance = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Talk to an industry specialist</h2>
+              {/* <p className="cta-text-white">Talk to an Engineer</p> */}
+            </div>
+            <div className="cta-buttons">
+              <Link className="blue-button" to="/contact">
+                Book your session
+              </Link>
+            </div>
           </div>
         </div>
       </section>

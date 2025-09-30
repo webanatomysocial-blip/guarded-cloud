@@ -131,7 +131,7 @@ function Home() {
               <p className="cta-text-white">Talk to an Engineer</p>
             </div>
             <div className="cta-buttons">
-              <Link className="blue-button" to="/contact">
+              <Link className="blue-button-no-hover" to="/contact">
                 Book your session
               </Link>
             </div>

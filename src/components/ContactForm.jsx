@@ -67,7 +67,7 @@ export default function Contactus() {
               />
             </div>
             <div className="field">
-              <label htmlFor="service">What do you need help with?</label>
+              <label htmlFor="service">Need help?</label>
               <select id="service" name="service">
                 <option value="Monitoring & Threat Detection">
                   Monitoring & Threat Detection

@@ -42,7 +42,7 @@ const TestimonialCarousel = () => (
     <Swiper
       slidesPerView={1.5}
       spaceBetween={32}
-      centeredSlides={true}
+      centeredSlides={false}
       pagination={{ clickable: true }}
       modules={[Pagination]}
       style={{ paddingBottom: "40px" }}
@@ -55,7 +55,7 @@ const TestimonialCarousel = () => (
         800: {
           slidesPerView: 1.5,
           spaceBetween: 32,
-          centeredSlides: true
+          centeredSlides: false
         }
       }}
     >

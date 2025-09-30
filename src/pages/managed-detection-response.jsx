@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
 import manageddetection from '../assets/images/services-imgs/managed-detection-response.jpg';
-import  Testimonialimg6 from '../assets/images/Testimonial-imgs/Testimonial-img6.jpg';
+import Testimonialimg6 from '../assets/images/Testimonial-imgs/Testimonial-img6.jpg';
 import Showcaseimg6 from '../assets/images/services-imgs/Showcase-img6.jpg';
 import {
   FaUserPlus,
@@ -12,7 +12,7 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import Cta from "../components/Cta";
+
 
 function ManagedDetectionResponse() {
   return (
@@ -217,10 +217,10 @@ function ManagedDetectionResponse() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Request MDR Review
               </Link>
-             
+
             </div>
           </div>
         </div>

@@ -64,3 +64,59 @@
     font-size: 12px;
     color: #666;
 }
+
+@media (max-width: 800px) {
+    .security-main {
+        padding: 100px 20px 60px 20px;
+        background-color: #ffffff;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .security-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        border-radius: 20px;
+        padding: 0px !important;
+    }
+
+    .security-left-container {
+        width: 100%;
+        height: 100%;
+        background-color: #04243f;
+        display: flex;
+        gap: 28px;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px 20px;
+        border-radius: 20px;
+    }
+
+    .security-right-container {
+        height: 100%;
+        width: 100%;
+        padding: 0px 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .section-card {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}

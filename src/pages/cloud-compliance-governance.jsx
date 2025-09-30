@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
 import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
-import TestimonialImg4 from '../assets/images/Testimonial-imgs/Testimonial-img4.jpg'; 
+import TestimonialImg4 from '../assets/images/Testimonial-imgs/Testimonial-img4.jpg';
 import ShowCaseImg4 from '../assets/images/services-imgs/ShowCase-img4.jpg';
-import Cta from "../components/Cta";
+
 
 import {
   FaUserPlus,
@@ -190,7 +190,7 @@ function CloudComplianceGovernance() {
         </div>
       </div>
 
-            <Cta />
+
 
     </>
   );

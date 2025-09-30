@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import "../css/Header.css";
 import "../css/pricing.css";
-
+import "../css/Services.css";
+import { Link } from 'react-router-dom';
 const Pricing = () => {
   const plans = [
     {
@@ -66,7 +67,7 @@ const Pricing = () => {
               <h3 className="plan-name">{plan.name}</h3>
               <div className="plan-price">
                 <span className="current-price"> Starting at {plan.price}</span>
-                
+
               </div>
               <p className="plan-description">{plan.description}</p>
               <ul className="plan-features">
@@ -79,6 +80,21 @@ const Pricing = () => {
               </button>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Book a FREE Security Assessment</h2>
+              {/* <p className="cta-text-white">Talk to an Engineer</p> */}
+            </div>
+            <div className="cta-buttons">
+              <Link className="blue-button" to="/contact">
+                Book your session
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

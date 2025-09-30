@@ -4,7 +4,7 @@ import "../css/Services.css";
 import advisorymanaged from '../assets/images/services-imgs/advisory-managed-security-img.jpg';
 import ShowcaseImg5 from '../assets/images/services-imgs/Showcase-img5.jpg';
 import Testimonialimg5 from '../assets/images/Testimonial-imgs/Testimonial-img5.jpg';
-import Cta from "../components/Cta";
+
 
 import {
   FaUserPlus,
@@ -190,8 +190,8 @@ function AdvisoryManagedSecurity() {
         </div>
       </div>
 
-      <Cta />
-      
+
+
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Services.css";
-import cloudimg from "../assets/images/services-imgs/cloud-security-img.jpg"
+import dataprotec from "../assets/images/services-imgs/data-protection.jpg"
 import testimonialImg from '../assets/images/Testimonial-imgs/Testimonial-img1.jpg'
 import Showcaseimg1 from '../assets/images/services-imgs/Showcase-img1.jpg'
 import {
@@ -12,7 +12,7 @@ import {
   FaFileAlt,
   FaUsers,
 } from "react-icons/fa";
-import Cta from "../components/Cta";
+
 
 function DataProtectiondlp() {
   return (
@@ -30,7 +30,7 @@ function DataProtectiondlp() {
         <div className="service-right">
           <div className="service-image">
             <img
-              src={cloudimg}
+              src={dataprotec}
               alt="data protection and DLP"
             />
           </div>
@@ -191,10 +191,10 @@ function DataProtectiondlp() {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/Contact" className="blue-button">
+              <Link to="/Contact" className="blue-button-no-hover">
                 Design DLP Policy
               </Link>
-              
+
             </div>
           </div>
         </div>

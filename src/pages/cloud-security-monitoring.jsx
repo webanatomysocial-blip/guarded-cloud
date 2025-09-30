@@ -13,7 +13,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { CgTab } from "react-icons/cg";
-import Cta from "../components/Cta";
+
 
 function CloudSecurityMonitoring() {
   return (
@@ -189,7 +189,7 @@ function CloudSecurityMonitoring() {
           </div>
         </div>
       </div>
-      <Cta />
+
     </>
   );
 }

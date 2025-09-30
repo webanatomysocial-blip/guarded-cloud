@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   FaBars,
   FaTimes,
@@ -20,14 +20,14 @@ import logo from "../assets/gaurdmainlogo.png";
 
 function Header() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // Mobile submenu state
-  const [isHeaderWhite, setIsHeaderWhite] = useState(false); // Header background state
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isHeaderWhite, setIsHeaderWhite] = useState(true);
   const dropdownRef = useRef(null);
   const headerRef = useRef(null);
   const debouncedHideMenuRef = useRef(null);
+  const location = useLocation();
 
-  // Debounced hide mega menu
   const getDebouncedHideMenu = useCallback(() => {
     if (!debouncedHideMenuRef.current) {
       debouncedHideMenuRef.current = debounce(() => {
@@ -49,20 +49,21 @@ function Header() {
     }
   };
 
-  // Intersection Observer to detect when header is over #home-banner
   useEffect(() => {
-    const homeBanner = document.getElementById("home-banner");
+    if (location.pathname !== "/") {
+      setIsHeaderWhite(false);
+      return;
+    }
 
+    setIsHeaderWhite(true);
+    const homeBanner = document.getElementById("home-banner");
     if (!homeBanner) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsHeaderWhite(entry.isIntersecting);
       },
-      {
-        root: null,
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     observer.observe(homeBanner);
@@ -71,34 +72,30 @@ function Header() {
       observer.disconnect();
       getDebouncedHideMenu().cancel();
     };
-  }, [getDebouncedHideMenu]);
+  }, [location.pathname, getDebouncedHideMenu]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-      setIsMobileServicesOpen(false);
-    }
+    if (isMenuOpen) setIsMobileServicesOpen(false);
   };
 
   return (
     <header
-      className={`header ${isHeaderWhite ? "white-bg" : ""}`}
+      className={`header ${isHeaderWhite ? "white-bg" : "blur-bg"}`}
       ref={headerRef}
     >
-      {/* Left logo */}
+      {/* Logo */}
       <div className="logo-container">
         <Link to="/" className="logo">
           <img src={logo} alt="Logo" />
         </Link>
       </div>
 
-      {/* Desktop nav */}
+      {/* Desktop Navigation */}
       <nav className="navigation only-windows">
         <ul className="nav-list">
           <li>
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
+            <Link to="/" className="nav-link">Home</Link>
           </li>
 
           {/* Mega Menu */}
@@ -127,9 +124,7 @@ function Header() {
                 </div>
                 <div className="mega-item">
                   <FaUserShield className="mega-icon" />
-                  <Link to="/zero-trust-identity">
-                    Zero Trust & Identity
-                  </Link>
+                  <Link to="/zero-trust-identity">Zero Trust & Identity</Link>
                 </div>
                 <div className="mega-item">
                   <FaNetworkWired className="mega-icon" />
@@ -145,9 +140,7 @@ function Header() {
                 </div>
                 <div className="mega-item">
                   <FaLock className="mega-icon" />
-                  <Link to="/data-protection-dlp">
-                    Data Protection & DLP
-                  </Link>
+                  <Link to="/data-protection-dlp">Data Protection & DLP</Link>
                 </div>
                 <div className="mega-item">
                   <FaBug className="mega-icon" />
@@ -171,64 +164,30 @@ function Header() {
             </div>
           </li>
 
-          <li>
-            <Link to="/industries" className="nav-link">
-              Industries
-            </Link>
-          </li>
-          <li>
-            <Link to="/how-we-work" className="nav-link">
-              How We Work
-            </Link>
-          </li>
-          <li>
-            <Link to="/pricing" className="nav-link">
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link to="/security" className="nav-link">
-              Security
-            </Link>
-          </li>
-          <li>
-            <Link to="/case-studies" className="nav-link">
-              Case Studies
-            </Link>
-          </li>
-          <li>
-            <Link to="/resources" className="nav-link">
-              Resources
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="nav-link">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-          </li>
+          <li><Link to="/industries" className="nav-link">Industries</Link></li>
+          <li><Link to="/how-we-work" className="nav-link">How We Work</Link></li>
+          <li><Link to="/pricing" className="nav-link">Pricing</Link></li>
+          <li><Link to="/security" className="nav-link">Security</Link></li>
+          <li><Link to="/case-studies" className="nav-link">Case Studies</Link></li>
+          <li><Link to="/resources" className="nav-link">Resources</Link></li>
+          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+          <li><Link to="/about" className="nav-link">About</Link></li>
         </ul>
       </nav>
 
-      {/* Mobile hamburger */}
+      {/* Mobile Hamburger */}
       <div className="hamburger only-mobile" onClick={toggleMenu}>
         <FaBars size={24} />
       </div>
 
-      {/* Mobile sidebar menu */}
+      {/* Mobile Sidebar Menu */}
       <div className={`mobile-menu only-mobile ${isMenuOpen ? "open" : ""}`}>
         <div className="mobile-menu-header">
           <FaTimes size={24} className="close-icon" onClick={toggleMenu} />
         </div>
         <ul className="mobile-nav-list">
           <li>
-            <Link to="/" onClick={toggleMenu}>
-              Home
-            </Link>
+            <Link to="/" onClick={toggleMenu}>Home</Link>
           </li>
           <li>
             <span
@@ -296,46 +255,14 @@ function Header() {
               </ul>
             )}
           </li>
-          <li>
-            <Link to="/industries" onClick={toggleMenu}>
-              Industries
-            </Link>
-          </li>
-          <li>
-            <Link to="/how-we-work" onClick={toggleMenu}>
-              How We Work
-            </Link>
-          </li>
-          <li>
-            <Link to="/pricing" onClick={toggleMenu}>
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link to="/security" onClick={toggleMenu}>
-              Security
-            </Link>
-          </li>
-          <li>
-            <Link to="/case-studies" onClick={toggleMenu}>
-              Case Studies
-            </Link>
-          </li>
-          <li>
-            <Link to="/resources" onClick={toggleMenu}>
-              Resources
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={toggleMenu}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={toggleMenu}>
-              About
-            </Link>
-          </li>
+          <li><Link to="/industries" onClick={toggleMenu}>Industries</Link></li>
+          <li><Link to="/how-we-work" onClick={toggleMenu}>How We Work</Link></li>
+          <li><Link to="/pricing" onClick={toggleMenu}>Pricing</Link></li>
+          <li><Link to="/security" onClick={toggleMenu}>Security</Link></li>
+          <li><Link to="/case-studies" onClick={toggleMenu}>Case Studies</Link></li>
+          <li><Link to="/resources" onClick={toggleMenu}>Resources</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
         </ul>
       </div>
 

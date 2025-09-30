@@ -3,8 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import "../css/Header.css";
 import "../css/industries.css";
 import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+import "../css/Services.css";
+import { Link } from 'react-router-dom';
 
-// import "../css/Industries.css";
 
 const Industries = () => {
   return (
@@ -39,7 +40,7 @@ const Industries = () => {
 
           </p>
         </div>
-        <div className="industries-right">
+        <div className="industries-right ">
           <div className="industries-image">
             <img
               src={cloudCompliance}
@@ -53,7 +54,7 @@ const Industries = () => {
       <section className='industries-section'>
         {/* <h2 className="main-heading">Industries</h2> */}
         <div className="industries-main-container">
-          <div className="industries-left-container">
+          <div className="industries-left-container only-windows">
             <div className="industries-inner-container">
               <img src={cloudCompliance} alt="industries" />
             </div>
@@ -82,6 +83,22 @@ const Industries = () => {
             <div className="ind-section-last">
               <p className='sub-heading'>Public Sector</p>
               <p className='text'>FedRAMP‑aligned controls, identity governance, auditing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="service-cta-section">
+        <div className="service-cta-content">
+          <div className="cta-flex-container">
+            <div className="cta-text">
+              <h2 className="cta-heading">Talk to an industry specialist</h2>
+              {/* <p className="cta-text-white">Talk to an Engineer</p> */}
+            </div>
+            <div className="cta-buttons">
+              <Link className="blue-button" to="/contact">
+                Book your session
+              </Link>
             </div>
           </div>
         </div>
