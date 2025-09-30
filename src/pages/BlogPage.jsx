@@ -7,15 +7,19 @@ const blogModules = import.meta.glob('../blogs/*.jsx');
 const BlogPage = () => {
   const { blogName } = useParams();
 
-  // Handle undefined or empty blogName
+  console.log('BlogPage: blogName from URL:', blogName);
+  console.log('BlogPage: Available blog modules:', Object.keys(blogModules));
+
   if (!blogName) {
     console.warn('BlogPage: blogName is undefined');
     return <div className="blog-not-found">Blog not found</div>;
   }
 
   const blogKey = Object.keys(blogModules).find(key =>
-    key.toLowerCase().includes(`/${blogName.toLowerCase()}.jsx`)
+    key.toLowerCase().endsWith(`/${blogName.toLowerCase()}.jsx`)
   );
+
+  console.log('BlogPage: Found blogKey:', blogKey);
 
   if (!blogKey) {
     console.warn(`BlogPage: No blog found for blogName: ${blogName}`);
@@ -24,11 +28,14 @@ const BlogPage = () => {
 
   const LazyBlog = React.lazy(() =>
     blogModules[blogKey]()
-      .then(module => ({
-        default: module.default || (() => <div>Blog content missing</div>),
-      }))
+      .then(module => {
+        console.log('BlogPage: Successfully loaded module for', blogName);
+        return {
+          default: module.default || (() => <div>Blog content missing</div>),
+        };
+      })
       .catch(error => {
-        console.error(`Error loading blog ${blogName}:`, error);
+        console.error(`BlogPage: Error loading blog ${blogName}:`, error);
         return { default: () => <div>Error loading blog: {blogName}</div> };
       })
   );

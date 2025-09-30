@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import DynamicBlog from './components/DynamicBlog'; // Adjust path as needed
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -33,6 +34,7 @@ import TermsOfService from './pages/terms-of-service';
 import CookiesPolicy from './pages/cookies-policy';
 import DataProcessingAddendum from './pages/data-processing-addendum';
 import FAQTemplate from './components/Faq';
+import CaseStudies from './pages/Case-studies';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -51,13 +53,11 @@ createRoot(document.getElementById('root')).render(
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/security" element={<SecurityCompliance />} />
 
-              {/* Blogs */}
-              <Route path="/case-studies" element={<Blogs />} />
-              <Route path="/case-studies/:id" element={<BlogPage />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-studies/:id" element={<DynamicBlog />} />
 
-              <Route path="/resources" element={<Blogs />} />
+              <Route path="/resources" element={<Resources />} />
 
-              {/* Solution detail pages */}
               <Route path="/cloud-security-posture" element={<CloudSecurityPosture />} />
               <Route path="/managed-detection-response" element={<ManagedDetectionResponse />} />
               <Route path="/zero-trust-identity" element={<ZeroTrustIdentity />} />
@@ -68,8 +68,6 @@ createRoot(document.getElementById('root')).render(
               <Route path="/backup-disaster-recovery" element={<BackupDisasterRecovery />} />
               <Route path="/incident-response-retainer" element={<IncidentResponseRetainer />} />
 
-
-              {/* Legal Pages Routing */}
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/cookies" element={<CookiesPolicy />} />
@@ -77,7 +75,6 @@ createRoot(document.getElementById('root')).render(
               <Route path="/faq" element={<FAQTemplate />} />
             </Route>
 
-            {/* Fallback for unknown routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

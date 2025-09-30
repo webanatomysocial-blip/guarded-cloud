@@ -17,7 +17,7 @@ import videoFile from '../assets/banner-video.mp4';
 import bannnnnnnn from '../assets/banner-img-after-vedeo.jpg';
 import { Helmet } from 'react-helmet-async';
 import TestimonialCarousel from "../components/TestimonialCarousel";
-import { faqs } from "../data/faqs";
+// import { faqs } from "../data/faqs";
 
 
 

@@ -4,15 +4,11 @@
 }
 
 .breach-hero-banner {
-  background-image: url('https://cloud.kaphi.in/images/21655.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  margin-top: 100px;
+  margin-top: 150px;
+  padding: 50px;
 }
 
 .hero-overlay-section {
@@ -62,4 +58,10 @@
 
 .breach-article-content li {
   margin-bottom: 8px;
+}
+.hero-banner-image-blog{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30px;
 }
