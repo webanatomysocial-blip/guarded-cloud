@@ -137,7 +137,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 120px 20px 60px 20px;
+    padding: 60px 20px !important;
   }
 
   .blog-card {
@@ -149,6 +149,18 @@
     transition: transform 0.3s ease;
   }
 
+  .blog-title {
+    font-size: 1rem;
+    margin: 0 0 10px;
+    color: #222;
+  }
+
+  .blog-excerpt {
+    font-size: 0.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
 
 
 }

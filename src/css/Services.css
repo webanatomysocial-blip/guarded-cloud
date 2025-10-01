@@ -230,7 +230,7 @@
   justify-content: center;
   align-items: center;
   background-color: #2E3840;
-  padding: 60px 0px 50px 0px;
+  padding: 60px 0px 60px 0px;
   border-radius: 20px;
 }
 
@@ -439,11 +439,11 @@
   }
 
   .service-container-1 {
-    padding: 100px 20px 60px 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 040px;
+    gap: 020px;
   }
 
   .serviceCard {
@@ -550,7 +550,7 @@
 
     background: linear-gradient(135deg, rgb(18, 27, 46, 0.8) 0%, #0156B3 80%, #ffffff43 150%);
     padding: 60px 20px;
-    margin: 40px 20px 50px 20px;
+    margin: 60px 20px;
     border-radius: 20px;
   }
 

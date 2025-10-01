@@ -69,7 +69,7 @@ const HowWeWork = () => {
             </div>
             <div className="ind-section">
               <p className='sub-heading'>Phase 1: Assess (Days 1–30)</p>
-              <p className='text'>- Baseline posture & threat review (cloud, identity, endpoint, network). - Quick wins implemented (critical
+              <p className='text'>Baseline posture & threat review (cloud, identity, endpoint, network). - Quick wins implemented (critical
                 misconfigs, risky exposures). - Deliverable: <bold> Assessment report + prioritized </bold></p>
             </div>
             <div className="ind-section">
@@ -98,7 +98,7 @@ const HowWeWork = () => {
             <div className="cta-text">
               <h2 className="cta-heading">Request your tailored 90-day plan</h2>
               {/* <p className="cta-text-white">Talk to an Engineer</p> */}
-            </div>
+            </div> 
             <div className="cta-buttons">
               <Link className="blue-button" to="/contact">
                 Book your session

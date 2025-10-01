@@ -25,7 +25,7 @@ function Contact() {
         <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
         <link rel="canonical" href="https://yourwebsite.com/" /> */}
       </Helmet>
-    <section style={{marginTop: "60px"}}>
+    <section>
     <Contactus></Contactus>
     </section>
     </>

@@ -95,12 +95,12 @@
   flex-direction: row;
   gap: 20px;
   justify-content: center;
-  padding: 30px 70px 100px 70px;
+  padding:  100px 70px;
   align-items: center;
 }
 
 .inner-about-mission-vision-right img {
-  width: 600px;
+  width: 500px;
   height: 400px;
   object-fit: cover;
   border: 5px solid white;
@@ -110,7 +110,8 @@
 
 /* Why Choose Us */
 .about-why-choose {
-  padding: 0px 70px 100px 70px;
+  padding:  100px 70px;
+  background-color: white;
 }
 
 .about-choose-grid {
@@ -138,7 +139,7 @@
 
 @media only screen and (max-width: 800px) {
   .about-banner-container {
-    padding: 100px 20px 60px 20px;
+    padding:  60px 20px 120px 20px;
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
@@ -194,7 +195,7 @@
     flex-direction: column;
     gap: 20px;
     justify-content: center;
-    padding: 30px 20px 60px 20px;
+    padding:  60px 20px ;
   }
 
   .inner-about-mission-vision-right {
@@ -233,7 +234,8 @@
   }
 
   .about-why-choose {
-    padding: 0px 20px 30px 20px;
+    padding: 60px 20px;
+    background-color: white;
   }
 
   .about-choose-grid {

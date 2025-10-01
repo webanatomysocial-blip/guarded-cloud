@@ -83,6 +83,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.sub-heading-bold {
+  font-size: 18px !important;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  padding: 0px 0px 3px 0px;
+  word-spacing: 1px;
+  color: #04243f;
+  font-family: "Roboto", sans-serif;
+}
+
 .sub-heading-white {
   font-size: 22px;
   font-weight: 400;
@@ -228,6 +239,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: fit-content;
 }
+
 .blue-button-no-hover {
   display: inline-flex;
   align-items: center;
@@ -546,11 +558,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   padding: 160px 70px 100px 70px;
 }
+.not-found-container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 160px 70px 100px 70px;
+}
+
+
 
 @media only screen and (max-width: 800px) {
   .only-windows {
@@ -564,11 +583,10 @@ body {
   .not-found-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    height: 100vh;
+    gap: 25px;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px 0px 20px;
+    padding: 60px 20px;
   }
 
   .blue-button {
@@ -815,5 +833,59 @@ body {
     color: #ffffff;
     text-transform: capitalize;
     /* text-align: center; */
+  }
+
+  .sub-heading {
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.1em;
+    text-align: left;
+
+  }
+
+  .text-black {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    padding: 0 0 15px 0;
+    max-width: 1000px;
+    line-height: 1.6;
+
+  }
+
+  .header {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    width: 100%;
+    position: static;
+    z-index: 1000;
+    padding: 20px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  }
+
+  .blue-button-no-hover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #007bff;
+    /* Blue background */
+    color: #fff;
+    /* White text */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: fit-content;
   }
 }

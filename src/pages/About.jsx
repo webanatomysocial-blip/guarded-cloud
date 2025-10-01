@@ -188,8 +188,8 @@ export default function About() {
 
 
       {/* Mission & Vision */}
-      <h2 className="main-heading" style={{ textAlign: "center" }}>What Drives Us Forward</h2>
       <div className="about-mission-vision">
+      <h2 className="main-heading" style={{ textAlign: "center" }}>What Drives Us Forward</h2>
 
         <div className="about-card-our-mission-vision ">
           <div className="icon">

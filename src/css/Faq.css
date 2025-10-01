@@ -1,8 +1,6 @@
-
-
 .faq-section {
-  padding: 60px 50px 150px 50px;
-  background:white;
+  padding: 60px 70px 30px 70px;
+  background-color: white;
 }
 
 .faq-list {
@@ -42,3 +40,29 @@
   margin-left: 20px;
 }
 
+@media only screen and (max-width: 800px) {
+  .faq-section {
+    padding: 60px 20px;
+    background-color: white;
+
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-family: "barlow", monospace;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1.3em;
+    padding: 36px 0 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+}

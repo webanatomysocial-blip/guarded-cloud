@@ -1,15 +1,12 @@
 .security-main {
-    padding: 160px 70px 100px 70px;
+    padding: 160px 70px 60px 70px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 100px;
 }
 
 .security-container {
-    width: 80%;
-    height: 70vh;
+    width: 100%;
     display: flex;
     gap: 10px;
     background-color: #ffffff;
@@ -19,7 +16,6 @@
 
 .security-left-container {
     width: 40%;
-    height: 100%;
     background-color: #04243f;
     display: flex;
     justify-content: space-between;
@@ -30,7 +26,6 @@
 }
 
 .security-right-container {
-    height: 100%;
     width: 60%;
     padding: 0px 20px;
     display: grid;
@@ -67,7 +62,7 @@
 
 @media (max-width: 800px) {
     .security-main {
-        padding: 100px 20px 60px 20px;
+        padding: 60px 20px;
         background-color: #ffffff;
         width: 100%;
         display: flex;
@@ -78,11 +73,9 @@
 
     .security-container {
         width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        
+        gap: 25px;
         border-radius: 20px;
         padding: 0px !important;
     }

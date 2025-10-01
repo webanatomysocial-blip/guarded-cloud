@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <>
-      <div className="not-found-container">
+      <div className="not-found-container-2">
     <p className='text'>404 Not Found</p>
         <h2 className='main-big-heading'>
           This page is out of policy
