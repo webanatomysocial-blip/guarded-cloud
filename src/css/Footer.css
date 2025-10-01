@@ -75,7 +75,9 @@
   font-weight: bold;
   text-align: center;
 }
-
+.footer:hover{
+  cursor: pointer;
+}
 .footer-column a {
   color: #ffffff;
   text-decoration: none;

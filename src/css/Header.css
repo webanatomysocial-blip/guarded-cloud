@@ -229,6 +229,9 @@ body {
 
 
 
+.header:hover{
+  cursor: pointer;
+}
 
 
 /* buttons start */
@@ -882,7 +885,6 @@ body {
     line-height: 1.6;
 
   }
-
   .header {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(14px);
