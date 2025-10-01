@@ -8,7 +8,7 @@ export default function Blog() {
     
       <div className="breach-article-content">
         <section>
-          <p>
+          <p className='text'>
             You’ve seen the headlines about multi-million-dollar breaches. Useful as a cautionary tale, but not for budgeting.
             If you’re a ~50-person company, here’s a straightforward way to estimate impact.
           </p>

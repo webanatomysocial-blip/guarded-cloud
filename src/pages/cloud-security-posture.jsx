@@ -129,7 +129,7 @@ function CloudSecurityPosture() {
 
       {/* Showcase Section - KEEPING AS IS */}
 
-
+{/* 
       <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
@@ -166,8 +166,8 @@ function CloudSecurityPosture() {
             />
           </div>
         </div>
-      </section>
-
+      </section> */}
+{/* 
       <div className="strength-bottom">
         <div className="stat-card">
           <div className="stat-box">
@@ -204,7 +204,7 @@ function CloudSecurityPosture() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <section className="service-cta-section">

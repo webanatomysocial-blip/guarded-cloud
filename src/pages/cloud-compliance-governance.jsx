@@ -114,7 +114,7 @@ function CloudComplianceGovernance() {
         </div>
       </section>
 
-      <section className="strength-showcase">
+      {/* <section className="strength-showcase">
         <div className="strength-left">
           <h2 className="main-heading-White">Showcase your strengths</h2>
           <p className="text-white">
@@ -188,7 +188,7 @@ function CloudComplianceGovernance() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 
