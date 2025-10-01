@@ -68,6 +68,16 @@ body {
   text-transform: capitalize;
 }
 
+.main-heading-white {
+  font-size: 55px !important;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
 .main-heading-white span {
   color: #a21caf;
 }
@@ -497,7 +507,7 @@ body {
 }
 
 .mega-icon {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
   fill: #ffffff;
 }
@@ -560,7 +570,9 @@ body {
   gap: 30px;
   padding: 160px 70px 100px 70px;
 }
+
 .not-found-container-2 {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -585,8 +597,17 @@ body {
     flex-direction: column;
     gap: 25px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 60px 20px;
+  }
+
+  .not-found-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 160px 70px 100px 70px;
   }
 
   .blue-button {
@@ -599,7 +620,7 @@ body {
     color: #fff;
     /* White text */
     text-decoration: none;
-    font-size: 17px !important;
+    font-size: 14px !important;
     font-weight: 300 !important;
     border-radius: 50px;
     letter-spacing: 1.5px;
@@ -711,7 +732,7 @@ body {
     font-weight: 600;
     line-height: 1.1em;
     letter-spacing: 0.5px;
-    text-align: center;
+    text-align: left;
   }
 
   .text-white {
@@ -722,6 +743,12 @@ body {
 
   .main-heading-White {
     font-size: 22px !important;
+    font-weight: 600;
+    line-height: 1.1em;
+  }
+
+  .main-heading-white {
+    font-size: 19px !important;
     font-weight: 600;
     line-height: 1.1em;
   }
@@ -887,5 +914,30 @@ body {
     letter-spacing: 1.5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: fit-content;
+  }
+
+  .arrow-icon {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    background-color: transparent;
+  }
+
+  .transparent-button-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    border: #fff 1px solid;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: fit-content;
+    cursor: pointer;
   }
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import "../css/Header.css";
 import "../css/industries.css";
-import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+import industries from '../assets/images/services-imgs/industries.jpg';
+import indsec from '../assets/images/services-imgs/ind-sec.jpg';
 import "../css/Services.css";
 import { Link } from 'react-router-dom';
 
@@ -43,7 +44,7 @@ const Industries = () => {
         <div className="industries-right ">
           <div className="industries-image">
             <img
-              src={cloudCompliance}
+              src={indsec}
               alt="Industries"
             />
           </div>
@@ -56,7 +57,7 @@ const Industries = () => {
         <div className="industries-main-container">
           <div className="industries-left-container only-windows">
             <div className="industries-inner-container">
-              <img src={cloudCompliance} alt="industries" />
+              <img src={industries} alt="industries" />
             </div>
           </div>
           <div className="industries-right-container">

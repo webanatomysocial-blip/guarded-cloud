@@ -475,6 +475,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
   }
 
@@ -562,7 +563,7 @@
     word-spacing: 1px;
     color: #ffffff;
     text-transform: capitalize;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
   }
 
@@ -587,7 +588,7 @@
     word-spacing: 1px;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
-    text-align: left;
+    text-align: center;
   }
 
   .blue-button {
@@ -623,10 +624,9 @@
   }
 
   .cta-buttons {
-    width: 97%;
+    width: 100%;
     display: flex;
     gap: 1.5rem;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
   }
 }

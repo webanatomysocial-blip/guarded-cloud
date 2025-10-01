@@ -189,7 +189,7 @@ export default function About() {
 
       {/* Mission & Vision */}
       <div className="about-mission-vision">
-      <h2 className="main-heading" style={{ textAlign: "center" }}>What Drives Us Forward</h2>
+      <h2 className="main-heading" >What Drives Us Forward</h2>
 
         <div className="about-card-our-mission-vision ">
           <div className="icon">
@@ -231,7 +231,7 @@ export default function About() {
 
       {/* Why Choose Us */}
       <section className="about-why-choose">
-        <h2 className="main-heading" style={{ textAlign: "center" }}>Why Choose Us</h2>
+        <h2 className="main-heading" >Why Choose Us</h2>
         <div className="about-choose-grid">
           <div className="about-choose-item">
             <div className="icon">

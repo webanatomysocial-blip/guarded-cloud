@@ -5,7 +5,7 @@ export default function Contactus() {
   return (
     <section className="contact-us-section" id="contact">
       <div className="contact-container">
-        <h2 className="main-heading">Talk to us
+        <h2 className="main-heading" style={{textAlign:"center"}}>Talk to us
         </h2>
         <p>
           Tell us where you’re headed and what keeps you up at night. We’ll reply within one business

@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import "../css/Header.css";
 import "../css/howwework.css";
-import cloudCompliance from '../assets/images/services-imgs/cloud-compliance-governance-img.jpg';
+import roadmap from '../assets/images/services-imgs/roadmap.jpg';
 import FAQTemplate from "../components/Faq";
 import { faqs } from "../data/faqs";
 import "../css/Services.css";
@@ -58,7 +58,7 @@ const HowWeWork = () => {
         <div className="howwework-main-container">
           <div className="howwework-left-container">
             <div className="howwework-inner-container">
-              <img src={cloudCompliance} alt="howwework" />
+              <img src={roadmap} alt="howwework" />
             </div>
           </div>
           <div className="howwework-right-container">

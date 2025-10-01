@@ -81,7 +81,7 @@ function Home() {
       <EverythingYouNeed />
       {/* How It Works Section */}
       <section className="how-it-works-section">
-        <h2 className="main-heading">How It Works</h2>
+        <h2 className="main-heading" style={{textAlign:"center"}}>How It Works</h2>
 
         <div className="how-it-works-timeline">
           <div className="timeline-step">

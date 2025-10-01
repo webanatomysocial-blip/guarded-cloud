@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <div className="not-found-container">
-        <h2 className='main-big-heading' style={{textAlign:"center"}}>Privacy Policy</h2>
+        <h2 className='main-big-heading' >Privacy Policy</h2>
         <p className='sub-heading'>
           This Privacy Policy explains how Guarded Cloud collects, uses, and shares your personal information.
         </p>

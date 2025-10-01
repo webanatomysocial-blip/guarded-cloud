@@ -60,7 +60,7 @@ const Pricing = () => {
       </Helmet>
 
       <section className="pricing-section">
-        <h2 className="main-heading">Pricing Plans</h2>
+        <h2 className="main-heading" style={{textAlign:"center"}}>Pricing Plans</h2>
         <div className="pricing-cards">
           {plans.map((plan, index) => (
             <div key={index} className={`pricing-card ${plan.highlight ? "highlight" : ""}`}>

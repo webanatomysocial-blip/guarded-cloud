@@ -80,9 +80,7 @@
 
 
 
-.industries-section {
-    min-height: 100vh;
-}
+
 
 @media only screen and (max-width: 800px) {
     .industries-container {
