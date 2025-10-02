@@ -21,6 +21,7 @@ import logo from "../assets/gaurdmainlogo.png";
 function Header() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isHeaderWhite, setIsHeaderWhite] = useState(true);
   const dropdownRef = useRef(null);
@@ -50,6 +51,18 @@ function Header() {
   };
 
   useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     if (location.pathname !== "/") {
       setIsHeaderWhite(false);
       return;
@@ -75,8 +88,20 @@ function Header() {
   }, [location.pathname, getDebouncedHideMenu]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) setIsMobileServicesOpen(false);
+    if (isMenuOpen) {
+      closeMenuWithAnimation();
+    } else {
+      setIsMenuOpen(true);
+    }
+  };
+
+  const closeMenuWithAnimation = () => {
+    setIsMenuClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsMenuClosing(false);
+      setIsMobileServicesOpen(false);
+    }, 300);
   };
 
   return (
@@ -84,21 +109,21 @@ function Header() {
       className={`header ${isHeaderWhite ? "white-bg" : "blur-bg"}`}
       ref={headerRef}
     >
-      {/* Logo */}
+      {/* Section: Logo Start */}
       <div className="logo-container">
         <Link to="/" className="logo">
           <img src={logo} alt="Logo" />
         </Link>
       </div>
+      {/* Section: Logo End */}
 
-      {/* Desktop Navigation */}
+      {/* Section: Desktop Navigation Start */}
       <nav className="navigation only-windows">
         <ul className="nav-list">
           <li>
             <Link to="/" className="nav-link">Home</Link>
           </li>
 
-          {/* Mega Menu */}
           <li
             className="dropdown"
             ref={dropdownRef}
@@ -174,20 +199,26 @@ function Header() {
           <li><Link to="/about" className="nav-link">About</Link></li>
         </ul>
       </nav>
+      {/* Section: Desktop Navigation End */}
 
-      {/* Mobile Hamburger */}
+      {/* Section: Mobile Hamburger Start */}
       <div className="hamburger only-mobile" onClick={toggleMenu}>
         <FaBars size={24} />
       </div>
+      {/* Section: Mobile Hamburger End */}
 
-      {/* Mobile Sidebar Menu */}
-      <div className={`mobile-menu only-mobile ${isMenuOpen ? "open" : ""}`}>
+      {/* Section: Mobile Sidebar Menu Start */}
+      <div
+        className={`mobile-menu only-mobile ${
+          isMenuOpen ? (isMenuClosing ? "closing" : "open") : ""
+        }`}
+      >
         <div className="mobile-menu-header">
           <FaTimes size={24} className="close-icon" onClick={toggleMenu} />
         </div>
         <ul className="mobile-nav-list">
           <li>
-            <Link to="/" onClick={toggleMenu}>Home</Link>
+            <Link to="/" onClick={closeMenuWithAnimation}>Home</Link>
           </li>
           <li>
             <span
@@ -200,74 +231,73 @@ function Header() {
               <ul className="mobile-submenu">
                 <li>
                   <FaCloud className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/cloud-security-posture" onClick={toggleMenu}>
+                  <Link to="/cloud-security-posture" onClick={closeMenuWithAnimation}>
                     Cloud Security Posture (CSPM)
                   </Link>
                 </li>
                 <li>
                   <FaShieldAlt className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/managed-detection-response" onClick={toggleMenu}>
+                  <Link to="/managed-detection-response" onClick={closeMenuWithAnimation}>
                     Managed Detection and Response (MDR/XDR)
                   </Link>
                 </li>
                 <li>
                   <FaUserShield className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/zero-trust-identity" onClick={toggleMenu}>
+                  <Link to="/zero-trust-identity" onClick={closeMenuWithAnimation}>
                     Zero Trust & Identity
                   </Link>
                 </li>
                 <li>
                   <FaNetworkWired className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/firewall-network-security" onClick={toggleMenu}>
+                  <Link to="/firewall-network-security" onClick={closeMenuWithAnimation}>
                     Firewall & Network Security
                   </Link>
                 </li>
                 <li>
                   <FaEnvelopeOpenText className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/email-collaboration-security" onClick={toggleMenu}>
+                  <Link to="/email-collaboration-security" onClick={closeMenuWithAnimation}>
                     Email & Collaboration Security
                   </Link>
                 </li>
                 <li>
                   <FaLock className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/data-protection-dlp" onClick={toggleMenu}>
+                  <Link to="/data-protection-dlp" onClick={closeMenuWithAnimation}>
                     Data Protection & DLP
                   </Link>
                 </li>
                 <li>
                   <FaBug className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/vulnerability-patch-management" onClick={toggleMenu}>
+                  <Link to="/vulnerability-patch-management" onClick={closeMenuWithAnimation}>
                     Vulnerability & Patch Management
                   </Link>
                 </li>
                 <li>
                   <FaDatabase className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/backup-disaster-recovery" onClick={toggleMenu}>
+                  <Link to="/backup-disaster-recovery" onClick={closeMenuWithAnimation}>
                     Backup & Disaster Recovery
                   </Link>
                 </li>
                 <li>
                   <FaLifeRing className="mega-icon" style={{ height: "0.7em", width: "1em" }} />
-                  <Link to="/incident-response-retainer" onClick={toggleMenu}>
+                  <Link to="/incident-response-retainer" onClick={closeMenuWithAnimation}>
                     Incident Response Retainer
                   </Link>
                 </li>
               </ul>
             )}
           </li>
-          <li><Link to="/industries" onClick={toggleMenu}>Industries</Link></li>
-          <li><Link to="/how-we-work" onClick={toggleMenu}>How We Work</Link></li>
-          <li><Link to="/pricing" onClick={toggleMenu}>Pricing</Link></li>
-          <li><Link to="/security" onClick={toggleMenu}>Security</Link></li>
-          <li><Link to="/case-studies" onClick={toggleMenu}>Case Studies</Link></li>
-          <li><Link to="/resources" onClick={toggleMenu}>Resources</Link></li>
-          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
-          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/industries" onClick={closeMenuWithAnimation}>Industries</Link></li>
+          <li><Link to="/how-we-work" onClick={closeMenuWithAnimation}>How We Work</Link></li>
+          <li><Link to="/pricing" onClick={closeMenuWithAnimation}>Pricing</Link></li>
+          <li><Link to="/security" onClick={closeMenuWithAnimation}>Security</Link></li>
+          <li><Link to="/case-studies" onClick={closeMenuWithAnimation}>Case Studies</Link></li>
+          <li><Link to="/resources" onClick={closeMenuWithAnimation}>Resources</Link></li>
+          <li><Link to="/contact" onClick={closeMenuWithAnimation}>Contact</Link></li>
+          <li><Link to="/about" onClick={closeMenuWithAnimation}>About</Link></li>
         </ul>
       </div>
 
-      {/* Overlay when menu is open */}
-      {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+      {isMenuOpen && <div className="overlay show" onClick={toggleMenu}></div>}
     </header>
   );
 }

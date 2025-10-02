@@ -16,11 +16,6 @@ const Resources = () => {
           name="description"
           content=" Guides, checklists, and insights on cloud security, Zero Trust, MDR, and compliance."
         />
-
-
-
-
-
        
       </Helmet>
 

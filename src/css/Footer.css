@@ -75,7 +75,7 @@
   font-weight: bold;
   text-align: center;
 }
-.footer:hover{
+.footer a:hover{
   cursor: pointer;
 }
 .footer-column a {
