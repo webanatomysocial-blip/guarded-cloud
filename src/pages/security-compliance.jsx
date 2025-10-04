@@ -59,7 +59,7 @@ const SecurityCompliance = () => {
         <div className="security-container">
           <div className="security-left-container">
             <h2 className='main-heading-white'>Built on security fundamentals</h2>
-            <Link to="/" className="transparent-button-small">
+            <Link to="/contact" className="transparent-button-small">
               Get Started
             </Link>
           </div>
