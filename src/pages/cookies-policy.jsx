@@ -6,7 +6,7 @@ const CookiesPolicy = () => {
   return (
     <>
       <div className="not-found-container">
-        <h2 className='main-big-heading' style={{textAlign:"center"}}>Cookies Policy</h2>
+        <h2 className='main-big-heading'>Cookies Policy</h2>
         <p className='sub-heading'>
           This Cookies Policy explains how Guarded Cloud uses cookies and similar technologies.
         </p>

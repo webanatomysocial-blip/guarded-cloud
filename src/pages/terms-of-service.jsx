@@ -6,7 +6,7 @@ const TermsOfService = () => {
   return (
     <>
       <div className="not-found-container">
-        <h2 className='main-big-heading' style={{textAlign:"center"}}>Terms of Service</h2>
+        <h2 className='main-big-heading'>Terms of Service</h2>
         <p className='sub-heading'>
           These Terms of Service govern your use of Guarded Cloud’s managed security offerings.
         </p>

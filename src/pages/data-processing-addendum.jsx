@@ -6,7 +6,7 @@ const DataProcessingAddendum = () => {
   return (
     <>
       <div className="not-found-container">
-        <h2 className='main-big-heading' style={{textAlign:"center"}}>Data Processing Addendum</h2>
+        <h2 className='main-big-heading' >Data Processing Addendum</h2>
         <p className='sub-heading'>
           This Data Processing Addendum (“DPA”) forms part of your agreement with Guarded Cloud.
         </p>

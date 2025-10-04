@@ -1,11 +1,13 @@
 import React from "react";
 import "../css/Contact.css";
+import { Link } from "react-router-dom";
+
 
 export default function Contactus() {
   return (
     <section className="contact-us-section" id="contact">
       <div className="contact-container">
-        <h2 className="main-heading" style={{textAlign:"center"}}>Talk to us
+        <h2 className="main-heading" style={{ textAlign: "center" }}>Talk to us
         </h2>
         <p>
           Tell us where you’re headed and what keeps you up at night. We’ll reply within one business
@@ -55,7 +57,7 @@ export default function Contactus() {
                 required
               />
             </div>
-            </div>
+          </div>
           <div className="field-row">
             <div className="field">
               <label htmlFor="phone">Phone</label>
@@ -69,18 +71,22 @@ export default function Contactus() {
             <div className="field">
               <label htmlFor="service">Need help?</label>
               <select id="service" name="service">
-                <option value="Monitoring & Threat Detection">
-                  Monitoring & Threat Detection
+                <option value="Cloud Security Posture Management">
+                  Cloud Security Posture Management
                 </option>
-                <option value="Infrastructure Protection">
-                  Infrastructure Protection
+                <option value="Managed Detection & Response">
+                  Managed Detection & Response
                 </option>
-                <option value="IAM">Identity & Access Management (IAM)</option>
+                <option value="Zero Trust & Identity">Zero Trust & Identity</option>
                 <option value="Compliance & Governance">
                   Compliance & Governance
                 </option>
-                <option value="Advisory & Managed">Advisory & Managed</option>
-                <option value="MDR">Managed Detection & Response</option>
+                <option value="Firewall & Network Security"> Firewall & Network Security (Palo Alto focus)</option>
+                <option value="Email & Collaboration Security"> Email & Collaboration Security</option>
+                <option value="Data Protection & DLP">Data Protection & DLP</option>
+                <option value="Vulnerability & Patch Management">Vulnerability & Patch Management</option>
+                <option value="Backup & Disaster Recovery">Backup & Disaster Recovery</option>
+                <option value="Incident Response Retainer">Incident Response Retainer</option>
               </select>
             </div>
           </div>
@@ -97,9 +103,9 @@ export default function Contactus() {
             <span>
               I agree to the{" "}
               processing of my data as described in the {" "}
-              <a href="#" style={{ textDecoration: "underline" }}>
+              <Link to="/privacy" style={{ textDecoration: "underline" }}>
                 Privacy Policy
-              </a>
+              </Link>
             </span>
           </label>
           <button className="sub-button" type="submit">
