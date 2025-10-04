@@ -13,8 +13,7 @@ function CaseStudies() {
         </title>
         <meta
           name="description"
-          content="  Reach our security engineers for assessments, pricing, and partnership.
-"
+          content="  Reach our security engineers for assessments, pricing, and partnership."
         />
 
       </Helmet>

@@ -16,11 +16,11 @@ const DynamicBlog = () => {
   if (!metadata) {
     console.warn(`DynamicBlog: No metadata found for blog: ${id}`);
     return (
-      <div className="breach-article-wrapper">
+      <div className="blog-not-found">
         {/* <Header backgroundColor="black" /> */}
-        <h1>Blog Not Found</h1>
-        <p>No blog found with the ID: {id}</p>
-        <Link to="/case-studies" className="back-btn">Back to Blogs</Link>
+        <h1 className='main-heading'>Blog Not Found</h1>
+        <p className='sub-heading'>No blog found with the ID: {id}</p>
+        <Link to="/case-studies" className="blue-button-small">Back to Blogs</Link>
         {/* <Footer /> */}
       </div>
     );
@@ -38,9 +38,9 @@ const DynamicBlog = () => {
         console.error(`DynamicBlog: Failed to load blog component for ${id}:`, error);
         return {
           default: () => (
-            <div>
-              <p>Error loading blog content. Please try again later.</p>
-              <Link to="/case-studies">Back to Blogs</Link>
+            <div className='error-blog'>
+              <p className='sub-heading-bold'>Error loading blog content. Please try again later.</p>
+              <Link to="/case-studies" className='blue-button-small'>Back to Blogs</Link>
             </div>
           ),
         };
@@ -54,7 +54,7 @@ const DynamicBlog = () => {
         <div className="breach-hero-banner">
           <img className="hero-banner-image-blog" src={metadata.image} alt={metadata.title} />
           <div className="hero-overlay-section">
-            <h1>{metadata.title}</h1>
+            <h1 className='main-heading'>{metadata.title}</h1>
           </div>
         </div>
         <div className="breach-article-content">

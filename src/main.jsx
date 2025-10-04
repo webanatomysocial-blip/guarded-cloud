@@ -57,7 +57,8 @@ createRoot(document.getElementById('root')).render(
               <Route path="/case-studies/:id" element={<DynamicBlog />} />
 
               <Route path="/resources" element={<Resources />} />
-
+              <Route path="/blogs/:id" element={<DynamicBlog />} />
+              
               <Route path="/cloud-security-posture" element={<CloudSecurityPosture />} />
               <Route path="/managed-detection-response" element={<ManagedDetectionResponse />} />
               <Route path="/zero-trust-identity" element={<ZeroTrustIdentity />} />
