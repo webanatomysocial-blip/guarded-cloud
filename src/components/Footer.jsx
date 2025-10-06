@@ -82,9 +82,9 @@ export default function Footer() {
         <p className="text-white">
           &copy; {new Date().getFullYear()} Your Guarded Cloud. All rights reserved.
           Designed and developed by{" "}
-          <a href="https://webanatomy.in/" target="_blank" rel="noopener noreferrer">
+          <Link style={{fontWeight:900}} to="https://webanatomy.in/" target="_blank" rel="noopener noreferrer">
             Web Anatomy
-          </a>
+          </Link>
         </p>
       </div>
     </>
